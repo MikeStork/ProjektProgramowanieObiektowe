@@ -2,12 +2,12 @@
 Depozytorium projektowe programowania obiektowego Środa 11:15 2023
 ## Spis treści
 * [Skład zespołu](#Skład)
-* [Temat projektu](#Temat projektu)
+* [Temat projektu](#Temat)
 * [Opis projektu](#Opis)
-* [Technologie]($Technologie)
+* [Technologie](#Technologie)
 ## Grupa projektowa pod przewodnictwem Agnieszki Pisarek
 ## Skład zespołu
-Agnieszka Pisarek
-Michał Bocian
-Robert Pytel
+* Agnieszka Pisarek
+* Michał Bocian
+* Robert Pytel
 ## Temat projektu: ######
