@@ -6,6 +6,7 @@ Repozytorium projektowe programowania obiektowego grupa 10 Środa 11:15 2023
 <p>
 Scrum master: Agnieszka Pisarek
 </p>
+
 ## Spis treści
 * [Skład zespołu](#Skład-zespołu)
 * [Temat projektu](#Temat-projektu)
