@@ -1,4 +1,6 @@
-# Projekt Programowanie Obiektowe<p>
+# Projekt Programowanie Obiektowe
+<p>
+<a><img src="https://img.shields.io/github/commit-activity/w/MikeStork/ProjektProgramowanieObiektowe?color=%2300BD00&label=Aktywno%C5%9B%C4%87&logo=Git&logoColor=%23F0F0F0" alt="Ostatni Commit"></a>
 <a><img src="https://img.shields.io/github/commit-activity/w/MikeStork/ProjektProgramowanieObiektowe?color=%2300BD00&label=Aktywno%C5%9B%C4%87&logo=Git&logoColor=%23F0F0F0" alt="Aktywność"></a>
 <a download href="https://github.com/MikeStork/ProjektProgramowanieObiektowe"><img src="https://img.shields.io/github/repo-size/MikeStork/ProjektProgramowanieObiektowe?label=Rozmiar&logo=GitHub" alt="Rozmiar"></a>
 </p>
