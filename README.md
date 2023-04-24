@@ -16,7 +16,6 @@ Scrum master: Agnieszka Pisarek
 * [Temat projektu](#Tematy-projektu)
   * [Ewolucja](#Ewolucja)
   * [Temat projektu](#Szczupak-król-wód)
-</ul>
 
 * [Opis projektu](#Opis-projektu)
 * [Technologie](#Technologie)
