@@ -14,8 +14,12 @@ Scrum master: Agnieszka Pisarek
 ## Spis treści
 * [Skład zespołu](#Skład-zespołu)
 * [Temat projektu](#Tematy-projektu)
+<ul>
+  <li>
 ** [Ewolucja](#Ewolucja)
 ** [Temat projektu](#Szczupak-król-wód)
+    </li>
+</ul>
 * [Opis projektu](#Opis-projektu)
 * [Technologie](#Technologie)
 ## Skład zespołu
