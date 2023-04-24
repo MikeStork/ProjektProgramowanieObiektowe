@@ -13,11 +13,24 @@ Scrum master: Agnieszka Pisarek
 
 ## Spis treści
 * [Skład zespołu](#Skład-zespołu)
-* [Temat projektu](#Temat-projektu)
+* [Temat projektu](#Tematy-projektu)
+** [Ewolucja](#Ewolucja)
+** [Temat projektu](#Szczupak-król-wód)
 * [Opis projektu](#Opis-projektu)
 * [Technologie](#Technologie)
 ## Skład zespołu
 * Agnieszka Pisarek
 * Michał Bocian
 * Robert Pytel
-## Temat projektu: ######
+## Tematy projektu: ######
+
+###Ewolucja
+<p>Rozwój organizmu od jednokomórkowca aż do złożonego organizmu. Możliwość implementacji interakcji organizmów rywalizujących o zdominowanie środowiska, co z kolei pozwala na uzyskanie różnych stanów ekosystemu. Możliwość implementacji zmiennego środowiska, dynamicznych warunków atmosferycznych, ilości pożywienia w środowisku.</p>
+</hr>
+<p>
+Dziedziczenie może być zastosowane na wielu płaszczyznach. Organizm mięsożerny może dziedziczyć po klasie ogólnej organizmu podstawowe właściwości, organizm wszystkożerny może dziedziczyć właściwości po mięsożernym i roślinożernym. Dodatkowo istnieje duży potencjał na zastosowanie polimorfizmu, enkapsulacji i innych sposobów poprawnego pisania kodu
+</p>
+<p>Pomysł jest inspirowany grą Spore firmy Maxis</p>
+
+### Szczupak król wód
+<p></p>
