@@ -18,6 +18,7 @@ Scrum master: Agnieszka Pisarek
   <li>[Ewolucja](#Ewolucja)</li>
   <li>[Temat projektu](#Szczupak-król-wód)</li>
 </ul>
+
 * [Opis projektu](#Opis-projektu)
 * [Technologie](#Technologie)
 ## Skład zespołu
