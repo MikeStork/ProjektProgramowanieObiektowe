@@ -25,7 +25,7 @@ Scrum master: Agnieszka Pisarek
 * Robert Pytel
 ## Tematy projektu: ######
 
-###Ewolucja
+### Ewolucja
 <p>Rozwój organizmu od jednokomórkowca aż do złożonego organizmu. Możliwość implementacji interakcji organizmów rywalizujących o zdominowanie środowiska, co z kolei pozwala na uzyskanie różnych stanów ekosystemu. Możliwość implementacji zmiennego środowiska, dynamicznych warunków atmosferycznych, ilości pożywienia w środowisku.</p>
 </hr>
 <p>
