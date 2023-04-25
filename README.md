@@ -34,4 +34,5 @@ Dziedziczenie może być zastosowane na wielu płaszczyznach. Organizm mięsoże
 <p>Pomysł jest inspirowany grą Spore firmy Maxis</p>
 
 ### Szczupak król wód
+<p>Drugi pomysł przewiduje symulację życia ryb słodkowodnych w Polsce. Poruszające się po mapie stawu zwierzątka konkurują między sobą o zasoby oraz miejsce do życia. Zgodnie z tą myślą możliwe jest wyszczególnienie drapieżników oraz roślinożerców. Ryby posiadają zróżnicowane cechy jak np. szybkość rozmnażania, prędkość poruszania się po mapie, rozmiar itp. Celem symulacji jest obserwacja interakcji zachodzących między poszczególnymi grupami oraz analiza liczebności przedstawicieli konkretnych gatunków. Obserwacje i wyniki eksperymentów mogą zostać urozmaicone przez zadanie różnych warunków początkowych np. stworzenie większej ilości ryb roślinożernych niż drapieżnych, modyfikacja cech ryb itd. Wybrany wycinek rzeczywistości pozwala na elastyczne podejście do tematu oraz umożliwia stworzenie symulacji spełniającej wszystkie wymogi wyszczególnione w opisie zadania.</p>
 <p></p>
