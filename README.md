@@ -13,6 +13,7 @@ Scrum master: Agnieszka Pisarek
 
 ## Spis treści
 * [Skład zespołu](#Skład-zespołu)
+* [Etapy projektu](#Etapy-projektu)
 * [Tematy projektu](#Tematy-projektu)
   * [Ewolucja](#Ewolucja)
   * [Szczupak król wód](#Szczupak-król-wód)
@@ -24,7 +25,7 @@ Scrum master: Agnieszka Pisarek
 * Michał Bocian
 * Robert Pytel
 
-## Etapy
+## Etapy projektu
 - [x] 1. Wybór zespołu
 - [x] 2. Propozycje tematów
 - [ ] 3. Wybór tematu
