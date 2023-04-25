@@ -16,6 +16,7 @@ Scrum master: Agnieszka Pisarek
 * [Tematy projektu](#Tematy-projektu)
   * [Ewolucja](#Ewolucja)
   * [Szczupak król wód](#Szczupak-król-wód)
+  * [Jaki znowu kowid?](#Jaki-znowu-kowid?)
 
 * [Opis projektu](#Opis-projektu)
 * [Technologie](#Technologie)
@@ -26,7 +27,17 @@ Scrum master: Agnieszka Pisarek
 ## Tematy projektu (do wyboru)
 
 ### Ewolucja
-<p>Rozwój organizmu od jednokomórkowca aż do złożonego organizmu. Możliwość implementacji interakcji organizmów rywalizujących o zdominowanie środowiska, co z kolei pozwala na uzyskanie różnych stanów ekosystemu. Możliwość implementacji zmiennego środowiska, dynamicznych warunków atmosferycznych, ilości pożywienia w środowisku.</p>
+<p>Rozwój organizmu od jednokomórkowca aż do złożonego organizmu. 
+  Możliwość implementacji: 
+  * Interakcji organizmów rywalizujących o zdominowanie środowiska, co z kolei pozwala na uzyskanie różnych stanów ekosystemu. 
+  * Zmiennego środowiska, dynamicznych warunków atmosferycznych, ilości pożywienia w środowisku.
+  * Warunkowej zmiany miejsca przebywania (migracja)
+</p>
+<p>
+  Jednym z dodatkowych elementów byłaby zaawansowana ewolucja - zmiana epoki ewolucji. 
+  Przykładowo:
+    <pre>Komórkowiec -> Mały organizm -> Zwierze -> Życie społeczne -> Cywilizacja</pre>
+</p>
 </hr>
 <p>
 Dziedziczenie może być zastosowane na wielu płaszczyznach. Organizm mięsożerny może dziedziczyć po klasie ogólnej organizmu podstawowe właściwości, organizm wszystkożerny może dziedziczyć właściwości po mięsożernym i roślinożernym. Dodatkowo istnieje duży potencjał na zastosowanie polimorfizmu, enkapsulacji i innych sposobów poprawnego pisania kodu
@@ -36,3 +47,4 @@ Dziedziczenie może być zastosowane na wielu płaszczyznach. Organizm mięsoże
 ### Szczupak król wód
 <p>Drugi pomysł przewiduje symulację życia ryb słodkowodnych w Polsce. Poruszające się po mapie stawu zwierzątka konkurują między sobą o zasoby oraz miejsce do życia. Zgodnie z tą myślą możliwe jest wyszczególnienie drapieżników oraz roślinożerców. Ryby posiadają zróżnicowane cechy jak np. szybkość rozmnażania, prędkość poruszania się po mapie, rozmiar itp. Dziedziczenie znajdzie tutaj zastosowanie w kreowaniu poszczególnych gatunków rybek oraz roślin np. szczupak. Niektóre z akcji jakie będą spotykały ryby to: pożarcie, rozmnażanie oraz wyłowienie przez rybaka. Celem symulacji jest obserwacja interakcji zachodzących między poszczególnymi grupami oraz analiza liczebności przedstawicieli konkretnych gatunków. Obserwacje i wyniki eksperymentów mogą zostać urozmaicone przez zadanie różnych warunków początkowych np. stworzenie większej ilości ryb roślinożernych niż drapieżnych, modyfikacja cech ryb itd. Wybrany wycinek rzeczywistości pozwala na elastyczne podejście do tematu oraz umożliwia stworzenie symulacji spełniającej wszystkie wymogi wyszczególnione w opisie zadania.</p>
 <p></p>
+ </p>
