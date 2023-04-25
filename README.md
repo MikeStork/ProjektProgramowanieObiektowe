@@ -25,10 +25,10 @@ Scrum master: Agnieszka Pisarek
 * Robert Pytel
 
 ## Etapy
-[x] 1. Wybór zespołu
-[x] 2. Propozycje tematów
-[ ] 3. Wybór tematu
-[ ] 4. Podział pracy i ustalenie cyklu pracy
+- [x] 1. Wybór zespołu
+- [x] 2. Propozycje tematów
+- [ ] 3. Wybór tematu
+- [ ] 4. Podział pracy i ustalenie cyklu pracy
 
 ## Tematy projektu (do wyboru)
 
