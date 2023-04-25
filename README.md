@@ -1,8 +1,10 @@
 # Projekt Programowanie Obiektowe
 <p>
+<a><img src="https://img.shields.io/github/issues/MikeStork/ProjektProgramowanieObiektowe" alt="issues"></a>
 <a><img src="https://img.shields.io/github/last-commit/MikeStork/ProjektProgramowanieObiektowe?color=%23F71&label=Ostatni%20commit&logo=git&logoColor=%23F71" alt="Ostatni Commit"></a>
 <a><img src="https://img.shields.io/github/commit-activity/w/MikeStork/ProjektProgramowanieObiektowe?color=%2300BD00&label=Aktywno%C5%9B%C4%87&logo=Git&logoColor=%23F0F0F0" alt="Aktywność"></a>
 <a download href="https://github.com/MikeStork/ProjektProgramowanieObiektowe"><img src="https://img.shields.io/github/repo-size/MikeStork/ProjektProgramowanieObiektowe?label=Rozmiar&logo=GitHub" alt="Rozmiar"></a>
+<a download href="https://github.com/MikeStork/ProjektProgramowanieObiektowe"><img src="https://img.shields.io/tokei/lines/github/MikeStork/ProjektProgramowanieObiektowe?label=Linii%20kodu" alt="Linii kodu"></a>
 </p>
 <p>
   Repozytorium projektowe programowania obiektowego grupa 10 Środa 11:15 2023
