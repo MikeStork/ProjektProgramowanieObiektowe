@@ -34,7 +34,8 @@ Scrum master: Agnieszka Pisarek
 - [x] 2. Propozycje tematów
 - [ ] 3. Wybór tematu
 - [ ] 4. Podział pracy i ustalenie cyklu pracy
-> ...![4x](https://user-images.githubusercontent.com/44142875/234476085-e3f5496a-60d5-45b6-aa75-79b4695271f8.gif)
+> [...]
+![4x](https://user-images.githubusercontent.com/44142875/234476085-e3f5496a-60d5-45b6-aa75-79b4695271f8.gif)
 
 
 ## Tematy projektu (do wyboru)
