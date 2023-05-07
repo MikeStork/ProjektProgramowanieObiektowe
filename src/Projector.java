@@ -1,12 +1,13 @@
 import java.util.ArrayList;
 import java.io.IOException;
+import java.util.Objects;
 
 
 public class Projector {
     static int WIDTH;
     static int HEIGHT;
     private boolean running;
-    private final int TARGET_FPS = 20;
+    private final int TARGET_FPS = 2;
     private final long OPTIMAL_TIME = 1000000000 / TARGET_FPS;
 
     ArrayList<Entity> ENTITY_LIST = new ArrayList<Entity>();
@@ -54,7 +55,12 @@ public class Projector {
     }
 
     private void update() {
-        ///
+        for (Entity ent:
+             ENTITY_LIST) {
+            if(Entity.hasExperienceField(ent)){
+                LevelController.increaseLevelIfPosible((Animal)ent);
+            }
+        }
     }
 
     public static String render(String [][] MAP){
