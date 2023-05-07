@@ -3,9 +3,9 @@ public class Main {
         System.out.println("Hello world!");
         System.out.println("\n\n\n");
         Projector GAME = new Projector(20,20);
-        Animal dog1 = new Animal(3,3, "Dog",Diet.Omnivore,3);
-        Animal dog2 = new Animal(7,5, "Dog",Diet.Omnivore,2);
-        Animal dog3 = new Animal(10,2, "Dog",Diet.Omnivore,2);
+        Organism dog1 = new Organism(3,3, "Dog",Diet.Omnivore,3);
+        Organism dog2 = new Organism(7,5, "Dog",Diet.Omnivore,2);
+        Organism dog3 = new Organism(10,2, "Dog",Diet.Omnivore,2);
         Tree baobab = new Tree(2,2, "Baobab");
         Water pond = new Water(9,9,"Pond");
         GAME.ENTITY_LIST.add(dog1);
