@@ -1,3 +1,5 @@
+package simulation;
+
 import java.util.ArrayList;
 import java.io.IOException;
 
@@ -57,7 +59,8 @@ public class Projector {
         for (Entity ent:
              ENTITY_LIST) {
             if(Entity.hasExperienceField(ent)){
-                LevelController.increaseLevelIfPosible((Organism)ent);
+                var org = (Organism)ent;
+
             }
         }
     }

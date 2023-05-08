@@ -1,3 +1,5 @@
+package simulation;
+
 public class Position{
     int x;
     int y;
