@@ -9,9 +9,16 @@ public class Organism extends Entity{
     Organism(int x, int y, String name, Diet diet, int speed) {
         super(x, y, name);
         this.diet = diet;
-        this.speed = speed;
+        this.speed = CONSTANTS.DEFAULT_SPEED;
         this.SPRITE = "O";
-        this.color = "A52";
+        this.color = "A";
+    }
+    Organism(int x, int y, String name, Diet diet) {
+        super(x, y, name);
+        this.diet = diet;
+        this.speed = CONSTANTS.DEFAULT_SPEED;
+        this.SPRITE = "O";
+        this.color = "A";
     }
     /**
      * Returns an Image object that can then be painted on the screen.
@@ -38,7 +45,9 @@ public class Organism extends Entity{
     /**
     * Destroys instance of this object
     */
-    void Move(){}
+    void Move(){
+
+    }
     void Destroy(){}
     void CheckSurroundings(){}
     void EatIfPossible(){}
