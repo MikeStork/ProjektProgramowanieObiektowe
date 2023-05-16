@@ -32,13 +32,31 @@ Scrum master: Agnieszka Pisarek
 ## Etapy projektu
 - [x] 1. Wybór zespołu
 - [x] 2. Propozycje tematów
-- [ ] 3. Wybór tematu
+- [x] 3. Wybór tematu
 - [ ] 4. Podział pracy i ustalenie cyklu pracy
 > [...]
 ![4x](https://user-images.githubusercontent.com/44142875/234476085-e3f5496a-60d5-45b6-aa75-79b4695271f8.gif)
 
+## Temat projektu - Ewolucja
+<p>Rozwój organizmu od jednokomórkowca aż do złożonego organizmu. 
+  Możliwość implementacji: 
+  * Interakcji organizmów rywalizujących o zdominowanie środowiska, co z kolei pozwala na uzyskanie różnych stanów ekosystemu. 
+  * Zmiennego środowiska, dynamicznych warunków atmosferycznych, ilości pożywienia w środowisku.
+  * Warunkowej zmiany miejsca przebywania (migracja)
+</p>
+<p>
+  Jednym z dodatkowych elementów byłaby zaawansowana ewolucja - zmiana epoki ewolucji. 
+  Przykładowo:
+    <pre>Komórkowiec -> Mały organizm -> Zwierze -> Życie społeczne -> Cywilizacja</pre>
+</p>
+</hr>
+<p>
+Dziedziczenie może być zastosowane na wielu płaszczyznach. Organizm mięsożerny może dziedziczyć po klasie ogólnej organizmu podstawowe właściwości, organizm wszystkożerny może dziedziczyć właściwości po mięsożernym i roślinożernym. Dodatkowo istnieje duży potencjał na zastosowanie polimorfizmu, enkapsulacji i innych sposobów poprawnego pisania kodu
+</p>
+<p>Pomysł jest inspirowany grą Spore firmy Maxis</p>
 
-## Tematy projektu (do wyboru)
+# Archiwum
+## Tematy projektu (do wyboru) 
 
 ### Ewolucja
 <p>Rozwój organizmu od jednokomórkowca aż do złożonego organizmu. 
