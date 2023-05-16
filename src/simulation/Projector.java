@@ -1,15 +1,13 @@
 package simulation;
 
-import java.util.ArrayList;
 import java.io.IOException;
-
+import java.util.ArrayList;
 
 public class Projector {
     static int WIDTH;
     static int HEIGHT;
     private boolean running;
-    private final int TARGET_FPS = 60;
-    private final long OPTIMAL_TIME = 1000000000 / TARGET_FPS;
+    private final long OPTIMAL_TIME = 1000000000 / CONSTANTS.FPS_TARGET;
 
     ArrayList<Entity> ENTITY_LIST = new ArrayList<Entity>();
     String[][] ENTITY_MAP;
