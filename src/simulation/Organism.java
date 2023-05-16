@@ -13,6 +13,7 @@ public class Organism extends Entity{
         this.SPRITE = "O";
         this.color = "A52";
     }
+
     /**
      * Returns an Image object that can then be painted on the screen.
      * The url argument must specify an absolute <a href="#{@link}">{@link URL}</a>. The name
@@ -40,8 +41,13 @@ public class Organism extends Entity{
     */
     void Move(){}
     void Destroy(){}
-    void CheckSurroundings(){}
+    void CheckSurroundings(){
+
+    }
     void EatIfPossible(){}
     void StrongerBehaviour(){}
     void WeakerBehaviour(){}
+    void Breed(){
+
+    }
 }

@@ -7,4 +7,8 @@ public class Cell extends Organism{
     }
     void Mate(){}
     void Eat(){}
+
+    void Breed(){
+
+    }
 }
