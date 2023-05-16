@@ -1,5 +1,7 @@
 package simulation;
 
+import java.util.ArrayList;
+
 public class Organism extends Entity{
     Diet diet;
     int speed;
@@ -50,8 +52,16 @@ public class Organism extends Entity{
 
     }
     void Destroy(){}
-    void CheckSurroundings(){
 
+    void CheckSurroundings(ArrayList<Entity> entity_list){
+        for(int i = 0; i < entity_list.size(); i++){
+            Entity entity = entity_list.get(i);
+            if(entity != this){
+                if(this.position.CalculateDistance(entity.position.x, entity.position.y) <= 1){
+                    System.out.println("w zasięgu pzdr");
+                }
+            }
+        }
     }
     void EatIfPossible(){}
     void StrongerBehaviour(){}
