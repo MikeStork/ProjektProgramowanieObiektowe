@@ -1,16 +1,18 @@
 package simulation;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Organism extends Entity{
     Diet diet;
     int speed;
 
+    int experience=0;
     int level=1;
     Organism(int x, int y, String name, Diet diet, int speed) {
         super(x, y, name);
         this.diet = diet;
-        this.speed = CONSTANTS.DEFAULT_SPEED;
+        this.speed = speed;
         this.SPRITE = "O";
         this.color = "A";
     }
@@ -43,12 +45,54 @@ public class Organism extends Entity{
      * Checks whether organism can or cannot evolve
      * If it can, it will return new organism that matches corresponding evolution state
      */
-    void EvolveIfPossible(){}
+    void EvolveIfPossible(){
+
+
+
+
+
+    }
     /**
     * Destroys instance of this object
     */
-    public void Move(){
+    void Move(){
+        Random r = new Random();
+        switch (r.nextInt(1,9)){
+            case 1:
+                this.position.x+=-1;
+                this.position.y+=-1;
+                break;
+            case 2:
+//                this.position.x+=0;
+                this.position.y+=-1;
+                break;
+            case 3:
+                this.position.x+=1;
+                this.position.y+=-1;
+                break;
+            case 4:
+                this.position.x+=-1;
+//                this.position.y+=0;
+                break;
+            case 5:
+                this.position.x+=1;
+//                this.position.y+=0;
+                break;
+            case 6:
+                this.position.x+=-1;
+                this.position.y+=1;
+                break;
+            case 7:
+//                this.position.x+=0;
+                this.position.y+=1;
+                break;
+            case 8:
+                this.position.x+=1;
+                this.position.y+=1;
+                break;
 
+
+        }
     }
     void Destroy(){}
 
