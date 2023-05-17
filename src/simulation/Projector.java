@@ -54,13 +54,13 @@ public class Projector {
     }
 
     private void update() {
-        for (Entity ent:
-             ENTITY_LIST) {
-            if(Entity.hasExperienceField(ent)){
-                var org = (Organism)ent;
-
-            }
-        }
+//        for (Entity ent:
+//             ENTITY_LIST) {
+//            if(Entity.hasExperienceField(ent)){
+//                var org = (Entity)ent;
+//
+//            }
+//        }
     }
 
     public static String render(String [][] MAP){
