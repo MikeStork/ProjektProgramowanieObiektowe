@@ -5,8 +5,6 @@ import java.util.Scanner;
 
 public class Main{
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-        System.out.println("\n\n\n");
         Projector GAME = new Projector(60,60);
         for (int i = 0; i < GAME.HEIGHT; i++) {
             for (int j = 0; j < GAME.WIDTH; j++) {
@@ -18,23 +16,27 @@ public class Main{
         System.out.println("Enter starting number of cells: ");
         int num_of_cells = scanner.nextInt();
 
-        Cell[] cells = new Cell[num_of_cells];
+//        Cell[] cells = new Cell[num_of_cells];
 
         System.out.println("Enter starting number of weed: ");
         int num_of_weed = scanner.nextInt();
 
-        Weed[] weed = new Weed[num_of_weed];
+//        Weed[] weed = new Weed[num_of_weed];
 
         Random random = new Random();
 
         for(int i = 0; i < num_of_cells; i++)   {
-            cells[i] = new Cell(random.nextInt(GAME.HEIGHT), random.nextInt(GAME.WIDTH),"cell", Diet.Omnivore, 1);
-            GAME.ENTITY_LIST.add(cells[i]);
+//            cells[i] = new Cell(random.nextInt(GAME.HEIGHT), random.nextInt(GAME.WIDTH),"cell", Diet.Omnivore, 1);
+            var cell = new Cell(random.nextInt(GAME.HEIGHT), random.nextInt(GAME.WIDTH),"cell", Diet.Omnivore, 1);
+            GAME.ENTITY_LIST.add(cell);
+            GAME.ENTITY_MAP[cell.position.x][cell.position.y] = cell.SPRITE;
         }
 
         for(int i = 0; i < num_of_weed; i++)   {
-            weed[i] = new Weed(random.nextInt(GAME.HEIGHT), random.nextInt(GAME.WIDTH), "weed");
-            GAME.ENTITY_LIST.add(weed[i]);
+//            weed[i] = new Weed(random.nextInt(GAME.HEIGHT), random.nextInt(GAME.WIDTH), "weed");
+            var weed = new Weed(random.nextInt(GAME.HEIGHT), random.nextInt(GAME.WIDTH), "weed");
+            GAME.ENTITY_LIST.add(weed);
+            GAME.ENTITY_MAP[weed.position.x][weed.position.y] = weed.SPRITE;
         }
 
         GAME.start();
