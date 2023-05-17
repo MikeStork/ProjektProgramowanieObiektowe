@@ -4,7 +4,6 @@ import java.lang.reflect.Field;
 
 public class Entity {
     String name;
-    String color = "";
     Position position;
     String SPRITE = "E";
     public int experience;

@@ -13,15 +13,11 @@ public class Organism extends Entity{
         super(x, y, name);
         this.diet = diet;
         this.speed = speed;
-        this.SPRITE = "O";
-        this.color = "A";
     }
     Organism(int x, int y, String name, Diet diet) {
         super(x, y, name);
         this.diet = diet;
         this.speed = CONSTANTS.DEFAULT_SPEED;
-        this.SPRITE = "O";
-        this.color = "A";
     }
 
     /**

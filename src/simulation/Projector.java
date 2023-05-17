@@ -11,6 +11,7 @@ public class Projector {
 
     ArrayList<Entity> ENTITY_LIST = new ArrayList<Entity>();
     String[][] ENTITY_MAP;
+
     Projector(int width, int height){
         this.WIDTH = width;
         this.HEIGHT = height;
@@ -54,13 +55,14 @@ public class Projector {
     }
 
     private void update() {
-//        for (Entity ent:
-//             ENTITY_LIST) {
-//            if(Entity.hasExperienceField(ent)){
-//                var org = (Entity)ent;
-//
-//            }
-//        }
+
+        for (int i = 0; i<ENTITY_LIST.size(); i++) {
+            var ent = ENTITY_LIST.get(i);
+            if(ent instanceof  Organism){
+                var org = (Organism)ent;
+                org.Move();
+            }
+        }
     }
 
     public static String render(String [][] MAP){
