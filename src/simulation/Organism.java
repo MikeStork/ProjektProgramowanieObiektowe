@@ -6,7 +6,6 @@ public class Organism extends Entity{
     Diet diet;
     int speed;
 
-    int experience=0;
     int level=1;
     Organism(int x, int y, String name, Diet diet, int speed) {
         super(x, y, name);
@@ -48,22 +47,44 @@ public class Organism extends Entity{
     /**
     * Destroys instance of this object
     */
-    void Move(){
+    public void Move(){
 
     }
     void Destroy(){}
 
-    void CheckSurroundings(ArrayList<Entity> entity_list){
-        for(int i = 0; i < entity_list.size(); i++){
+    /**
+     * Given list of entities, search for the first entity which is in the distance of Organism.
+     * @param entity_list
+     */
+    public Entity CheckSurroundings(ArrayList<Entity> entity_list){
+        for(int i = 0; i < entity_list.size(); i++) {
             Entity entity = entity_list.get(i);
-            if(entity != this){
-                if(this.position.CalculateDistance(entity.position.x, entity.position.y) <= 1){
-                    System.out.println("w zasięgu pzdr");
+            if (entity != this && this.position.CalculateDistance(entity.position.x, entity.position.y) <= 1)
+                return entity;
+            }
+        return null;
+    }
+
+    private void Eat(Entity e, ArrayList<Entity> entity_list){
+        this.experience += e.experience;
+        entity_list.remove(e);
+    }
+    public void EatIfPossible(Entity e, ArrayList<Entity> entity_list){
+        switch(this.diet){
+            case Herbivore:{
+                if (e.getClass().equals(Weed.class)) {
+                    this.Eat(e, entity_list);
                 }
+                break;
+            }
+            case Carnivore:{
+                break;
+            }
+            case Omnivore:{
+                break;
             }
         }
     }
-    void EatIfPossible(){}
     void StrongerBehaviour(){}
     void WeakerBehaviour(){}
     void Breed(){
