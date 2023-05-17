@@ -60,9 +60,14 @@ public class Projector {
             var ent = ENTITY_LIST.get(i);
             if(ent instanceof  Organism){
                 var org = (Organism)ent;
+                //poruszanie
+                ENTITY_MAP[org.position.x][org.position.y] = " ";
                 org.Move();
+                ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
             }
         }
+
     }
 
     public static String render(String [][] MAP){
