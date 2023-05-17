@@ -41,13 +41,114 @@ public class Organism extends Entity{
      * Checks whether organism can or cannot evolve
      * If it can, it will return new organism that matches corresponding evolution state
      */
-    void EvolveIfPossible(){
+    void EvolveIfPossible(ArrayList<Entity> entity_list, Cell cell) {
+
+        if (this.experience > 5) {
+
+            Random random = new Random();
+
+            int r = random.nextInt(3);
 
 
+            if (r == 1) {
+                Cat cat = new Cat(cell.position.x, cell.position.y, "cat", Diet.Carnivore, 1);
+                entity_list.add(cat);
+                cat.experience = 6;
+                entity_list.remove(cell);
+            } else if (r == 2) {
+                Bird bird = new Bird(cell.position.x, cell.position.y, "cat", Diet.Carnivore, 1);
+                entity_list.add(bird);
+                bird.experience = 6;
+                entity_list.remove(cell);
 
+            } else {
+                Fish fish = new Fish(cell.position.x, cell.position.y, "cat", Diet.Carnivore, 1);
+                entity_list.add(fish);
+                fish.experience = 6;
+                entity_list.remove(cell);
+            }
 
-
+        }
     }
+
+      void EvolveIfPossible(ArrayList<Entity> entity_list, Fish fish)  {
+
+            if(this.experience > 10)    {
+
+                Random random = new Random();
+
+                int r = random.nextInt(2);
+
+                if(r == 1)  {
+
+                    Amfiprion amfiprion = new Amfiprion(this.position.x, this.position.y,"cat", Diet.Carnivore, 1);
+                    entity_list.add(amfiprion);
+                    amfiprion.experience = 11;
+                    entity_list.remove(fish);
+
+                }   else {
+
+                    Pike pike = new Pike(this.position.x, this.position.y,"cat", Diet.Carnivore, 1);
+                    entity_list.add(pike);
+                    pike.experience = 11;
+                    entity_list.remove(fish);
+
+                }
+            }
+        }
+
+        void EvolveIfPossible(ArrayList<Entity> entity_list, Cat cat)  {
+
+            if(this.experience > 10)    {
+
+                Random random = new Random();
+
+                int r = random.nextInt(2);
+
+                if(r == 1)  {
+
+                    Cougar cougar = new Cougar(this.position.x, this.position.y,"cat", Diet.Carnivore, 1);
+                    entity_list.add(cougar);
+                    cougar.experience = 11;
+                    entity_list.remove(cat);
+
+                }   else {
+
+                    Tiger tiger = new Tiger(this.position.x, this.position.y,"cat", Diet.Carnivore, 1);
+                    entity_list.add(tiger);
+                    tiger.experience = 11;
+                    entity_list.remove(cat);
+
+                }
+            }
+        }
+
+        void EvolveIfPossible(ArrayList<Entity> entity_list, Bird bird)  {
+
+            if(this.experience > 10)    {
+
+                Random random = new Random();
+
+                int r = random.nextInt(2);
+
+                if(r == 1)  {
+
+                    Stork stork = new Stork(this.position.x, this.position.y,"cat", Diet.Carnivore, 1);
+                    entity_list.add(stork);
+                    stork.experience = 11;
+                    entity_list.remove(bird);
+
+                }   else {
+
+                    Eagle eagle = new Eagle(this.position.x, this.position.y,"cat", Diet.Carnivore, 1);
+                    entity_list.add(eagle);
+                    eagle.experience = 11;
+                    entity_list.remove(bird);
+
+                }
+            }
+    }
+
     /**
     * Destroys instance of this object
     */
