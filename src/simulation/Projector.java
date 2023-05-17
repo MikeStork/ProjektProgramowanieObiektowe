@@ -55,7 +55,6 @@ public class Projector {
     }
 
     private void update() {
-
         for (int i = 0; i<ENTITY_LIST.size(); i++) {
             var ent = ENTITY_LIST.get(i);
             if(ent instanceof  Organism){
@@ -67,7 +66,6 @@ public class Projector {
 
             }
         }
-
     }
 
     public static String render(String [][] MAP){

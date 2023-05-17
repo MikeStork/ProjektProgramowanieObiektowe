@@ -182,8 +182,4 @@ public class Organism extends Entity{
         Tiger tiger1 = new Tiger(this.position.x, this.position.y,"tiger", Diet.Carnivore, 1);
         entity_list.add(tiger1);
     }
-
-
-
-
 }
