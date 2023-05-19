@@ -66,6 +66,8 @@ public class Projector {
             var ent = ENTITY_LIST.get(i);
             if(ent instanceof  Organism){
                 var org = (Organism)ent;
+                //Sprawdzenie otoczenia / podjęcie akcji
+                org.CheckSurroundings(this.ENTITY_LIST);
                 //poruszanie
                 ENTITY_MAP[org.position.x][org.position.y] = " ";
                 org.Move();
