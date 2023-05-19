@@ -6,10 +6,4 @@ public class Cell extends Organism{
         super(x, y, name, diet, speed);
         this.SPRITE = CONSTANTS.PURPLE+"C"+CONSTANTS.RESET;
     }
-    void Mate(){}
-    void Eat(){}
-
-    void Breed(){
-
-    }
 }

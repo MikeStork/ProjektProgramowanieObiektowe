@@ -12,6 +12,11 @@ public class Entity {
         this.position = new Position(x,y);
         this.name = name;
     }
+    /**
+     * @deprecated
+     * Checks whether object has declared experience field
+     */
+    
     public static boolean hasExperienceField(Object obj) {
         try {
             Field experienceField = obj.getClass().getDeclaredField("experience");

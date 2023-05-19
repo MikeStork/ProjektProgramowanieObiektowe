@@ -9,6 +9,12 @@ public class Bird extends Cell {
     Bird(int x, int y, String name, Diet diet, int speed) {
         super(x, y, name, diet, speed);
     }
+    /**
+     * @exception Unimplemented
+     */
     void LayEggs(){}
+    /**
+     * @exception Unimplemented
+     */
     void BuildNest(){}
 }

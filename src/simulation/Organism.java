@@ -21,6 +21,8 @@ public class Organism extends Entity{
     }
 
     /**
+     * SAMPLE
+     *
      * Returns an Image object that can then be painted on the screen.
      * The url argument must specify an absolute <a href="#{@link}">{@link URL}</a>. The name
      * argument is a specifier that is relative to the url argument.
@@ -39,7 +41,9 @@ public class Organism extends Entity{
 
     /**
      * Checks whether organism can or cannot evolve
-     * If it can, it will return new organism that matches corresponding evolution state
+     * If it can, it will create new organism that matches corresponding evolution state in replacement of one that has been there
+     * @param  entity_list List of games entities
+     * @param  cell Entity of extended type to Cell
      */
     void EvolveIfPossible(ArrayList<Entity> entity_list, Cell cell) {
 
@@ -70,7 +74,12 @@ public class Organism extends Entity{
 
         }
     }
-
+    /**
+     * Checks whether organism can or cannot evolve
+     * If it can, it will create new organism that matches corresponding evolution state in replacement of one that has been there
+     * @param  entity_list List of games entities
+     * @param  fish Entity of extended type to Fish
+     */
       void EvolveIfPossible(ArrayList<Entity> entity_list, Fish fish)  {
 
             if(this.experience > 10)    {
@@ -96,7 +105,12 @@ public class Organism extends Entity{
                 }
             }
         }
-
+    /**
+     * Checks whether organism can or cannot evolve
+     * If it can, it will create new organism that matches corresponding evolution state in replacement of one that has been there
+     * @param  entity_list List of games entities
+     * @param  cat Entity of extended type to Cat
+     */
         void EvolveIfPossible(ArrayList<Entity> entity_list, Cat cat)  {
 
             if(this.experience > 10)    {
@@ -122,7 +136,12 @@ public class Organism extends Entity{
                 }
             }
         }
-
+    /**
+     * Checks whether organism can or cannot evolve
+     * If it can, it will create new organism that matches corresponding evolution state in replacement of one that has been there
+     * @param  entity_list List of games entities
+     * @param  bird Entity of extended type to Bird
+     */
         void EvolveIfPossible(ArrayList<Entity> entity_list, Bird bird)  {
 
             if(this.experience > 10)    {
@@ -150,7 +169,7 @@ public class Organism extends Entity{
     }
 
     /**
-    * Destroys instance of this object
+    * Randomly changes coordinates of Organism
     */
     void Move(){
         Random r = new Random();
@@ -191,11 +210,9 @@ public class Organism extends Entity{
 
         }
     }
-    void Destroy(){}
-
     /**
      * Given list of entities, search for the first entity which is in the distance of Organism.
-     * @param entity_list
+     * @param entity_list List of games entities
      */
     public Entity CheckSurroundings(ArrayList<Entity> entity_list){
         for(int i = 0; i < entity_list.size(); i++) {
@@ -205,11 +222,20 @@ public class Organism extends Entity{
             }
         return null;
     }
-
+    /**
+     * Controlls consumption of entity
+     * @param e Entity to be eaten
+     * @param entity_list List of games entities
+     */
     private void Eat(Entity e, ArrayList<Entity> entity_list){
         this.experience += e.experience;
         entity_list.remove(e);
     }
+    /**
+     * Checks whether given entity can be consumed
+     * @param e Entity to be eaten
+     * @param entity_list List of games entities
+     */
     public void EatIfPossible(Entity e, ArrayList<Entity> entity_list){
         switch(this.diet){
             case Herbivore:{
@@ -229,56 +255,93 @@ public class Organism extends Entity{
 
     void StrongerBehaviour(){}
     void WeakerBehaviour(){}
-
+    /**
+     * Breeds organism of given type and appends it to list of games entities
+     * @param entity_list List of games entities
+     * @param ampifrion  extended class of organism
+     */
     void Breed(ArrayList<Entity> entity_list, Amfiprion amfiprion){
 
         Amfiprion amfiprion1 = new Amfiprion(this.position.x, this.position.y,"amfiprion", Diet.Herbivore, 1);
         entity_list.add(amfiprion1);
 
     }
+    /**
+     * Breeds organism of given type and appends it to list of games entities
+     * @param entity_list List of games entities
+     * @param bird  extended class of organism
+     */
     void Breed(ArrayList<Entity> entity_list, Bird bird){
 
         Bird bird1 = new Bird(this.position.x, this.position.y,"bird", Diet.Herbivore, 1);
         entity_list.add(bird1);
 
     }
-
+    /**
+     * Breeds organism of given type and appends it to list of games entities
+     * @param entity_list of games entities
+     * @param cat  extended class of organism
+     */
     void Breed(ArrayList<Entity> entity_list, Cat cat){
 
         Cat cat1 = new Cat(this.position.x, this.position.y,"cat", Diet.Carnivore, 1);
         entity_list.add(cat1);
 
     }
-
+    /**
+     * Breeds organism of given type and appends it to list of games entities
+     * @param entity_list List of games entities
+     * @param cougar  extended class of organism
+     */
     void Breed(ArrayList<Entity> entity_list, Cougar cougar){
 
        Cougar cougar1 = new Cougar(this.position.x, this.position.y,"cougar", Diet.Carnivore, 1);
         entity_list.add(cougar1);
     }
-
+    /**
+     * Breeds organism of given type and appends it to list of games entities
+     * @param entity_list of games entities
+     * @param eagle  extended class of organism
+     */
     void Breed(ArrayList<Entity> entity_list, Eagle eagle){
 
         Eagle eagle1 = new Eagle(this.position.x, this.position.y,"eagle", Diet.Omnivore, 1);
         entity_list.add(eagle1);
     }
-
+    /**
+     * Breeds organism of given type and appends it to list of games entities
+     * @param entity_list List of games entities
+     * @param fish  extended class of organism
+     */
     void Breed(ArrayList<Entity> entity_list, Fish fish){
 
         Fish fish1 = new Fish(this.position.x, this.position.y,"fish", Diet.Herbivore, 1);
         entity_list.add(fish1);
 
     }
-
+    /**
+     * Breeds organism of given type and appends it to list of games entities
+     * @param entity_list List of games entities
+     * @param pike  extended class of organism
+     */
     void Breed(ArrayList<Entity> entity_list, Pike pike){
         Pike pike1 = new Pike(this.position.x, this.position.y,"pike", Diet.Carnivore, 1);
         entity_list.add(pike1);
     }
-
+    /**
+     * Breeds organism of given type and appends it to list of games entities
+     * @param entity_list List of games entities
+     * @param stork  extended class of organism
+     */
     void Breed(ArrayList<Entity> entity_list, Stork stork){
         Stork stork1 = new Stork(this.position.x, this.position.y,"stork", Diet.Omnivore, 1);
         entity_list.add(stork1);
     }
-
+    /**
+     * Breeds organism of given type and appends it to list of games entities
+     * @param entity_list List of games entities
+     * @param tiger  extended class of organism
+     */
     void Breed(ArrayList<Entity> entity_list, Tiger tiger){
         Tiger tiger1 = new Tiger(this.position.x, this.position.y,"tiger", Diet.Carnivore, 1);
         entity_list.add(tiger1);

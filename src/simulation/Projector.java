@@ -17,6 +17,9 @@ public class Projector {
         this.HEIGHT = height;
         ENTITY_MAP = new String[HEIGHT][WIDTH];
     }
+    /**
+     * Game starting method, controlls game
+     */
     public void start() {
         running = true;
         long lastUpdateTime = System.nanoTime();
@@ -49,11 +52,15 @@ public class Projector {
             }
         }
     }
-
+    /**
+     * Stops the game
+     */
     public void stop() {
         running = false;
     }
-
+    /**
+     * Updates game state
+     */
     private void update() {
         for (int i = 0; i<ENTITY_LIST.size(); i++) {
             var ent = ENTITY_LIST.get(i);
@@ -67,7 +74,11 @@ public class Projector {
             }
         }
     }
-
+    /**
+     * Renders singular frame of game state
+     * @param MAP Mapped positions of entities using 2dim array of strings
+     * @return Rendered frame to be displayed
+     */
     public static String render(String [][] MAP){
         String [] processed_rows = new String[HEIGHT];
         for (int i = 0; i < HEIGHT; i++) {
