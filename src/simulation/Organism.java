@@ -171,43 +171,89 @@ public class Organism extends Entity{
     /**
     * Randomly changes coordinates of Organism
     */
-    void Move(){
+    void Move(int WIDTH, int HEIGHT){
         Random r = new Random();
-        switch (r.nextInt(1,9)){
+        switch (r.nextInt(1,8)){
             case 1:
-                this.position.x+=-1;
-                this.position.y+=-1;
+                if(this.position.x ==0){
+                    this.position.x+=1;
+                }else {
+                    this.position.x+=-1;
+                }
+                if(this.position.y == 0){
+                    this.position.y+=1;
+                }else{
+                    this.position.y+=-1;
+                }
                 break;
             case 2:
 //                this.position.x+=0;
-                this.position.y+=-1;
+                if(this.position.y == 0){
+                    this.position.y+=1;
+                }else{
+                    this.position.y+=-1;
+                }
                 break;
             case 3:
-                this.position.x+=1;
-                this.position.y+=-1;
+                if(this.position.x == WIDTH-1){
+                    this.position.x+=-1;
+                }else {
+                    this.position.x+=1;
+                }
+                if(this.position.y == 0){
+                    this.position.y+=1;
+                }else{
+                    this.position.y+=-1;
+                }
                 break;
             case 4:
-                this.position.x+=-1;
+                if(this.position.x == 0){
+                    this.position.x+=1;
+                }else {
+                    this.position.x+=-1;
+                }
 //                this.position.y+=0;
                 break;
             case 5:
-                this.position.x+=1;
+                if(this.position.x == WIDTH-1){
+                    this.position.x+=-1;
+                }else {
+                    this.position.x+=1;
+                }
 //                this.position.y+=0;
                 break;
             case 6:
-                this.position.x+=-1;
-                this.position.y+=1;
+                if(this.position.x == WIDTH-1){
+                    this.position.x+=-1;
+                }else {
+                    this.position.x+=1;
+                }
+                if(this.position.y == HEIGHT-1){
+                    this.position.y+=-1;
+                }else{
+                    this.position.y+=1;
+                }
                 break;
             case 7:
 //                this.position.x+=0;
-                this.position.y+=1;
+                if(this.position.y == HEIGHT-1){
+                    this.position.y+=-1;
+                }else{
+                    this.position.y+=1;
+                }
                 break;
-            case 8:
-                this.position.x+=1;
-                this.position.y+=1;
-                break;
-
-
+//            case 8:
+//                if(this.position.x == WIDTH){
+//                    this.position.x+=-1;
+//                }else {
+//                    this.position.x+=1;
+//                }
+//                if(this.position.y == HEIGHT){
+//                    this.position.y+=-1;
+//                }else{
+//                    this.position.y+=1;
+//                }
+//                break;
         }
     }
     /**

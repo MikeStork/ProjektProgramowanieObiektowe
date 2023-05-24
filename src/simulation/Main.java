@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Main{
     public static void main(String[] args) {
-        Projector GAME = new Projector(60,60);
+        Projector GAME = new Projector(50,50);
         for (int i = 0; i < GAME.HEIGHT; i++) {
             for (int j = 0; j < GAME.WIDTH; j++) {
                 GAME.ENTITY_MAP[i][j] = " ";
