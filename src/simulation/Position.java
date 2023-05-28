@@ -1,4 +1,4 @@
-package simulation;
+package simulation.simulation;
 
 public class Position{
     int x;

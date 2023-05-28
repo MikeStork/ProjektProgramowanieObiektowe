@@ -1,4 +1,4 @@
-package simulation;
+package simulation.simulation;
 
 import java.util.ArrayList;
 import java.util.Random;

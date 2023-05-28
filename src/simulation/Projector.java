@@ -1,4 +1,4 @@
-package simulation;
+package simulation.simulation;
 
 import java.io.IOException;
 import java.util.ArrayList;

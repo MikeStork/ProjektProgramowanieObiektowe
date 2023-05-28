@@ -1,7 +1,7 @@
-package simulation;
+package simulation.simulation;
 
-import simulation.bodyparts.Beak;
-import simulation.bodyparts.Wings;
+import simulation.simulation.bodyparts.Beak;
+import simulation.simulation.bodyparts.Wings;
 
 public class Bird extends Cell {
     Wings wings = new Wings();

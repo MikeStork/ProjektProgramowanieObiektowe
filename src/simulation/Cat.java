@@ -1,7 +1,7 @@
-package simulation;
+package simulation.simulation;
 
-import simulation.Cell;
-import simulation.bodyparts.Claws;
+import simulation.simulation.Cell;
+import simulation.simulation.bodyparts.Claws;
 
 public class Cat extends Cell {
     Claws claws = new Claws();
