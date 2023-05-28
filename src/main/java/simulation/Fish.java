@@ -1,6 +1,5 @@
-package org.example;
+package simulation;
 
-import simulation.Cell;
 import simulation.bodyparts.Fins;
 
 public class Fish extends Cell {

@@ -1,4 +1,4 @@
-package org.example;
+package simulation;
 
 public class CONSTANTS {
     public static final int DEFAULT_SPEED = 1;

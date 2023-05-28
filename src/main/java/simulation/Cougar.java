@@ -1,4 +1,4 @@
-package org.example;
+package simulation;
 
 public class Cougar extends Cat {
     int speed_incrementation = 1;

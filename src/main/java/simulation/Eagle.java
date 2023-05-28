@@ -1,6 +1,4 @@
-package org.example;
-
-import simulation.Bird;
+package simulation;
 
 public class Eagle extends Bird {
     Eagle(int x, int y, Diet diet, int speed) {

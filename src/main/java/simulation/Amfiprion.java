@@ -1,4 +1,4 @@
-package org.example;
+package simulation;
 
 public class Amfiprion extends Fish {
     Amfiprion(int x, int y, Diet diet, int speed) {
