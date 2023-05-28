@@ -1,4 +1,4 @@
-package simulation;
+package org.example;
 
 import simulation.bodyparts.Beak;
 import simulation.bodyparts.Wings;

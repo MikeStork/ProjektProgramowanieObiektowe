@@ -1,4 +1,4 @@
-package simulation;
+package org.example;
 
 import java.lang.reflect.Field;
 

@@ -1,4 +1,4 @@
-package simulation;
+package org.example;
 
 public class Weed extends Entity{
     Weed(int x, int y) {

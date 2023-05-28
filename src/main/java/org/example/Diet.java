@@ -1,4 +1,4 @@
-package simulation;
+package org.example;
 
 public enum Diet {
     Omnivore,

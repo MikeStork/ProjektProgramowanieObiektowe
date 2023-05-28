@@ -1,4 +1,6 @@
-package simulation;
+package org.example;
+
+import simulation.Cat;
 
 public class Tiger extends Cat {
 

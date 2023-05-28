@@ -1,4 +1,4 @@
-package simulation;
+package org.example;
 
 public class Position{
     int x;
