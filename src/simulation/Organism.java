@@ -6,16 +6,15 @@ import java.util.Random;
 public class Organism extends Entity{
     Diet diet;
     int speed;
-
     int experience=0;
     int level=1;
-    Organism(int x, int y, String name, Diet diet, int speed) {
-        super(x, y, name);
+    Organism(int x, int y, Diet diet, int speed) {
+        super(x, y, 1);
         this.diet = diet;
         this.speed = speed;
     }
-    Organism(int x, int y, String name, Diet diet) {
-        super(x, y, name);
+    Organism(int x, int y, Diet diet) {
+        super(x, y, 1);
         this.diet = diet;
         this.speed = CONSTANTS.DEFAULT_SPEED;
     }
@@ -55,18 +54,18 @@ public class Organism extends Entity{
 
 
             if (r == 1) {
-                Cat cat = new Cat(cell.position.x, cell.position.y, "cat", Diet.Carnivore, 1);
+                Cat cat = new Cat(cell.position.x, cell.position.y, Diet.Carnivore, 1);
                 entity_list.add(cat);
                 cat.experience = 6;
                 entity_list.remove(cell);
             } else if (r == 2) {
-                Bird bird = new Bird(cell.position.x, cell.position.y, "cat", Diet.Carnivore, 1);
+                Bird bird = new Bird(cell.position.x, cell.position.y, Diet.Carnivore, 1);
                 entity_list.add(bird);
                 bird.experience = 6;
                 entity_list.remove(cell);
 
             } else {
-                Fish fish = new Fish(cell.position.x, cell.position.y, "cat", Diet.Carnivore, 1);
+                Fish fish = new Fish(cell.position.x, cell.position.y, Diet.Carnivore, 1);
                 entity_list.add(fish);
                 fish.experience = 6;
                 entity_list.remove(cell);
@@ -90,14 +89,14 @@ public class Organism extends Entity{
 
                 if(r == 1)  {
 
-                    Amfiprion amfiprion = new Amfiprion(this.position.x, this.position.y,"cat", Diet.Carnivore, 1);
+                    Amfiprion amfiprion = new Amfiprion(this.position.x, this.position.y, Diet.Carnivore, 1);
                     entity_list.add(amfiprion);
                     amfiprion.experience = 11;
                     entity_list.remove(fish);
 
                 }   else {
 
-                    Pike pike = new Pike(this.position.x, this.position.y,"cat", Diet.Carnivore, 1);
+                    Pike pike = new Pike(this.position.x, this.position.y, Diet.Carnivore, 1);
                     entity_list.add(pike);
                     pike.experience = 11;
                     entity_list.remove(fish);
@@ -121,14 +120,14 @@ public class Organism extends Entity{
 
                 if(r == 1)  {
 
-                    Cougar cougar = new Cougar(this.position.x, this.position.y,"cat", Diet.Carnivore, 1);
+                    Cougar cougar = new Cougar(this.position.x, this.position.y, Diet.Carnivore, 1);
                     entity_list.add(cougar);
                     cougar.experience = 11;
                     entity_list.remove(cat);
 
                 }   else {
 
-                    Tiger tiger = new Tiger(this.position.x, this.position.y,"cat", Diet.Carnivore, 1);
+                    Tiger tiger = new Tiger(this.position.x, this.position.y, Diet.Carnivore, 1);
                     entity_list.add(tiger);
                     tiger.experience = 11;
                     entity_list.remove(cat);
@@ -152,14 +151,14 @@ public class Organism extends Entity{
 
                 if(r == 1)  {
 
-                    Stork stork = new Stork(this.position.x, this.position.y,"cat", Diet.Carnivore, 1);
+                    Stork stork = new Stork(this.position.x, this.position.y, Diet.Carnivore, 1);
                     entity_list.add(stork);
                     stork.experience = 11;
                     entity_list.remove(bird);
 
                 }   else {
 
-                    Eagle eagle = new Eagle(this.position.x, this.position.y,"cat", Diet.Carnivore, 1);
+                    Eagle eagle = new Eagle(this.position.x, this.position.y, Diet.Carnivore, 1);
                     entity_list.add(eagle);
                     eagle.experience = 11;
                     entity_list.remove(bird);
@@ -291,9 +290,17 @@ public class Organism extends Entity{
                 break;
             }
             case Carnivore:{
+                if (e.getClass().equals(Weed.class)) {
+                    this.Eat(e, entity_list);
+                }else if(this.size > e.size){
+                    this.Eat(e, entity_list);
+                }
                 break;
             }
             case Omnivore:{
+                if(this.size > e.size){
+                    this.Eat(e, entity_list);
+                }
                 break;
             }
         }
@@ -308,7 +315,7 @@ public class Organism extends Entity{
      */
     void Breed(ArrayList<Entity> entity_list, Amfiprion amfiprion){
 
-        Amfiprion amfiprion1 = new Amfiprion(this.position.x, this.position.y,"amfiprion", Diet.Herbivore, 1);
+        Amfiprion amfiprion1 = new Amfiprion(this.position.x, this.position.y, Diet.Herbivore, 1);
         entity_list.add(amfiprion1);
 
     }
@@ -319,7 +326,7 @@ public class Organism extends Entity{
      */
     void Breed(ArrayList<Entity> entity_list, Bird bird){
 
-        Bird bird1 = new Bird(this.position.x, this.position.y,"bird", Diet.Herbivore, 1);
+        Bird bird1 = new Bird(this.position.x, this.position.y, Diet.Herbivore, 1);
         entity_list.add(bird1);
 
     }
@@ -330,7 +337,7 @@ public class Organism extends Entity{
      */
     void Breed(ArrayList<Entity> entity_list, Cat cat){
 
-        Cat cat1 = new Cat(this.position.x, this.position.y,"cat", Diet.Carnivore, 1);
+        Cat cat1 = new Cat(this.position.x, this.position.y, Diet.Carnivore, 1);
         entity_list.add(cat1);
 
     }
@@ -341,7 +348,7 @@ public class Organism extends Entity{
      */
     void Breed(ArrayList<Entity> entity_list, Cougar cougar){
 
-       Cougar cougar1 = new Cougar(this.position.x, this.position.y,"cougar", Diet.Carnivore, 1);
+       Cougar cougar1 = new Cougar(this.position.x, this.position.y, Diet.Carnivore, 1);
         entity_list.add(cougar1);
     }
     /**
@@ -351,7 +358,7 @@ public class Organism extends Entity{
      */
     void Breed(ArrayList<Entity> entity_list, Eagle eagle){
 
-        Eagle eagle1 = new Eagle(this.position.x, this.position.y,"eagle", Diet.Omnivore, 1);
+        Eagle eagle1 = new Eagle(this.position.x, this.position.y, Diet.Omnivore, 1);
         entity_list.add(eagle1);
     }
     /**
@@ -361,7 +368,7 @@ public class Organism extends Entity{
      */
     void Breed(ArrayList<Entity> entity_list, Fish fish){
 
-        Fish fish1 = new Fish(this.position.x, this.position.y,"fish", Diet.Herbivore, 1);
+        Fish fish1 = new Fish(this.position.x, this.position.y, Diet.Herbivore, 1);
         entity_list.add(fish1);
 
     }
@@ -371,7 +378,7 @@ public class Organism extends Entity{
      * @param pike  extended class of organism
      */
     void Breed(ArrayList<Entity> entity_list, Pike pike){
-        Pike pike1 = new Pike(this.position.x, this.position.y,"pike", Diet.Carnivore, 1);
+        Pike pike1 = new Pike(this.position.x, this.position.y, Diet.Carnivore, 1);
         entity_list.add(pike1);
     }
     /**
@@ -380,7 +387,7 @@ public class Organism extends Entity{
      * @param stork  extended class of organism
      */
     void Breed(ArrayList<Entity> entity_list, Stork stork){
-        Stork stork1 = new Stork(this.position.x, this.position.y,"stork", Diet.Omnivore, 1);
+        Stork stork1 = new Stork(this.position.x, this.position.y, Diet.Omnivore, 1);
         entity_list.add(stork1);
     }
     /**
@@ -389,7 +396,11 @@ public class Organism extends Entity{
      * @param tiger  extended class of organism
      */
     void Breed(ArrayList<Entity> entity_list, Tiger tiger){
-        Tiger tiger1 = new Tiger(this.position.x, this.position.y,"tiger", Diet.Carnivore, 1);
+        Tiger tiger1 = new Tiger(this.position.x, this.position.y, Diet.Carnivore, 1);
         entity_list.add(tiger1);
     }
+
+
+
+
 }

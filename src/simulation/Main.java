@@ -26,14 +26,14 @@ public class Main{
         Random random = new Random();
 
         for(int i = 0; i < num_of_cells; i++)   {
-            cells[i] = new Cell(random.nextInt(GAME.HEIGHT), random.nextInt(GAME.WIDTH),"cell", Diet.Omnivore, 1);
+            cells[i] = new Cell(random.nextInt(GAME.HEIGHT), random.nextInt(GAME.WIDTH), Diet.Omnivore, 1);
 //            var cell = new Cell(random.nextInt(GAME.HEIGHT), random.nextInt(GAME.WIDTH),"cell", Diet.Omnivore, 1);
             GAME.ENTITY_LIST.add(cells[i]);
             GAME.ENTITY_MAP[cells[i].position.x][cells[i].position.y] = cells[i].SPRITE;
         }
 
         for(int i = 0; i < num_of_weed; i++)   {
-            weed[i] = new Weed(random.nextInt(GAME.HEIGHT), random.nextInt(GAME.WIDTH), "weed");
+            weed[i] = new Weed(random.nextInt(GAME.HEIGHT), random.nextInt(GAME.WIDTH));
 //            var weed = new Weed(random.nextInt(GAME.HEIGHT), random.nextInt(GAME.WIDTH), "weed");
             GAME.ENTITY_LIST.add(weed[i]);
             GAME.ENTITY_MAP[weed[i].position.x][weed[i].position.y] = weed[i].SPRITE;
