@@ -6,9 +6,11 @@ public class Cat extends Cell {
 
     boolean if_asleep;
     int sleep_count;
+    private static int ca_count;
     Claws claws = new Claws();
     Cat(int x, int y, Diet diet, int speed, boolean if_asleep, int sleep_count) {
         super(x, y, diet, speed);
+        ca_count++;
     }
 
     void sleep() {
@@ -19,6 +21,9 @@ public class Cat extends Cell {
             this.sleep_count++;
         }
 
+    }
+    public static int getNumberOfObjects() {
+        return ca_count;
     }
 
     /**

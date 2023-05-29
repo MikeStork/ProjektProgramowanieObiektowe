@@ -1,5 +1,8 @@
 package simulation;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -16,16 +19,21 @@ public class Main{
             }
         }
 
+        int[] output_data = new int[10];
+        output_data[0] = GAME.HEIGHT;
+        output_data[1] = GAME.WIDTH;
 
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter starting number of cells: ");
         int num_of_cells = scanner.nextInt();
+        output_data[2] = num_of_cells;
 
         Cell[] cells = new Cell[num_of_cells];
 
         System.out.println("Enter starting number of weed: ");
         int num_of_weed = scanner.nextInt();
+        output_data[3] = num_of_weed;
 
         Weed[] weed = new Weed[num_of_weed];
         System.out.println("Download data after which cycles (enter each cycle natural number differentiating them with spaces. Pattern \"12 34 56\" or just \"12\"):");
@@ -48,11 +56,30 @@ public class Main{
             GAME.ENTITY_MAP[weed[i].position.x][weed[i].position.y] = weed[i].SPRITE;
         }
 
-        GAME.start();
+        GAME.start(output_data);
 
     }
 
     void Write2File(int[] tab)  {
+
+        String fileName = "output_data.txt";
+
+        try (PrintWriter writer = new PrintWriter(new FileWriter(fileName))) {
+
+            writer.println("Size of the map was: " + tab[0] + " " + tab[1] + ".");
+            writer.println("Simulation started with " + tab[2] + "cells.");
+            writer.println("Simulation started with " + tab[3] + "weed.");
+            writer.println("line");
+            writer.println("Simulation ended after " + tab[10] + "cycles.");
+
+
+        } catch (IOException e) {
+
+            System.out.println(e.getMessage());
+
+        }
+
+
 
 
     }

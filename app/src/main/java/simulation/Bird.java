@@ -6,8 +6,10 @@ import simulation.bodyparts.Wings;
 public class Bird extends Cell {
     Wings wings = new Wings();
     Beak beak = new Beak();
+    private static int b_count;
     Bird(int x, int y, Diet diet, int speed) {
         super(x, y, diet, speed);
+        b_count++;
     }
     /**
      * @exception Unimplemented
@@ -26,5 +28,7 @@ public class Bird extends Cell {
      * @param height height of the map
      * @param org Organism object able to make a move
      */
-
+    public static int getNumberOfObjects() {
+        return b_count;
+    }
 }

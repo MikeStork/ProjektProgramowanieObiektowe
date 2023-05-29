@@ -22,7 +22,7 @@ public class Projector {
     /**
      * Game starting method, controlls game
      */
-    public void start() {
+    public void start(int[] tab) {
         running = true;
         long lastUpdateTime = System.nanoTime();
         while (running) {
@@ -41,7 +41,7 @@ public class Projector {
                     System.out.print("\033[H\033[2J");
                     System.out.flush();
                 }
-                update();
+                update(tab);
                 System.out.println(render(ENTITY_MAP));
                 for (int i = 0; i < WIDTH; i++) {
 
@@ -70,7 +70,7 @@ public class Projector {
     /**
      * Updates game state
      */
-    private void update() {
+    private void update(int[] tab) {
         this.cycle++;
         Random r = new Random();
 
@@ -141,6 +141,9 @@ public class Projector {
                 }
             }
         }
+
+        tab[10] = this.cycle;
+
         if(this.cycle == this.DATA_DUMP_CYCLES.get(0)){
             //
             //data drop / data dump
