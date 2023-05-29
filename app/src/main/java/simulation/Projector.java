@@ -101,7 +101,6 @@ public class Projector {
                             ((Cat) org).if_asleep = true;
                         }   else {
 
-                            ENTITY_MAP[org.position.x][org.position.y] = " ";
                             org.Move(WIDTH,HEIGHT);
                             ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
 
@@ -114,16 +113,10 @@ public class Projector {
                     if(r.nextInt(0,20) > 18)    {
                         ENTITY_MAP[org.position.x][org.position.y] = " ";
                         ((Fish)org).CaughtByFisherman(ENTITY_LIST, (Fish) org);
-
                     }   else {
-
-                        ENTITY_MAP[org.position.x][org.position.y] = " ";
                         org.Move(WIDTH,HEIGHT);
                         ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
-
                     }
-
-
 
                 } else if(org.getClass() == Bird.class) {
 
@@ -149,6 +142,8 @@ public class Projector {
 
                 }
                 org.EvolveIfPossible(ENTITY_LIST);
+            } else if(ent instanceof Weed){
+                ENTITY_MAP[ent.position.x][ent.position.y] = ent.SPRITE;
             }
 
         }
