@@ -10,6 +10,7 @@ public class Bird extends Cell {
     Bird(int x, int y, Diet diet, int speed) {
         super(x, y, diet, speed);
         b_count++;
+        this.SPRITE = CONSTANTS.BLUE_UNDERLINED+"B"+CONSTANTS.RESET;
     }
     /**
      * @exception Unimplemented
