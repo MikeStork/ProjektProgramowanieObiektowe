@@ -6,6 +6,9 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Random;
 
+import static simulation.Main.num_of_cells;
+import static simulation.Main.num_of_weed;
+
 public class Projector {
     static int WIDTH;
     static int HEIGHT;
@@ -24,7 +27,7 @@ public class Projector {
     /**
      * Game starting method, controlls game
      */
-    public void start(int[] tab) {
+    public void start() {
         running = true;
         long lastUpdateTime = System.nanoTime();
         while (running) {
@@ -43,7 +46,7 @@ public class Projector {
                     System.out.print("\033[H\033[2J");
                     System.out.flush();
                 }
-                update(tab);
+                update();
                 System.out.println(render(ENTITY_MAP));
                 for (int i = 0; i < WIDTH; i++) {
 
@@ -72,7 +75,7 @@ public class Projector {
     /**
      * Updates game state
      */
-    private void update(int[] tab) {
+    private void update() {
         this.cycle++;
         Random r = new Random();
 
@@ -145,8 +148,6 @@ public class Projector {
             }
         }
 
-        tab[13] = this.cycle;
-
         if(this.cycle == this.DATA_DUMP_CYCLES.get(0)){
             //
             //data drop / data dump
@@ -166,34 +167,24 @@ public class Projector {
         }
         return String.join("\n",processed_rows);
     }
-    void Write2File(int[] tab)  {
+    void Write2File()  {
 
         String fileName = "output_data.txt";
 
-        tab[4] = Cat.getNumberOfObjects();
-        tab[5] = Bird.getNumberOfObjects();
-        tab[6] = Fish.getNumberOfObjects();
-        tab[7] = Tiger.getNumberOfObjects();
-        tab[8] = Cougar.getNumberOfObjects();
-        tab[9] = Eagle.getNumberOfObjects();
-        tab[10] = Pike.getNumberOfObjects();
-        tab[11] = Amfiprion.getNumberOfObjects();
-        tab[12] = Stork.getNumberOfObjects();
-
         try (PrintWriter writer = new PrintWriter(new FileWriter(fileName))) {
 
-            writer.println("Size of the map in cycle "+this.cycle+" was: " + tab[0] + " " + tab[1] + ".");
-            writer.println("Simulation started with " + tab[2] + "cells.");
-            writer.println("Simulation started with " + tab[3] + "weed.");
-            writer.println("There were " + tab[4] + " cats during simulation.");
-            writer.println("There were " + tab[5] + " birds during simulation.");
-            writer.println("There were " + tab[6] + " fishes during simulation.");
-            writer.println("There were " + tab[7] + " tigers during simulation.");
-            writer.println("There were " + tab[8] + " cougars during simulation.");
-            writer.println("There were " + tab[9] + " eagles during simulation.");
-            writer.println("There were " + tab[10] + " pikes during simulation.");
-            writer.println("There were " + tab[11] + " amfiprions during simulation.");
-            writer.println("There were " + tab[12] + " storks during simulation.");
+            writer.println("Size of the map in cycle "+this.cycle+" was: " + HEIGHT + " " + WIDTH + ".");
+            writer.println("Simulation started with " + num_of_cells + "cells.");
+            writer.println("Simulation started with " + num_of_weed + "weed.");
+            writer.println("There were " + Cat.getNumberOfObjects() + " cats during simulation.");
+            writer.println("There were " + Bird.getNumberOfObjects() + " birds during simulation.");
+            writer.println("There were " + Fish.getNumberOfObjects() + " fishes during simulation.");
+            writer.println("There were " + Tiger.getNumberOfObjects() + " tigers during simulation.");
+            writer.println("There were " + Cougar.getNumberOfObjects() + " cougars during simulation.");
+            writer.println("There were " + Eagle.getNumberOfObjects() + " eagles during simulation.");
+            writer.println("There were " + Pike.getNumberOfObjects() + " pikes during simulation.");
+            writer.println("There were " + Amfiprion.getNumberOfObjects() + " amfiprions during simulation.");
+            writer.println("There were " + Stork.getNumberOfObjects() + " storks during simulation.");
 
         } catch (IOException e) {
 
