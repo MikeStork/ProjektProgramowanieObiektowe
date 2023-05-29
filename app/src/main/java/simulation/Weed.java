@@ -5,5 +5,6 @@ public class Weed extends Entity{
         super(x, y, 1);
         this.SPRITE = CONSTANTS.GREEN_UNDERLINED+"W"+CONSTANTS.RESET;
         this.experience = 5;
+        this.size = 0;
     }
 }

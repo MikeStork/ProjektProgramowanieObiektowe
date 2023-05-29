@@ -46,6 +46,11 @@ public class Bird extends Cell {
         entity_list.add(new Bird(this.position.x, this.position.y, this.diet, this.speed));
     }
 
+    /**
+     * Checks whether organism can or cannot evolve
+     * If it can, it will create new organism that matches corresponding evolution state in replacement of one that has been there
+     * @param  entity_list List of games entities
+     */
     @Override
     public void EvolveIfPossible(ArrayList<Entity> entity_list) {
         if(this.experience > 20)    {

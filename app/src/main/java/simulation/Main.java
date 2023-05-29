@@ -32,10 +32,10 @@ public class Main{
         num_of_weed = scanner.nextInt();
 
         Weed[] weed = new Weed[num_of_weed];
-        System.out.println("Download data after which cycles (enter each cycle natural number differentiating them with spaces. Pattern \"12 34 56\" or just \"12\"):");
-        String input = scanner.nextLine();
+//        System.out.println("Download data after which cycles (enter each cycle natural number differentiating them with spaces. Pattern \"12 34 56\" or just \"12\"):");
+//        String input = scanner.next();
+//        GAME.DATA_DUMP_CYCLES = parseNumbers(input);
 
-        GAME.DATA_DUMP_CYCLES = parseNumbers(input);
         Random random = new Random();
 
         for(int i = 0; i < num_of_cells; i++)   {

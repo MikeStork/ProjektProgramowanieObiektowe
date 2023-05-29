@@ -85,7 +85,10 @@ public class Projector {
                 var org = (Organism)ent;
                 //Sprawdzenie otoczenia / podjęcie akcji
                 var toActWith = org.CheckSurroundings(this.ENTITY_LIST);
-                org.EatIfPossible(toActWith,ENTITY_LIST);
+
+                if(toActWith != null){
+                    org.EatIfPossible(toActWith,ENTITY_LIST);
+                }
                 //poruszanie
 
                 if(org.getClass() == Cat.class) {
@@ -109,7 +112,7 @@ public class Projector {
                 }   else if(org.getClass() == Fish.class)   {
 
                     if(r.nextInt(0,20) > 18)    {
-
+                        ENTITY_MAP[org.position.x][org.position.y] = " ";
                         ((Fish)org).CaughtByFisherman(ENTITY_LIST, (Fish) org);
 
                     }   else {
