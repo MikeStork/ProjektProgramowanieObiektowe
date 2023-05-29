@@ -1,5 +1,6 @@
 package simulation;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -308,98 +309,8 @@ public abstract class Organism extends Entity{
 
     void StrongerBehaviour(){}
     void WeakerBehaviour(){}
-    /**
-     * Breeds organism of given type and appends it to list of games entities
-     * @param entity_list List of games entities
-     * @param ampifrion  extended class of organism
-     */
-    void Breed(ArrayList<Entity> entity_list, Amfiprion amfiprion){
 
-        Amfiprion amfiprion1 = new Amfiprion(this.position.x, this.position.y, Diet.Herbivore, 1);
-        entity_list.add(amfiprion1);
-
-    }
-    /**
-     * Breeds organism of given type and appends it to list of games entities
-     * @param entity_list List of games entities
-     * @param bird  extended class of organism
-     */
-    void Breed(ArrayList<Entity> entity_list, Bird bird){
-
-        Bird bird1 = new Bird(this.position.x, this.position.y, Diet.Herbivore, 1);
-        entity_list.add(bird1);
-
-    }
-    /**
-     * Breeds organism of given type and appends it to list of games entities
-     * @param entity_list of games entities
-     * @param cat  extended class of organism
-     */
-    void Breed(ArrayList<Entity> entity_list, Cat cat){
-
-        Cat cat1 = new Cat(this.position.x, this.position.y, Diet.Carnivore, 1, false, 0);
-        entity_list.add(cat1);
-
-    }
-    /**
-     * Breeds organism of given type and appends it to list of games entities
-     * @param entity_list List of games entities
-     * @param cougar  extended class of organism
-     */
-    void Breed(ArrayList<Entity> entity_list, Cougar cougar){
-
-       Cougar cougar1 = new Cougar(this.position.x, this.position.y, Diet.Carnivore, 1, false, 0);
-        entity_list.add(cougar1);
-    }
-    /**
-     * Breeds organism of given type and appends it to list of games entities
-     * @param entity_list of games entities
-     * @param eagle  extended class of organism
-     */
-    void Breed(ArrayList<Entity> entity_list, Eagle eagle){
-
-        Eagle eagle1 = new Eagle(this.position.x, this.position.y, Diet.Omnivore, 1);
-        entity_list.add(eagle1);
-    }
-    /**
-     * Breeds organism of given type and appends it to list of games entities
-     * @param entity_list List of games entities
-     * @param fish  extended class of organism
-     */
-    void Breed(ArrayList<Entity> entity_list, Fish fish){
-
-        Fish fish1 = new Fish(this.position.x, this.position.y, Diet.Herbivore, 1);
-        entity_list.add(fish1);
-
-    }
-    /**
-     * Breeds organism of given type and appends it to list of games entities
-     * @param entity_list List of games entities
-     * @param pike  extended class of organism
-     */
-    void Breed(ArrayList<Entity> entity_list, Pike pike){
-        Pike pike1 = new Pike(this.position.x, this.position.y, Diet.Carnivore, 1);
-        entity_list.add(pike1);
-    }
-    /**
-     * Breeds organism of given type and appends it to list of games entities
-     * @param entity_list List of games entities
-     * @param stork  extended class of organism
-     */
-    void Breed(ArrayList<Entity> entity_list, Stork stork){
-        Stork stork1 = new Stork(this.position.x, this.position.y, Diet.Omnivore, 1);
-        entity_list.add(stork1);
-    }
-    /**
-     * Breeds organism of given type and appends it to list of games entities
-     * @param entity_list List of games entities
-     * @param tiger  extended class of organism
-     */
-    void Breed(ArrayList<Entity> entity_list, Tiger tiger){
-        Tiger tiger1 = new Tiger(this.position.x, this.position.y, Diet.Carnivore, 1, false, 0);
-        entity_list.add(tiger1);
-    }
+    abstract public void Breed(ArrayList<Entity> entity_list);
 
 
-    abstract void Breed(ArrayList<Entity> entity_list);
 }

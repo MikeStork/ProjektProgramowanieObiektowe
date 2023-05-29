@@ -33,4 +33,12 @@ public class Fish extends Cell {
         return fisherman_count;
     }
 
+    /**
+     * Breeds organism of given type and appends it to list of games entities
+     * @param entity_list List of games entities
+     */
+    @Override
+    public void Breed(ArrayList<Entity> entity_list) {
+        entity_list.add(new Fish(this.position.x, this.position.y, this.diet, this.speed));
+    }
 }

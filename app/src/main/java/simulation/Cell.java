@@ -10,7 +10,7 @@ public class Cell extends Organism{
     }
 
     @Override
-    void Breed(ArrayList<Entity> entity_list) {
+    public void Breed(ArrayList<Entity> entity_list) {
         //For our best cells won't replicate themselves
     }
 }

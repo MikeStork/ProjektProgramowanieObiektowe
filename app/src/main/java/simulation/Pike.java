@@ -1,5 +1,7 @@
 package simulation;
 
+import java.util.ArrayList;
+
 public class Pike extends Fish {
     private static int p_count;
     Pike(int x, int y, Diet diet, int speed) {
@@ -9,5 +11,12 @@ public class Pike extends Fish {
         return p_count;
     }
 
-
+    /**
+     * Breeds organism of given type and appends it to list of games entities
+     * @param entity_list List of games entities
+     */
+    @Override
+    public void Breed(ArrayList<Entity> entity_list) {
+        entity_list.add(new Pike(this.position.x, this.position.y, this.diet, this.speed));
+    }
 }

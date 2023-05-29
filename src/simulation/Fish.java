@@ -8,4 +8,6 @@ public class Fish extends Cell {
     Fish(int x, int y, Diet diet, int speed) {
         super(x, y, diet, speed);
     }
+
+
 }
