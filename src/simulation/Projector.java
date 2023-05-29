@@ -70,12 +70,18 @@ public class Projector {
      */
     private void update() {
         this.cycle++;
-        for (int i = 0; i<ENTITY_LIST.size(); i++) {
+        for (int i = 0; i < ENTITY_LIST.size(); i++) {
             var ent = ENTITY_LIST.get(i);
             if(ent instanceof  Organism){
                 var org = (Organism)ent;
                 //Sprawdzenie otoczenia / podjęcie akcji
-                org.CheckSurroundings(this.ENTITY_LIST);
+                Entity nearby_entity = org.CheckSurroundings(this.ENTITY_LIST);
+                if(nearby_entity != null){
+                    if(org.getClass().equals(nearby_entity.getClass())){
+                        // Breed here
+//                        org.Breed(ENTITY_LIST);
+                    }
+                }
                 //poruszanie
                 ENTITY_MAP[org.position.x][org.position.y] = " ";
                 org.Move(WIDTH,HEIGHT);
