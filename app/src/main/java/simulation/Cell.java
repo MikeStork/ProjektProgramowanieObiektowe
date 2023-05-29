@@ -9,8 +9,12 @@ public class Cell extends Organism{
         this.SPRITE = CONSTANTS.PURPLE+"C"+CONSTANTS.RESET;
     }
 
+    /**
+     * Breeds organism of given type and appends it to list of games entities
+     * @param entity_list List of games entities
+     */
     @Override
-    void Breed(ArrayList<Entity> entity_list) {
-
+    public void Breed(ArrayList<Entity> entity_list) {
+        entity_list.add(new Cell(this.position.x, this.position.y, this.diet, this.speed));
     }
 }

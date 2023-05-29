@@ -1,5 +1,7 @@
 package simulation;
 
+import java.util.ArrayList;
+
 public class Eagle extends Bird {
     private static int e_count;
     Eagle(int x, int y, Diet diet, int speed) {
@@ -10,5 +12,13 @@ public class Eagle extends Bird {
     void LookForPray(){}
     public static int getNumberOfObjects() {
         return e_count;
+    }
+
+    /**
+     * Breeds organism of given type and appends it to list of games entities
+     * @param entity_list of games entities
+     */
+    public void Breed(ArrayList<Entity> entity_list) {
+        entity_list.add(new Eagle(this.position.x, this.position.y, this.diet, this.speed));
     }
 }

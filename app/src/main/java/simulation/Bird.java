@@ -3,6 +3,8 @@ package simulation;
 import simulation.bodyparts.Beak;
 import simulation.bodyparts.Wings;
 
+import java.util.ArrayList;
+
 public class Bird extends Cell {
     Wings wings = new Wings();
     Beak beak = new Beak();
@@ -30,5 +32,14 @@ public class Bird extends Cell {
      */
     public static int getNumberOfObjects() {
         return b_count;
+    }
+
+    /**
+     * Breeds organism of given type and appends it to list of games entities
+     * @param entity_list List of games entities
+     */
+    @Override
+    public void Breed(ArrayList<Entity> entity_list) {
+        entity_list.add(new Bird(this.position.x, this.position.y, this.diet, this.speed));
     }
 }
