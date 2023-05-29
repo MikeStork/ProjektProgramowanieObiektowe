@@ -1,5 +1,7 @@
 package simulation;
 
+import java.util.ArrayList;
+
 public class Tiger extends Cat {
 
     static int camouflage_ratio = 2;
@@ -8,4 +10,8 @@ public class Tiger extends Cat {
     }
     void LookForPray(){}
 
+    @Override
+    void Breed(ArrayList<Entity> entity_list) {
+
+    }
 }
