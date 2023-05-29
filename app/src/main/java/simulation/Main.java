@@ -1,5 +1,7 @@
 package simulation;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -26,7 +28,10 @@ public class Main{
         int num_of_weed = scanner.nextInt();
 
         Weed[] weed = new Weed[num_of_weed];
+        System.out.println("Download data after which cycles (enter each cycle natural number differentiating them with spaces. Pattern \"12 34 56\" or just \"12\"):");
+        String input = scanner.nextLine();
 
+        GAME.DATA_DUMP_CYCLES = parseNumbers(input);
         Random random = new Random();
 
         for(int i = 0; i < num_of_cells; i++)   {
@@ -50,5 +55,21 @@ public class Main{
     void Write2File(int[] tab)  {
 
 
+    }
+    private static ArrayList<Integer> parseNumbers(String input) {
+        ArrayList<Integer> numbers = new ArrayList<>();
+        String[] numberStrings = input.split(" ");
+
+        for (String numberString : numberStrings) {
+            try {
+                int number = Integer.parseInt(numberString);
+                numbers.add(number);
+            } catch (NumberFormatException e) {
+                // Handle invalid number format if needed
+                System.out.println("Invalid number format: " + numberString);
+            }
+        }
+
+        return numbers;
     }
 }
