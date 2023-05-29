@@ -2,10 +2,12 @@ package simulation;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Projector {
     static int WIDTH;
     static int HEIGHT;
+    public ArrayList<Integer>   DATA_DUMP_CYCLES;
     private boolean running;
     private final long OPTIMAL_TIME = 1000000000 / CONSTANTS.FPS_TARGET;
     public int cycle = 0;
@@ -20,7 +22,7 @@ public class Projector {
     /**
      * Game starting method, controlls game
      */
-    public void start() {
+    public void start(int[] tab) {
         running = true;
         long lastUpdateTime = System.nanoTime();
         while (running) {
@@ -39,7 +41,7 @@ public class Projector {
                     System.out.print("\033[H\033[2J");
                     System.out.flush();
                 }
-                update();
+                update(tab);
                 System.out.println(render(ENTITY_MAP));
                 for (int i = 0; i < WIDTH; i++) {
 
@@ -68,8 +70,10 @@ public class Projector {
     /**
      * Updates game state
      */
-    private void update() {
+    private void update(int[] tab) {
         this.cycle++;
+        Random r = new Random();
+
         for (int i = 0; i<ENTITY_LIST.size(); i++) {
             var ent = ENTITY_LIST.get(i);
             if(ent instanceof  Organism){
@@ -77,12 +81,74 @@ public class Projector {
                 //Sprawdzenie otoczenia / podjęcie akcji
                 org.CheckSurroundings(this.ENTITY_LIST);
                 //poruszanie
-                ENTITY_MAP[org.position.x][org.position.y] = " ";
-                org.Move(WIDTH,HEIGHT);
-                ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                if(org.getClass() == Cat.class) {
+
+                    if(((Cat) org).if_asleep)   {
+                        ((Cat) org).sleep();
+                    }   else {
+
+                        if(r.nextInt(0,20) > 17)    {
+                            ((Cat) org).if_asleep = true;
+                        }   else {
+
+                            ENTITY_MAP[org.position.x][org.position.y] = " ";
+                            org.Move(WIDTH,HEIGHT);
+                            ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                        }
+
+                    }
+
+                }   else if(org.getClass() == Fish.class)   {
+
+                    if(r.nextInt(0,20) > 18)    {
+
+                        ((Fish)org).CaughtByFisherman(ENTITY_LIST, (Fish) org);
+
+                    }   else {
+
+                        ENTITY_MAP[org.position.x][org.position.y] = " ";
+                        org.Move(WIDTH,HEIGHT);
+                        ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                    }
 
 
+
+                } else if(org.getClass() == Bird.class) {
+
+                    if(r.nextInt(0,20) > 17)    {
+
+                        ENTITY_MAP[org.position.x][org.position.y] = " ";
+                        ((Bird)org).FlyFast(WIDTH, HEIGHT, org);
+                        ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                    }   else {
+
+                        ENTITY_MAP[org.position.x][org.position.y] = " ";
+                        org.Move(WIDTH,HEIGHT);
+                        ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                    }
+
+                } else  {
+
+                    ENTITY_MAP[org.position.x][org.position.y] = " ";
+                    org.Move(WIDTH,HEIGHT);
+                    ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                }
             }
+        }
+
+        tab[13] = this.cycle;
+
+        if(this.cycle == this.DATA_DUMP_CYCLES.get(0)){
+            //
+            //data drop / data dump
+            //
+            this.DATA_DUMP_CYCLES.remove(0);
         }
     }
     /**
