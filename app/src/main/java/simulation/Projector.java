@@ -7,7 +7,7 @@ import java.util.Random;
 public class Projector {
     static int WIDTH;
     static int HEIGHT;
-    public ArrayList<Integer> DATA_DUMP_CYCLES;
+    public ArrayList<Integer>   DATA_DUMP_CYCLES;
     private boolean running;
     private final long OPTIMAL_TIME = 1000000000 / CONSTANTS.FPS_TARGET;
     public int cycle = 0;
@@ -142,7 +142,7 @@ public class Projector {
             }
         }
 
-        tab[10] = this.cycle;
+        tab[13] = this.cycle;
 
         if(this.cycle == this.DATA_DUMP_CYCLES.get(0)){
             //
