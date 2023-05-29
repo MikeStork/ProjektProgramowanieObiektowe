@@ -1,4 +1,4 @@
-package simulation;
+package simulation.simulation;
 
 public class CONSTANTS {
     public static final int DEFAULT_SPEED = 1;

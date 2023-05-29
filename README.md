@@ -45,7 +45,7 @@ Scrum master: Agnieszka Pisarek
   * Warunkowej zmiany miejsca przebywania (migracja)
 </p>
 <p>
-  Jednym z dodatkowych elementów byłaby zaawansowana ewolucja - zmiana epoki ewolucji. 
+  Jednym z dodatkowych elementów byłaby zaawansowana simulation - zmiana epoki ewolucji. 
   Przykładowo:
     <pre>Komórkowiec -> Mały organizm -> Zwierze -> Życie społeczne -> Cywilizacja</pre>
 </p>
@@ -66,7 +66,7 @@ Dziedziczenie może być zastosowane na wielu płaszczyznach. Organizm mięsoże
   * Warunkowej zmiany miejsca przebywania (migracja)
 </p>
 <p>
-  Jednym z dodatkowych elementów byłaby zaawansowana ewolucja - zmiana epoki ewolucji. 
+  Jednym z dodatkowych elementów byłaby zaawansowana simulation - zmiana epoki ewolucji. 
   Przykładowo:
     <pre>Komórkowiec -> Mały organizm -> Zwierze -> Życie społeczne -> Cywilizacja</pre>
 </p>

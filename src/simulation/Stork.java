@@ -1,4 +1,4 @@
-package simulation;
+package simulation.simulation;
 
 public class Stork extends Bird {
     Stork(int x, int y, Diet diet, int speed) {

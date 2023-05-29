@@ -1,4 +1,4 @@
-package simulation;
+package simulation.simulation;
 
 public class Cell extends Organism{
 
