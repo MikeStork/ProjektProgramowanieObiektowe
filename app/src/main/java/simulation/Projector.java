@@ -79,7 +79,8 @@ public class Projector {
             if(ent instanceof  Organism){
                 var org = (Organism)ent;
                 //Sprawdzenie otoczenia / podjęcie akcji
-                org.CheckSurroundings(this.ENTITY_LIST);
+                var toActWith = org.CheckSurroundings(this.ENTITY_LIST);
+                org.EatIfPossible(toActWith,ENTITY_LIST);
                 //poruszanie
 
                 if(org.getClass() == Cat.class) {

@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Organism extends Entity{
+public abstract class Organism extends Entity{
     Diet diet;
     int speed;
     int experience=0;
@@ -274,8 +274,10 @@ public class Organism extends Entity{
      * @param entity_list List of games entities
      */
     private void Eat(Entity e, ArrayList<Entity> entity_list){
-        this.experience += e.experience;
-        entity_list.remove(e);
+        if(e != null){
+            this.experience += e.experience;
+            entity_list.remove(e);
+        }
     }
     /**
      * Checks whether given entity can be consumed
@@ -291,15 +293,13 @@ public class Organism extends Entity{
                 break;
             }
             case Carnivore:{
-                if (e.getClass().equals(Weed.class)) {
-                    this.Eat(e, entity_list);
-                }else if(this.size > e.size){
-                    this.Eat(e, entity_list);
+                if (!e.getClass().equals(e.getClass()) && (!e.getClass().equals(Weed.class)) && (this.size > e.size) ){
+                        this.Eat(e, entity_list);
                 }
                 break;
             }
             case Omnivore:{
-                if(this.size > e.size){
+                if((this.size > e.size) && (!e.getClass().equals(e.getClass()))){
                     this.Eat(e, entity_list);
                 }
                 break;
@@ -310,7 +310,7 @@ public class Organism extends Entity{
     void StrongerBehaviour(){}
     void WeakerBehaviour(){}
 
-    public void Breed(ArrayList<Entity> entity_list){
+    abstract public void Breed(ArrayList<Entity> entity_list);
 
-    }
+
 }

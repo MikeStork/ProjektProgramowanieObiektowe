@@ -3,348 +3,338 @@
   <ID>JAVA</ID>
   <OriginalElement>C:/Users/PC COMPUTER/IdeaProjects/ProjektProgramowanieObiektowe</OriginalElement>
   <nodes>
-    <node x="1430.5044047619047" y="1406.5">simulation.Cougar</node>
-    <node x="1977.0419047619048" y="888.5">simulation.bodyparts.Wings</node>
-    <node x="395.9807142857144" y="505.5">simulation.Weed</node>
-    <node x="2204.041904761905" y="888.5">simulation.bodyparts.Beak</node>
-    <node x="605.6236904761904" y="1207.5">simulation.Main</node>
-    <node x="2456.791904761905" y="1406.5">simulation.Stork</node>
-    <node x="332.9986904761904" y="-14.0">simulation.Position</node>
-    <node x="1091.6236904761904" y="148.0">simulation.Diet</node>
-    <node x="1699.5044047619047" y="1419.0">simulation.Pike</node>
-    <node x="271.4986904761904" y="148.0">simulation.Entity</node>
-    <node x="2014.6669047619048" y="1394.5">simulation.Eagle</node>
-    <node x="1089.3125" y="1207.5">simulation.Cat</node>
-    <node x="133.0" y="505.5">simulation.Water</node>
-    <node x="866.0669047619047" y="1394.0">simulation.Tiger</node>
-    <node x="1264.1294047619047" y="876.5">simulation.Cell</node>
-    <node x="2036.3794047619047" y="1171.0">simulation.Bird</node>
-    <node x="598.9807142857143" y="385.0">simulation.Organism</node>
-    <node x="1040.1294047619047" y="888.5">simulation.bodyparts.Claws</node>
-    <node x="1122.0669047619047" y="1406.5">simulation.Amfiprion</node>
-    <node x="1511.1294047619047" y="888.5">simulation.bodyparts.Fins</node>
-    <node x="1496.1669047619048" y="1207.5">simulation.Fish</node>
-    <node x="237.98071428571438" y="768.0">simulation.Projector</node>
+    <node x="659.3786407766988" y="2151.0">simulation.Projector</node>
+    <node x="459.90981245589865" y="717.4999999999998">simulation.bodyparts</node>
+    <node x="657.8786407766988" y="2556.0">simulation.Main</node>
+    <node x="830.6286407766988" y="1647.9999999999998">simulation.Organism</node>
+    <node x="761.4098124558986" y="1446.9999999999998">simulation.Tiger</node>
+    <node x="279.40981245589865" y="1471.4999999999998">simulation.Stork</node>
+    <node x="934.2848124558986" y="1235.9999999999998">simulation.Cat</node>
+    <node x="1085.2183964157975" y="1471.4999999999998">simulation.Cougar</node>
+    <node x="919.0348124558986" y="85.49999999999977">simulation.Entity</node>
+    <node x="491.40981245589865" y="1459.4999999999998">simulation.Eagle</node>
+    <node x="72.9626006764488" y="1248.4999999999998">simulation.Fish</node>
+    <node x="1333.8433964157975" y="1059.9999999999998">simulation.Cell</node>
+    <node x="947.0348124558986" y="-775.0000000000002">simulation.Position</node>
+    <node x="728.4098124558986" y="1211.9999999999998">simulation.Bird</node>
+    <node x="39.409812455898646" y="1471.4999999999998">simulation.Amfiprion</node>
+    <node x="144.40981245589865" y="97.49999999999977">simulation.Diet</node>
+    <node x="1590.0933964157975" y="-586.0000000000002">simulation.CONSTANTS</node>
+    <node x="-165.59018754410135" y="1483.9999999999998">simulation.Pike</node>
+    <node x="1690.7848124558986" y="1072.4999999999998">simulation.Weed</node>
   </nodes>
   <notes />
   <edges>
     <edge source="simulation.Pike" target="simulation.Diet" relationship="DEPENDENCY">
-      <point x="57.5" y="-31.5" />
-      <point x="1872.0044047619047" y="1373.0" />
-      <point x="1890.9169047619048" y="1373.0" />
-      <point x="1890.9169047619048" y="364.0" />
-      <point x="1754.475" y="364.0" />
-      <point x="1754.475" y="354.0" />
-      <point x="1220.6236904761904" y="354.0" />
-      <point x="43.0" y="92.5" />
-    </edge>
-    <edge source="simulation.Main" target="simulation.Water" relationship="CREATE">
-      <point x="-41.0" y="-44.0" />
-      <point x="646.6236904761904" y="1149.0" />
-      <point x="541.9419047619047" y="1149.0" />
-      <point x="541.9419047619047" y="1139.0" />
-      <point x="225.0" y="1139.0" />
-      <point x="0.0" y="44.0" />
-    </edge>
-    <edge source="simulation.Projector" target="simulation.Entity" relationship="TO_MANY">
-      <point x="-59.75" y="-164.5" />
-      <point x="297.7307142857144" y="741.0" />
-      <point x="383.0" y="741.0" />
-      <point x="383.0" y="354.0" />
-      <point x="340.2486904761904" y="354.0" />
-      <point x="-68.75" y="92.5" />
+      <point x="-2.0802005053610628E-4" y="31.5" />
+      <point x="-73.09039556415189" y="1616.4999999999998" />
+      <point x="-183.090395564152" y="1616.4999999999998" />
+      <point x="-183.090395564152" y="1180.4999999999998" />
+      <point x="230.4096044358481" y="1180.4999999999998" />
+      <point x="-2.0802005053610628E-4" y="92.5" />
     </edge>
     <edge source="simulation.Projector" target="simulation.Organism" relationship="DEPENDENCY">
-      <point x="59.75" y="-164.5" />
-      <point x="417.2307142857144" y="741.0" />
-      <point x="642.8140476190476" y="741.0" />
-      <point x="-87.66666666666663" y="164.5" />
+      <point x="25.749999999999886" y="-176.5" />
+      <point x="-158.5" y="224.5" />
     </edge>
     <edge source="simulation.Cat" target="simulation.Diet" relationship="DEPENDENCY">
-      <point x="28.125" y="-44.0" />
-      <point x="1229.9375" y="1149.0" />
-      <point x="1253.6294047619047" y="1149.0" />
-      <point x="1253.6294047619047" y="364.0" />
-      <point x="1754.475" y="364.0" />
-      <point x="1754.475" y="354.0" />
-      <point x="1220.6236904761904" y="354.0" />
-      <point x="43.0" y="92.5" />
+      <point x="-2.08020050564528E-4" y="-56.5" />
+      <point x="1051.284604435848" y="1180.4999999999998" />
+      <point x="230.4096044358481" y="1180.4999999999998" />
+      <point x="-2.0802005053610628E-4" y="92.5" />
     </edge>
-    <edge source="simulation.Cat" target="simulation.bodyparts.Claws" relationship="CREATE">
-      <point x="-84.375" y="-44.0" />
-      <point x="1117.4375" y="1149.0" />
-      <point x="1090.8794047619047" y="1149.0" />
-      <point x="-50.75" y="44.0" />
+    <edge source="simulation.Cat" target="simulation.Entity" relationship="DEPENDENCY">
+      <point x="14.999791979949435" y="-56.5" />
+      <point x="1066.284604435848" y="1209.4999999999998" />
+      <point x="1036.284604435848" y="1209.4999999999998" />
+      <point x="-20.250208020050565" y="104.5" />
     </edge>
-    <edge source="simulation.Cell" target="simulation.Organism" relationship="GENERALIZATION">
-      <point x="-56.75" y="-56.0" />
-      <point x="1320.8794047619047" y="741.0" />
-      <point x="818.1473809523809" y="741.0" />
-      <point x="87.66666666666663" y="164.5" />
+    <edge source="simulation.Weed" target="simulation.CONSTANTS" relationship="DEPENDENCY">
+      <point x="-2.0802005042241944E-4" y="-31.5" />
+      <point x="1759.784604435848" y="983.4999999999998" />
+      <point x="1313.251604435848" y="983.4999999999998" />
+      <point x="1313.251604435848" y="189.99999999999977" />
+      <point x="-145.99979197994935" y="0.0" />
     </edge>
     <edge source="simulation.Cougar" target="simulation.Diet" relationship="DEPENDENCY">
-      <point x="62.25" y="-44.0" />
-      <point x="1617.2544047619047" y="1353.0" />
-      <point x="1781.5625" y="1353.0" />
-      <point x="1781.5625" y="364.0" />
-      <point x="1754.475" y="364.0" />
-      <point x="1754.475" y="354.0" />
-      <point x="1220.6236904761904" y="354.0" />
-      <point x="43.0" y="92.5" />
+      <point x="2.0802005064979312E-4" y="44.0" />
+      <point x="1188.7186044358482" y="1616.4999999999998" />
+      <point x="-183.090395564152" y="1616.4999999999998" />
+      <point x="-183.090395564152" y="1180.4999999999998" />
+      <point x="230.4096044358481" y="1180.4999999999998" />
+      <point x="-2.0802005053610628E-4" y="92.5" />
     </edge>
-    <edge source="simulation.Fish" target="simulation.bodyparts.Fins" relationship="CREATE">
-      <point x="-28.75" y="-44.0" />
-      <point x="1582.4169047619048" y="1139.0" />
-      <point x="1562.8794047619047" y="1139.0" />
-      <point x="-51.75" y="44.0" />
+    <edge source="simulation.Organism" target="simulation.Cell" relationship="DEPENDENCY">
+      <point x="166.0" y="-15.0" />
+      <point x="1480.8436044358482" y="1857.4999999999998" />
+      <point x="30.00020802005065" y="44.0" />
     </edge>
     <edge source="simulation.Entity" target="simulation.Position" relationship="TO_ONE">
-      <point x="68.75" y="-92.5" />
-      <point x="477.7486904761904" y="123.0" />
-      <point x="446.9986904761904" y="123.0" />
-      <point x="38.0" y="56.0" />
+      <point x="5.0" y="-104.5" />
+      <point x="0.0" y="68.5" />
     </edge>
-    <edge source="simulation.Organism" target="simulation.Diet" relationship="TO_ONE">
-      <point x="65.75" y="-164.5" />
-      <point x="796.2307142857143" y="354.0" />
-      <point x="1134.6236904761904" y="354.0" />
-      <point x="-43.0" y="92.5" />
+    <edge source="simulation.Organism" target="simulation.Position" relationship="DEPENDENCY">
+      <point x="-166.0" y="60.0" />
+      <point x="-198.090395564152" y="1932.4999999999998" />
+      <point x="-198.090395564152" y="-706.5000000000002" />
+      <point x="-114.5" y="0.0" />
     </edge>
-    <edge source="simulation.Bird" target="simulation.bodyparts.Beak" relationship="TO_ONE">
-      <point x="-28.5" y="-80.5" />
-      <point x="2121.879404761905" y="1139.0" />
-      <point x="2028.7919047619048" y="1139.0" />
-      <point x="2028.7919047619048" y="1129.0" />
-      <point x="2274.291904761905" y="1129.0" />
-      <point x="-70.25" y="44.0" />
+    <edge source="simulation.Organism" target="simulation.Weed" relationship="DEPENDENCY">
+      <point x="166.0" y="30.0" />
+      <point x="1759.7848124558986" y="1902.4999999999998" />
+      <point x="0.0" y="31.5" />
     </edge>
     <edge source="simulation.Weed" target="simulation.Entity" relationship="GENERALIZATION">
-      <point x="0.0" y="-44.0" />
-      <point x="487.4807142857144" y="364.0" />
-      <point x="440.6625" y="364.0" />
-      <point x="440.6625" y="354.0" />
-      <point x="477.7486904761904" y="354.0" />
-      <point x="68.75" y="92.5" />
+      <point x="-15.000208020050422" y="-31.5" />
+      <point x="1744.784604435848" y="998.4999999999998" />
+      <point x="1196.251604435848" y="998.4999999999998" />
+      <point x="1196.251604435848" y="882.9999999999998" />
+      <point x="1051.284604435848" y="882.9999999999998" />
+      <point x="-5.2502080200505645" y="104.5" />
+    </edge>
+    <edge source="simulation.Projector" target="simulation.CONSTANTS" relationship="DEPENDENCY">
+      <point x="152.99996365914916" y="-2.2737367544323206E-13" />
+      <point x="1313.251604435848" y="2327.5" />
+      <point x="1313.251604435848" y="189.99999999999977" />
+      <point x="-145.99979197994935" y="0.0" />
     </edge>
     <edge source="simulation.Fish" target="simulation.Cell" relationship="GENERALIZATION">
-      <point x="-86.25" y="-44.0" />
-      <point x="1524.9169047619048" y="1149.0" />
-      <point x="1377.6294047619047" y="1149.0" />
-      <point x="0.0" y="56.0" />
+      <point x="-14.999996240600694" y="-44.0" />
+      <point x="150.4626044358481" y="1164.4999999999998" />
+      <point x="1435.8436044358482" y="1164.4999999999998" />
+      <point x="-14.99979197994935" y="44.0" />
     </edge>
-    <edge source="simulation.Bird" target="simulation.bodyparts.Wings" relationship="TO_ONE">
-      <point x="-28.5" y="-80.5" />
-      <point x="2121.879404761905" y="1139.0" />
-      <point x="2028.7919047619048" y="1139.0" />
-      <point x="-51.75" y="44.0" />
-    </edge>
-    <edge source="simulation.Organism" target="simulation.Entity" relationship="GENERALIZATION">
-      <point x="-65.75" y="-164.5" />
-      <point x="664.7307142857143" y="364.0" />
-      <point x="440.6625" y="364.0" />
-      <point x="440.6625" y="354.0" />
-      <point x="477.7486904761904" y="354.0" />
-      <point x="68.75" y="92.5" />
-    </edge>
-    <edge source="simulation.Main" target="simulation.Diet" relationship="DEPENDENCY">
-      <point x="41.0" y="-44.0" />
-      <point x="728.6236904761904" y="1149.0" />
-      <point x="872.4807142857143" y="1149.0" />
-      <point x="872.4807142857143" y="364.0" />
-      <point x="1754.475" y="364.0" />
-      <point x="1754.475" y="354.0" />
-      <point x="1220.6236904761904" y="354.0" />
-      <point x="43.0" y="92.5" />
+    <edge source="simulation.Organism" target="simulation.Fish" relationship="CREATE">
+      <point x="-166.0" y="90.0" />
+      <point x="-228.090395564152" y="1962.4999999999998" />
+      <point x="-228.090395564152" y="1292.4999999999998" />
+      <point x="-92.5" y="0.0" />
     </edge>
     <edge source="simulation.Cougar" target="simulation.Cat" relationship="GENERALIZATION">
-      <point x="-62.25" y="-44.0" />
-      <point x="1492.7544047619047" y="1373.0" />
-      <point x="1201.8125" y="1373.0" />
-      <point x="0.0" y="44.0" />
-    </edge>
-    <edge source="simulation.Fish" target="simulation.bodyparts.Fins" relationship="TO_ONE">
-      <point x="28.75" y="-44.0" />
-      <point x="1639.9169047619048" y="1139.0" />
-      <point x="1666.3794047619047" y="1139.0" />
-      <point x="51.75" y="44.0" />
-    </edge>
-    <edge source="simulation.Bird" target="simulation.Diet" relationship="DEPENDENCY">
-      <point x="85.5" y="-80.5" />
-      <point x="2235.879404761905" y="1139.0" />
-      <point x="2495.541904761905" y="1139.0" />
-      <point x="2495.541904761905" y="364.0" />
-      <point x="1754.475" y="364.0" />
-      <point x="1754.475" y="354.0" />
-      <point x="1220.6236904761904" y="354.0" />
-      <point x="43.0" y="92.5" />
+      <point x="2.0802005064979312E-4" y="-44.0" />
+      <point x="1188.7186044358482" y="1410.4999999999998" />
+      <point x="1051.284604435848" y="1410.4999999999998" />
+      <point x="-2.08020050564528E-4" y="56.5" />
     </edge>
     <edge source="simulation.Amfiprion" target="simulation.Fish" relationship="GENERALIZATION">
-      <point x="66.0" y="-44.0" />
-      <point x="1320.0669047619047" y="1363.0" />
-      <point x="1611.1669047619048" y="1363.0" />
-      <point x="0.0" y="44.0" />
+      <point x="-2.0802005053610628E-4" y="-44.0" />
+      <point x="148.9096044358481" y="1404.4999999999998" />
+      <point x="165.4626044358481" y="1404.4999999999998" />
+      <point x="3.7593993056361796E-6" y="44.0" />
     </edge>
-    <edge source="simulation.Stork" target="simulation.Diet" relationship="DEPENDENCY">
-      <point x="59.25" y="-44.0" />
-      <point x="2634.541904761905" y="1373.0" />
-      <point x="2526.041904761905" y="1373.0" />
-      <point x="2526.041904761905" y="364.0" />
-      <point x="1754.475" y="364.0" />
-      <point x="1754.475" y="354.0" />
-      <point x="1220.6236904761904" y="354.0" />
-      <point x="43.0" y="92.5" />
+    <edge source="simulation.Tiger" target="simulation.Entity" relationship="DEPENDENCY">
+      <point x="116.99979197994944" y="-61.5" />
+      <point x="1262.751604435848" y="1453.9999999999998" />
+      <point x="1262.751604435848" y="1209.4999999999998" />
+      <point x="1036.284604435848" y="1209.4999999999998" />
+      <point x="-20.250208020050565" y="104.5" />
     </edge>
     <edge source="simulation.Pike" target="simulation.Fish" relationship="GENERALIZATION">
-      <point x="-57.5" y="-31.5" />
-      <point x="1757.0044047619047" y="1363.0" />
-      <point x="1611.1669047619048" y="1363.0" />
-      <point x="0.0" y="44.0" />
+      <point x="-2.0802005053610628E-4" y="-31.5" />
+      <point x="-73.09039556415189" y="1404.4999999999998" />
+      <point x="165.4626044358481" y="1404.4999999999998" />
+      <point x="3.7593993056361796E-6" y="44.0" />
     </edge>
-    <edge source="simulation.Eagle" target="simulation.Bird" relationship="GENERALIZATION">
-      <point x="-59.5" y="-56.0" />
-      <point x="2074.166904761905" y="1373.0" />
-      <point x="2150.379404761905" y="1373.0" />
-      <point x="0.0" y="80.5" />
-    </edge>
-    <edge source="simulation.Main" target="simulation.Projector" relationship="CREATE">
-      <point x="-41.0" y="-44.0" />
-      <point x="646.6236904761904" y="1149.0" />
-      <point x="541.9419047619047" y="1149.0" />
-      <point x="541.9419047619047" y="1139.0" />
-      <point x="357.4807142857144" y="1139.0" />
-      <point x="0.0" y="164.5" />
+    <edge source="simulation.Organism" target="simulation.Amfiprion" relationship="CREATE">
+      <point x="-166.0" y="-30.0" />
+      <point x="163.9096044358481" y="1842.4999999999998" />
+      <point x="14.999791979949464" y="44.0" />
     </edge>
     <edge source="simulation.Eagle" target="simulation.Diet" relationship="DEPENDENCY">
-      <point x="59.5" y="-56.0" />
-      <point x="2193.166904761905" y="1363.0" />
-      <point x="2506.041904761905" y="1363.0" />
-      <point x="2506.041904761905" y="364.0" />
-      <point x="1754.475" y="364.0" />
-      <point x="1754.475" y="354.0" />
-      <point x="1220.6236904761904" y="354.0" />
-      <point x="43.0" y="92.5" />
+      <point x="-2.0802005053610628E-4" y="56.0" />
+      <point x="595.409604435848" y="1616.4999999999998" />
+      <point x="-183.090395564152" y="1616.4999999999998" />
+      <point x="-183.090395564152" y="1180.4999999999998" />
+      <point x="230.4096044358481" y="1180.4999999999998" />
+      <point x="-2.0802005053610628E-4" y="92.5" />
     </edge>
     <edge source="simulation.Amfiprion" target="simulation.Diet" relationship="DEPENDENCY">
-      <point x="-66.0" y="-44.0" />
-      <point x="1188.0669047619047" y="1363.0" />
-      <point x="1029.6294047619047" y="1363.0" />
-      <point x="1029.6294047619047" y="364.0" />
-      <point x="1754.475" y="364.0" />
-      <point x="1754.475" y="354.0" />
-      <point x="1220.6236904761904" y="354.0" />
-      <point x="43.0" y="92.5" />
-    </edge>
-    <edge source="simulation.Bird" target="simulation.Cell" relationship="GENERALIZATION">
-      <point x="-85.5" y="-80.5" />
-      <point x="2064.879404761905" y="1149.0" />
-      <point x="1377.6294047619047" y="1149.0" />
-      <point x="0.0" y="56.0" />
-    </edge>
-    <edge source="simulation.Cat" target="simulation.bodyparts.Claws" relationship="TO_ONE">
-      <point x="-28.125" y="-44.0" />
-      <point x="1173.6875" y="1149.0" />
-      <point x="1192.3794047619047" y="1149.0" />
-      <point x="50.75" y="44.0" />
+      <point x="-2.0802005053610628E-4" y="44.0" />
+      <point x="148.9096044358481" y="1616.4999999999998" />
+      <point x="-183.090395564152" y="1616.4999999999998" />
+      <point x="-183.090395564152" y="1180.4999999999998" />
+      <point x="230.4096044358481" y="1180.4999999999998" />
+      <point x="-2.0802005053610628E-4" y="92.5" />
     </edge>
     <edge source="simulation.Tiger" target="simulation.Cat" relationship="GENERALIZATION">
-      <point x="59.0" y="-56.5" />
-      <point x="1043.0669047619047" y="1373.0" />
-      <point x="1201.8125" y="1373.0" />
-      <point x="0.0" y="44.0" />
-    </edge>
-    <edge source="simulation.Bird" target="simulation.bodyparts.Wings" relationship="CREATE">
-      <point x="28.5" y="-80.5" />
-      <point x="2178.879404761905" y="1149.0" />
-      <point x="2284.291904761905" y="1149.0" />
-      <point x="2284.291904761905" y="1119.0" />
-      <point x="2132.291904761905" y="1119.0" />
-      <point x="51.75" y="44.0" />
-    </edge>
-    <edge source="simulation.Cat" target="simulation.Cell" relationship="GENERALIZATION">
-      <point x="84.375" y="-44.0" />
-      <point x="1286.1875" y="1149.0" />
-      <point x="1377.6294047619047" y="1149.0" />
-      <point x="0.0" y="56.0" />
+      <point x="-2.0802005055031714E-4" y="-68.5" />
+      <point x="878.409604435848" y="1410.4999999999998" />
+      <point x="1051.284604435848" y="1410.4999999999998" />
+      <point x="-2.08020050564528E-4" y="56.5" />
     </edge>
     <edge source="simulation.Stork" target="simulation.Bird" relationship="GENERALIZATION">
-      <point x="-59.25" y="-44.0" />
-      <point x="2516.041904761905" y="1373.0" />
-      <point x="2150.379404761905" y="1373.0" />
-      <point x="0.0" y="80.5" />
+      <point x="-2.0802005053610628E-4" y="-44.0" />
+      <point x="375.409604435848" y="1410.4999999999998" />
+      <point x="819.909604435848" y="1410.4999999999998" />
+      <point x="-2.0802005055031714E-4" y="80.5" />
     </edge>
-    <edge source="simulation.Bird" target="simulation.bodyparts.Beak" relationship="CREATE">
-      <point x="28.5" y="-80.5" />
-      <point x="2178.879404761905" y="1149.0" />
-      <point x="2284.291904761905" y="1149.0" />
-      <point x="2284.291904761905" y="1119.0" />
-      <point x="2414.791904761905" y="1119.0" />
-      <point x="70.25" y="44.0" />
+    <edge source="simulation.Organism" target="simulation.Cat" relationship="CREATE">
+      <point x="69.65596365914925" y="-224.5" />
+      <point x="14.999791979949435" y="56.5" />
     </edge>
-    <edge source="simulation.Main" target="simulation.Organism" relationship="CREATE">
-      <point x="-41.0" y="-44.0" />
-      <point x="646.6236904761904" y="1149.0" />
-      <point x="541.9419047619047" y="1149.0" />
-      <point x="541.9419047619047" y="1139.0" />
-      <point x="728.1460714285713" y="1139.0" />
-      <point x="728.1460714285713" y="741.0" />
-      <point x="730.4807142857143" y="741.0" />
-      <point x="0.0" y="164.5" />
+    <edge source="simulation.Organism" target="simulation.Bird" relationship="CREATE">
+      <point x="-166.0" y="-60.0" />
+      <point x="743.9098124558986" y="1812.4999999999998" />
+      <point x="-76.0" y="80.5" />
     </edge>
-    <edge source="simulation.Cell" target="simulation.Diet" relationship="DEPENDENCY">
-      <point x="56.75" y="-56.0" />
-      <point x="1434.3794047619047" y="741.0" />
-      <point x="1382.8794047619047" y="741.0" />
-      <point x="1382.8794047619047" y="364.0" />
-      <point x="1754.475" y="364.0" />
-      <point x="1754.475" y="354.0" />
-      <point x="1220.6236904761904" y="354.0" />
-      <point x="43.0" y="92.5" />
+    <edge source="simulation.Organism" target="simulation.Stork" relationship="CREATE">
+      <point x="-166.0" y="-45.0" />
+      <point x="390.409604435848" y="1827.4999999999998" />
+      <point x="14.999791979949464" y="44.0" />
     </edge>
     <edge source="simulation.Main" target="simulation.Weed" relationship="CREATE">
-      <point x="-41.0" y="-44.0" />
-      <point x="646.6236904761904" y="1149.0" />
-      <point x="541.9419047619047" y="1149.0" />
-      <point x="541.9419047619047" y="1139.0" />
-      <point x="487.48071428571427" y="1139.0" />
-      <point x="0.0" y="44.0" />
+      <point x="154.5" y="29.999999999999773" />
+      <point x="1774.7848124558986" y="2642.0" />
+      <point x="15.0" y="31.5" />
     </edge>
     <edge source="simulation.Entity" target="simulation.Position" relationship="CREATE">
-      <point x="-68.75" y="-92.5" />
-      <point x="340.2486904761904" y="123.0" />
-      <point x="370.9986904761904" y="123.0" />
-      <point x="-38.0" y="56.0" />
-    </edge>
-    <edge source="simulation.Fish" target="simulation.Diet" relationship="DEPENDENCY">
-      <point x="86.25" y="-44.0" />
-      <point x="1697.4169047619048" y="1139.0" />
-      <point x="1740.6294047619047" y="1139.0" />
-      <point x="1740.6294047619047" y="364.0" />
-      <point x="1754.475" y="364.0" />
-      <point x="1754.475" y="354.0" />
-      <point x="1220.6236904761904" y="354.0" />
-      <point x="43.0" y="92.5" />
-    </edge>
-    <edge source="simulation.Water" target="simulation.Entity" relationship="GENERALIZATION">
-      <point x="0.0" y="-44.0" />
-      <point x="225.0" y="364.0" />
-      <point x="440.6625" y="364.0" />
-      <point x="440.6625" y="354.0" />
-      <point x="477.7486904761904" y="354.0" />
-      <point x="68.75" y="92.5" />
+      <point x="20.0" y="-104.5" />
+      <point x="15.0" y="68.5" />
     </edge>
     <edge source="simulation.Tiger" target="simulation.Diet" relationship="DEPENDENCY">
-      <point x="-59.0" y="-56.5" />
-      <point x="925.0669047619047" y="1373.0" />
-      <point x="921.5" y="1373.0" />
-      <point x="921.5" y="364.0" />
-      <point x="1754.475" y="364.0" />
-      <point x="1754.475" y="354.0" />
-      <point x="1220.6236904761904" y="354.0" />
-      <point x="43.0" y="92.5" />
+      <point x="-2.0802005055031714E-4" y="68.5" />
+      <point x="878.409604435848" y="1616.4999999999998" />
+      <point x="-183.090395564152" y="1616.4999999999998" />
+      <point x="-183.090395564152" y="1180.4999999999998" />
+      <point x="230.4096044358481" y="1180.4999999999998" />
+      <point x="-2.0802005053610628E-4" y="92.5" />
+    </edge>
+    <edge source="simulation.Organism" target="simulation.Cougar" relationship="CREATE">
+      <point x="166.0" y="-30.0" />
+      <point x="1203.7186044358482" y="1842.4999999999998" />
+      <point x="15.00020802005065" y="44.0" />
+    </edge>
+    <edge source="simulation.Cell" target="simulation.CONSTANTS" relationship="DEPENDENCY">
+      <point x="-116.99979197994935" y="0.0" />
+      <point x="1313.251604435848" y="1103.9999999999998" />
+      <point x="1313.251604435848" y="189.99999999999977" />
+      <point x="-145.99979197994935" y="0.0" />
+    </edge>
+    <edge source="simulation.Projector" target="simulation.Entity" relationship="TO_MANY">
+      <point x="-153.0" y="0.0" />
+      <point x="-243.090395564152" y="2327.5" />
+      <point x="-243.090395564152" y="67.99999999999977" />
+      <point x="1046.5348124558986" y="67.99999999999977" />
+      <point x="-10.0" y="-104.5" />
+    </edge>
+    <edge source="simulation.Organism" target="simulation.Tiger" relationship="CREATE">
+      <point x="-8.718828320800185" y="-224.5" />
+      <point x="109.5" y="68.5" />
+    </edge>
+    <edge source="simulation.Organism" target="simulation.CONSTANTS" relationship="DEPENDENCY">
+      <point x="165.99996365914927" y="0.0" />
+      <point x="1313.251604435848" y="1872.4999999999998" />
+      <point x="1313.251604435848" y="189.99999999999977" />
+      <point x="-145.99979197994935" y="0.0" />
+    </edge>
+    <edge source="simulation.Organism" target="simulation.Pike" relationship="CREATE">
+      <point x="-166.0" y="-15.0" />
+      <point x="-58.09039556415189" y="1857.4999999999998" />
+      <point x="14.999791979949464" y="31.5" />
+    </edge>
+    <edge source="simulation.Cell" target="simulation.Organism" relationship="GENERALIZATION">
+      <point x="45.00020802005065" y="44.0" />
+      <point x="1495.8436044358482" y="1887.4999999999998" />
+      <point x="166.0" y="15.0" />
+    </edge>
+    <edge source="simulation.Organism" target="simulation.Diet" relationship="TO_ONE">
+      <point x="-166.0" y="75.0" />
+      <point x="-213.090395564152" y="1947.4999999999998" />
+      <point x="-213.090395564152" y="189.99999999999977" />
+      <point x="-86.0" y="0.0" />
+    </edge>
+    <edge source="simulation.Cougar" target="simulation.CONSTANTS" relationship="DEPENDENCY">
+      <point x="103.50020802005065" y="0.0" />
+      <point x="1313.251604435848" y="1515.4999999999998" />
+      <point x="1313.251604435848" y="189.99999999999977" />
+      <point x="-145.99979197994935" y="0.0" />
+    </edge>
+    <edge source="simulation.Cell" target="simulation.Entity" relationship="DEPENDENCY">
+      <point x="15.00020802005065" y="44.0" />
+      <point x="1465.8436044358482" y="1209.4999999999998" />
+      <point x="1036.284604435848" y="1209.4999999999998" />
+      <point x="-20.250208020050565" y="104.5" />
+    </edge>
+    <edge source="simulation.Organism" target="simulation.Entity" relationship="GENERALIZATION">
+      <point x="16.28096365914925" y="-224.5" />
+      <point x="1012.909604435848" y="1366.4999999999998" />
+      <point x="1196.251604435848" y="1366.4999999999998" />
+      <point x="1196.251604435848" y="882.9999999999998" />
+      <point x="1051.284604435848" y="882.9999999999998" />
+      <point x="-5.2502080200505645" y="104.5" />
+    </edge>
+    <edge source="simulation.Main" target="simulation.Diet" relationship="DEPENDENCY">
+      <point x="154.49996365914916" y="-2.2737367544323206E-13" />
+      <point x="1180.128604435848" y="2612.0" />
+      <point x="1180.128604435848" y="1616.4999999999998" />
+      <point x="-183.090395564152" y="1616.4999999999998" />
+      <point x="-183.090395564152" y="1180.4999999999998" />
+      <point x="230.4096044358481" y="1180.4999999999998" />
+      <point x="-2.0802005053610628E-4" y="92.5" />
+    </edge>
+    <edge source="simulation.Main" target="simulation.Cell" relationship="CREATE">
+      <point x="154.5" y="14.999999999999773" />
+      <point x="1510.8436044358482" y="2627.0" />
+      <point x="60.00020802005065" y="44.0" />
+    </edge>
+    <edge source="simulation.Bird" target="simulation.Diet" relationship="DEPENDENCY">
+      <point x="-2.0802005055031714E-4" y="-80.5" />
+      <point x="819.909604435848" y="1180.4999999999998" />
+      <point x="230.4096044358481" y="1180.4999999999998" />
+      <point x="-2.0802005053610628E-4" y="92.5" />
+    </edge>
+    <edge source="simulation.Stork" target="simulation.Diet" relationship="DEPENDENCY">
+      <point x="-2.0802005053610628E-4" y="44.0" />
+      <point x="375.409604435848" y="1616.4999999999998" />
+      <point x="-183.090395564152" y="1616.4999999999998" />
+      <point x="-183.090395564152" y="1180.4999999999998" />
+      <point x="230.4096044358481" y="1180.4999999999998" />
+      <point x="-2.0802005053610628E-4" y="92.5" />
+    </edge>
+    <edge source="simulation.Organism" target="simulation.Eagle" relationship="CREATE">
+      <point x="-166.0" y="45.0" />
+      <point x="610.409604435848" y="1917.4999999999998" />
+      <point x="14.999791979949464" y="56.0" />
+    </edge>
+    <edge source="simulation.Eagle" target="simulation.Bird" relationship="GENERALIZATION">
+      <point x="-2.0802005053610628E-4" y="-56.0" />
+      <point x="595.409604435848" y="1410.4999999999998" />
+      <point x="819.909604435848" y="1410.4999999999998" />
+      <point x="-2.0802005055031714E-4" y="80.5" />
+    </edge>
+    <edge source="simulation.Main" target="simulation.Projector" relationship="CREATE">
+      <point x="0.0" y="-56.0" />
+      <point x="0.0" y="176.5" />
+    </edge>
+    <edge source="simulation.Bird" target="simulation.Cell" relationship="GENERALIZATION">
+      <point x="14.99979197994945" y="-80.5" />
+      <point x="834.909604435848" y="1164.4999999999998" />
+      <point x="1435.8436044358482" y="1164.4999999999998" />
+      <point x="-14.99979197994935" y="44.0" />
+    </edge>
+    <edge source="simulation.Cat" target="simulation.Cell" relationship="GENERALIZATION">
+      <point x="-30.000208020050565" y="-56.5" />
+      <point x="1021.284604435848" y="1164.4999999999998" />
+      <point x="1435.8436044358482" y="1164.4999999999998" />
+      <point x="-14.99979197994935" y="44.0" />
+    </edge>
+    <edge source="simulation.Cell" target="simulation.Diet" relationship="DEPENDENCY">
+      <point x="2.0802005064979312E-4" y="44.0" />
+      <point x="1450.8436044358482" y="1180.4999999999998" />
+      <point x="230.4096044358481" y="1180.4999999999998" />
+      <point x="-2.0802005053610628E-4" y="92.5" />
+    </edge>
+    <edge source="simulation.Fish" target="simulation.Diet" relationship="DEPENDENCY">
+      <point x="3.7593993056361796E-6" y="-44.0" />
+      <point x="165.4626044358481" y="1180.4999999999998" />
+      <point x="230.4096044358481" y="1180.4999999999998" />
+      <point x="-2.0802005053610628E-4" y="92.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic" zoom="0.6288260364199922" showDependencies="true" x="1493.4716574245217" y="732.6460258780036" />
-  <SelectedNodes />
+  <settings layout="Hierarchic" zoom="0.3612474732890557" showDependencies="true" x="868.2516044358483" y="956.4999999999998" />
+  <SelectedNodes>
+    <node>simulation.bodyparts</node>
+  </SelectedNodes>
   <Categories>
     <Category>Constructors</Category>
     <Category>Fields</Category>
