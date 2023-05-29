@@ -15,6 +15,7 @@ public class Bird extends Cell {
         this.SPRITE = CONSTANTS.RED+"B"+CONSTANTS.RESET;
         b_count++;
         this.SPRITE = CONSTANTS.BLUE_UNDERLINED+"B"+CONSTANTS.RESET;
+        this.size = 2;
     }
     /**
      * @exception Unimplemented

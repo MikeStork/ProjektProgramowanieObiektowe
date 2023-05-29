@@ -10,6 +10,7 @@ public class Tiger extends Cat {
         super(x, y, diet, speed, if_asleep,sleep_count);
         this.SPRITE = CONSTANTS.CYAN+"T"+CONSTANTS.RESET;
         t_count++;
+        this.size = 4;
     }
     void LookForPray(){}
 

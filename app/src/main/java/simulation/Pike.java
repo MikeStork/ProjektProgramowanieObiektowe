@@ -8,6 +8,7 @@ public class Pike extends Fish {
         super(x, y, diet, speed);
         this.SPRITE = CONSTANTS.GREEN_BOLD+"S"+CONSTANTS.RESET;
         p_count++;
+        this.size = 2;
     } public static int getNumberOfObjects() {
         return p_count;
     }

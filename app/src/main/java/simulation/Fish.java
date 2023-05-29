@@ -13,6 +13,7 @@ public class Fish extends Cell {
         super(x, y, diet, speed);
         this.SPRITE = CONSTANTS.BLUE+"F"+CONSTANTS.RESET;
         f_count++;
+        this.size = 1;
     }
 
     void CaughtByFisherman(ArrayList entity_list, Fish fish)    {

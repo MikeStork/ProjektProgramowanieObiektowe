@@ -10,6 +10,7 @@ public class Cougar extends Cat {
         super(x, y, diet, speed, if_asleep, sleep_count);
         this.SPRITE = CONSTANTS.YELLOW_BOLD+ "P"+CONSTANTS.RESET;
         co_count++;
+        this.size = 4;
     }
     public static int getNumberOfObjects() {
         return co_count;
