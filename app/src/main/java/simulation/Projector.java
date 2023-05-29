@@ -145,8 +145,6 @@ public class Projector {
             }
         }
 
-        tab[13] = this.cycle;
-
         if(this.cycle == this.DATA_DUMP_CYCLES.get(0)){
             //
             //data drop / data dump
@@ -175,10 +173,10 @@ public class Projector {
         tab[6] = Fish.getNumberOfObjects();
         tab[7] = Tiger.getNumberOfObjects();
         tab[8] = Cougar.getNumberOfObjects();
-        tab[9] = Eagle.getNumberOfObjects();
-        tab[10] = Pike.getNumberOfObjects();
-        tab[11] = Amfiprion.getNumberOfObjects();
-        tab[12] = Stork.getNumberOfObjects();
+        tab[9] = ;
+        tab[10] = ;
+        tab[11] = ;
+        Stork.getNumberOfObjects();
 
         try (PrintWriter writer = new PrintWriter(new FileWriter(fileName))) {
 
@@ -190,10 +188,10 @@ public class Projector {
             writer.println("There were " + tab[6] + " fishes during simulation.");
             writer.println("There were " + tab[7] + " tigers during simulation.");
             writer.println("There were " + tab[8] + " cougars during simulation.");
-            writer.println("There were " + tab[9] + " eagles during simulation.");
-            writer.println("There were " + tab[10] + " pikes during simulation.");
-            writer.println("There were " + tab[11] + " amfiprions during simulation.");
-            writer.println("There were " + tab[12] + " storks during simulation.");
+            writer.println("There were " + Eagle.getNumberOfObjects() + " eagles during simulation.");
+            writer.println("There were " + Pike.getNumberOfObjects() + " pikes during simulation.");
+            writer.println("There were " + Amfiprion.getNumberOfObjects() + " amfiprions during simulation.");
+            writer.println("There were " + Stork.getNumberOfObjects() + " storks during simulation.");
 
         } catch (IOException e) {
 
