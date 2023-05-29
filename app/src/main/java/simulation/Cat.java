@@ -10,6 +10,7 @@ public class Cat extends Cell {
     Claws claws = new Claws();
     Cat(int x, int y, Diet diet, int speed, boolean if_asleep, int sleep_count) {
         super(x, y, diet, speed);
+        this.SPRITE = CONSTANTS.WHITE+"C"+CONSTANTS.RESET;
         ca_count++;
     }
 

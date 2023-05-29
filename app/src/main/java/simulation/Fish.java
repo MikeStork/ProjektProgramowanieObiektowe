@@ -10,6 +10,7 @@ public class Fish extends Cell {
     private static int fisherman_count;
     Fish(int x, int y, Diet diet, int speed) {
         super(x, y, diet, speed);
+        this.SPRITE = CONSTANTS.BLUE+"F"+CONSTANTS.RESET;
         f_count++;
     }
 
