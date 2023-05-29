@@ -173,9 +173,6 @@ public class Projector {
         tab[6] = Fish.getNumberOfObjects();
         tab[7] = Tiger.getNumberOfObjects();
         tab[8] = Cougar.getNumberOfObjects();
-        tab[9] = ;
-        tab[10] = ;
-        tab[11] = ;
         Stork.getNumberOfObjects();
 
         try (PrintWriter writer = new PrintWriter(new FileWriter(fileName))) {
