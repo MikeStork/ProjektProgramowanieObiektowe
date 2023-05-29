@@ -54,7 +54,7 @@ public class Organism extends Entity{
 
 
             if (r == 1) {
-                Cat cat = new Cat(cell.position.x, cell.position.y, Diet.Carnivore, 1, false, 0);
+                Cat cat = new Cat(cell.position.x, cell.position.y, Diet.Carnivore, 1);
                 entity_list.add(cat);
                 cat.experience = 6;
                 entity_list.remove(cell);
@@ -120,14 +120,14 @@ public class Organism extends Entity{
 
                 if(r == 1)  {
 
-                    Cougar cougar = new Cougar(this.position.x, this.position.y, Diet.Carnivore, 1, false, 0);
+                    Cougar cougar = new Cougar(this.position.x, this.position.y, Diet.Carnivore, 1);
                     entity_list.add(cougar);
                     cougar.experience = 11;
                     entity_list.remove(cat);
 
                 }   else {
 
-                    Tiger tiger = new Tiger(this.position.x, this.position.y, Diet.Carnivore, 1, false, 0);
+                    Tiger tiger = new Tiger(this.position.x, this.position.y, Diet.Carnivore, 1);
                     entity_list.add(tiger);
                     tiger.experience = 11;
                     entity_list.remove(cat);
@@ -337,7 +337,7 @@ public class Organism extends Entity{
      */
     void Breed(ArrayList<Entity> entity_list, Cat cat){
 
-        Cat cat1 = new Cat(this.position.x, this.position.y, Diet.Carnivore, 1, false, 0);
+        Cat cat1 = new Cat(this.position.x, this.position.y, Diet.Carnivore, 1);
         entity_list.add(cat1);
 
     }
@@ -348,7 +348,7 @@ public class Organism extends Entity{
      */
     void Breed(ArrayList<Entity> entity_list, Cougar cougar){
 
-       Cougar cougar1 = new Cougar(this.position.x, this.position.y, Diet.Carnivore, 1, false, 0);
+       Cougar cougar1 = new Cougar(this.position.x, this.position.y, Diet.Carnivore, 1);
         entity_list.add(cougar1);
     }
     /**
@@ -396,7 +396,7 @@ public class Organism extends Entity{
      * @param tiger  extended class of organism
      */
     void Breed(ArrayList<Entity> entity_list, Tiger tiger){
-        Tiger tiger1 = new Tiger(this.position.x, this.position.y, Diet.Carnivore, 1, false, 0);
+        Tiger tiger1 = new Tiger(this.position.x, this.position.y, Diet.Carnivore, 1);
         entity_list.add(tiger1);
     }
 

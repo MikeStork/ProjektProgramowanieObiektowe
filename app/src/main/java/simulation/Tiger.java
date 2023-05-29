@@ -10,8 +10,4 @@ public class Tiger extends Cat {
     }
     void LookForPray(){}
 
-    public static int getNumberOfObjects() {
-        return t_count;
-    }
-
 }
