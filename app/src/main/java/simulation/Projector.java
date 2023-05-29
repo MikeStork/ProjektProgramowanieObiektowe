@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class Projector {
     static int WIDTH;
     static int HEIGHT;
+    public ArrayList<Integer> DATA_DUMP_CYCLES;
     private boolean running;
     private final long OPTIMAL_TIME = 1000000000 / CONSTANTS.FPS_TARGET;
     public int cycle = 0;
@@ -83,6 +84,12 @@ public class Projector {
 
 
             }
+        }
+        if(this.cycle == this.DATA_DUMP_CYCLES.get(0)){
+            //
+            //data drop / data dump
+            //
+            this.DATA_DUMP_CYCLES.remove(0);
         }
     }
     /**
