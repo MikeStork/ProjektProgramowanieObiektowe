@@ -145,14 +145,14 @@ public class Projector {
             }
         }
 
-//        tab[13] = this.cycle;
-//
-//        if(this.cycle == this.DATA_DUMP_CYCLES.get(0)){
-//            //
-//            //data drop / data dump
-//            //
-//            this.DATA_DUMP_CYCLES.remove(0);
-//        }
+        tab[13] = this.cycle;
+
+        if(this.cycle == this.DATA_DUMP_CYCLES.get(0)){
+            //
+            //data drop / data dump
+            //
+            this.DATA_DUMP_CYCLES.remove(0);
+        }
     }
     /**
      * Renders singular frame of game state
@@ -165,5 +165,41 @@ public class Projector {
             processed_rows[i] = String.join(" ",MAP[i]);
         }
         return String.join("\n",processed_rows);
+    }
+    void Write2File(int[] tab)  {
+
+        String fileName = "output_data.txt";
+
+        tab[4] = Cat.getNumberOfObjects();
+        tab[5] = Bird.getNumberOfObjects();
+        tab[6] = Fish.getNumberOfObjects();
+        tab[7] = Tiger.getNumberOfObjects();
+        tab[8] = Cougar.getNumberOfObjects();
+        Stork.getNumberOfObjects();
+
+        try (PrintWriter writer = new PrintWriter(new FileWriter(fileName))) {
+
+            writer.println("Size of the map in cycle "+this.cycle+" was: " + tab[0] + " " + tab[1] + ".");
+            writer.println("Simulation started with " + tab[2] + "cells.");
+            writer.println("Simulation started with " + tab[3] + "weed.");
+            writer.println("There were " + tab[4] + " cats during simulation.");
+            writer.println("There were " + tab[5] + " birds during simulation.");
+            writer.println("There were " + tab[6] + " fishes during simulation.");
+            writer.println("There were " + tab[7] + " tigers during simulation.");
+            writer.println("There were " + tab[8] + " cougars during simulation.");
+            writer.println("There were " + Eagle.getNumberOfObjects() + " eagles during simulation.");
+            writer.println("There were " + Pike.getNumberOfObjects() + " pikes during simulation.");
+            writer.println("There were " + Amfiprion.getNumberOfObjects() + " amfiprions during simulation.");
+            writer.println("There were " + Stork.getNumberOfObjects() + " storks during simulation.");
+
+        } catch (IOException e) {
+
+            System.out.println(e.getMessage());
+
+        }
+        //potentially add .csv service
+
+
+
     }
 }
