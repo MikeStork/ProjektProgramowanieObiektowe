@@ -8,6 +8,7 @@ public class Eagle extends Bird {
         super(x, y, diet, speed);
         this.SPRITE = CONSTANTS.GREEN+"E"+CONSTANTS.RESET;
         e_count++;
+        this.size = 3;
     }
     void PerformAnAirStrike(){}
     void LookForPray(){}
