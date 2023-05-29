@@ -1,6 +1,8 @@
 package simulation;
 
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -82,7 +84,7 @@ public class Projector {
                 var toActWith = org.CheckSurroundings(this.ENTITY_LIST);
 
                 if(toActWith != null){
-                    org.EatIfPossible(toActWith,ENTITY_LIST);
+                    org.EatIfPossible(toActWith, ENTITY_LIST);
                 }
 
                 if(org.getClass() == Cat.class) {
@@ -142,17 +144,19 @@ public class Projector {
                     ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
 
                 }
+                org.EvolveIfPossible(ENTITY_LIST);
             }
+
         }
 
-        tab[13] = this.cycle;
+//        tab[13] = this.cycle;
 
-        if(this.cycle == this.DATA_DUMP_CYCLES.get(0)){
-            //
-            //data drop / data dump
-            //
-            this.DATA_DUMP_CYCLES.remove(0);
-        }
+//        if(this.cycle == this.DATA_DUMP_CYCLES.get(0)){
+//            //
+//            //data drop / data dump
+//            //
+//            this.DATA_DUMP_CYCLES.remove(0);
+//        }
     }
     /**
      * Renders singular frame of game state

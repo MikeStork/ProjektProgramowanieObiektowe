@@ -4,6 +4,7 @@ import simulation.bodyparts.Beak;
 import simulation.bodyparts.Wings;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Bird extends Cell {
     Wings wings = new Wings();
@@ -43,5 +44,29 @@ public class Bird extends Cell {
     @Override
     public void Breed(ArrayList<Entity> entity_list) {
         entity_list.add(new Bird(this.position.x, this.position.y, this.diet, this.speed));
+    }
+
+    @Override
+    public void EvolveIfPossible(ArrayList<Entity> entity_list) {
+        if(this.experience > 20)    {
+            Random random = new Random();
+
+            int r = random.nextInt(2);
+
+            if(r == 1)  {
+
+                Stork stork = new Stork(this.position.x, this.position.y, Diet.Carnivore, 1);
+                entity_list.add(stork);
+                stork.experience = 11;
+
+            }   else {
+
+                Eagle eagle = new Eagle(this.position.x, this.position.y, Diet.Carnivore, 1);
+                entity_list.add(eagle);
+                eagle.experience = 11;
+
+            }
+            entity_list.remove(this);
+        }
     }
 }

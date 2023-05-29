@@ -173,75 +173,85 @@ public abstract class Organism extends Entity{
     */
     void Move(int WIDTH, int HEIGHT){
         Random r = new Random();
-        switch (r.nextInt(1,8)){
-            case 1:
-                if(this.position.x ==0){
-                    this.position.x+=1;
-                }else {
-                    this.position.x+=-1;
-                }
-                if(this.position.y == 0){
-                    this.position.y+=1;
-                }else{
-                    this.position.y+=-1;
-                }
-                break;
-            case 2:
-//                this.position.x+=0;
-                if(this.position.y == 0){
-                    this.position.y+=1;
-                }else{
-                    this.position.y+=-1;
-                }
-                break;
-            case 3:
-                if(this.position.x == WIDTH-1){
-                    this.position.x+=-1;
-                }else {
-                    this.position.x+=1;
-                }
-                if(this.position.y == 0){
-                    this.position.y+=1;
-                }else{
-                    this.position.y+=-1;
-                }
-                break;
-            case 4:
-                if(this.position.x == 0){
-                    this.position.x+=1;
-                }else {
-                    this.position.x+=-1;
-                }
-//                this.position.y+=0;
-                break;
-            case 5:
-                if(this.position.x == WIDTH-1){
-                    this.position.x+=-1;
-                }else {
-                    this.position.x+=1;
-                }
-//                this.position.y+=0;
-                break;
-            case 6:
-                if(this.position.x == WIDTH-1){
-                    this.position.x+=-1;
-                }else {
-                    this.position.x+=1;
-                }
-                if(this.position.y == HEIGHT-1){
-                    this.position.y+=-1;
-                }else{
-                    this.position.y+=1;
-                }
-                break;
-            case 7:
-//                this.position.x+=0;
-                if(this.position.y == HEIGHT-1){
-                    this.position.y+=-1;
-                }else{
-                    this.position.y+=1;
-                }
-                break;
+        int add_to_x = r.nextInt(-1, 2);
+        int add_to_y = r.nextInt(-1, 2);
+        if(this.position.x + add_to_x > 0 && this.position.x + add_to_x < WIDTH){
+            this.position.x += add_to_x;
+        }
+        if(this.position.y + add_to_y > 0 && this.position.y + add_to_y < HEIGHT){
+            this.position.y += add_to_y;
+        }
+
+//
+//        switch (r.nextInt(1,8)){
+//            case 1:
+//                if(this.position.x ==0){
+//                    this.position.x+=1;
+//                }else {
+//                    this.position.x+=-1;
+//                }
+//                if(this.position.y == 0){
+//                    this.position.y+=1;
+//                }else{
+//                    this.position.y+=-1;
+//                }
+//                break;
+//            case 2:
+////                this.position.x+=0;
+//                if(this.position.y == 0){
+//                    this.position.y+=1;
+//                }else{
+//                    this.position.y+=-1;
+//                }
+//                break;
+//            case 3:
+//                if(this.position.x == WIDTH-1){
+//                    this.position.x+=-1;
+//                }else {
+//                    this.position.x+=1;
+//                }
+//                if(this.position.y == 0){
+//                    this.position.y+=1;
+//                }else{
+//                    this.position.y+=-1;
+//                }
+//                break;
+//            case 4:
+//                if(this.position.x == 0){
+//                    this.position.x+=1;
+//                }else {
+//                    this.position.x+=-1;
+//                }
+////                this.position.y+=0;
+//                break;
+//            case 5:
+//                if(this.position.x == WIDTH-1){
+//                    this.position.x+=-1;
+//                }else {
+//                    this.position.x+=1;
+//                }
+////                this.position.y+=0;
+//                break;
+//            case 6:
+//                if(this.position.x == WIDTH-1){
+//                    this.position.x+=-1;
+//                }else {
+//                    this.position.x+=1;
+//                }
+//                if(this.position.y == HEIGHT-1){
+//                    this.position.y+=-1;
+//                }else{
+//                    this.position.y+=1;
+//                }
+//                break;
+//            case 7:
+////                this.position.x+=0;
+//                if(this.position.y == HEIGHT-1){
+//                    this.position.y+=-1;
+//                }else{
+//                    this.position.y+=1;
+//                }
+//                break;
 //            case 8:
 //                if(this.position.x == WIDTH){
 //                    this.position.x+=-1;
@@ -255,7 +265,7 @@ public abstract class Organism extends Entity{
 //                }
 //                break;
         }
-    }
+
     /**
      * Given list of entities, search for the first entity which is in the distance of Organism.
      * @param entity_list List of games entities
@@ -299,6 +309,9 @@ public abstract class Organism extends Entity{
                 break;
             }
             case Omnivore:{
+                if(this.getClass().equals(Cell.class)){
+                    this.Eat(e, entity_list);
+                }
                 if((this.size > e.size) && (!e.getClass().equals(e.getClass()))){
                     this.Eat(e, entity_list);
                 }
@@ -311,6 +324,7 @@ public abstract class Organism extends Entity{
     void WeakerBehaviour(){}
 
     abstract public void Breed(ArrayList<Entity> entity_list);
+    abstract public void EvolveIfPossible(ArrayList<Entity> entity_list);
 
 
 }
