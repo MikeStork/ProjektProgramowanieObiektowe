@@ -2,6 +2,7 @@ package simulation;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Projector {
     static int WIDTH;
@@ -70,6 +71,8 @@ public class Projector {
      */
     private void update() {
         this.cycle++;
+        Random r = new Random();
+
         for (int i = 0; i<ENTITY_LIST.size(); i++) {
             var ent = ENTITY_LIST.get(i);
             if(ent instanceof  Organism){
@@ -77,11 +80,64 @@ public class Projector {
                 //Sprawdzenie otoczenia / podjęcie akcji
                 org.CheckSurroundings(this.ENTITY_LIST);
                 //poruszanie
-                ENTITY_MAP[org.position.x][org.position.y] = " ";
-                org.Move(WIDTH,HEIGHT);
-                ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                if(org.getClass() == Cat.class) {
+
+                    if(((Cat) org).if_asleep)   {
+                        ((Cat) org).sleep();
+                    }   else {
+
+                        if(r.nextInt(0,20) > 17)    {
+                            ((Cat) org).if_asleep = true;
+                        }   else {
+
+                            ENTITY_MAP[org.position.x][org.position.y] = " ";
+                            org.Move(WIDTH,HEIGHT);
+                            ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                        }
+
+                    }
+
+                }   else if(org.getClass() == Fish.class)   {
+
+                    if(r.nextInt(0,20) > 18)    {
+
+                        ((Fish)org).CaughtByFisherman(ENTITY_LIST, (Fish) org);
+
+                    }   else {
+
+                        ENTITY_MAP[org.position.x][org.position.y] = " ";
+                        org.Move(WIDTH,HEIGHT);
+                        ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                    }
 
 
+
+                } else if(org.getClass() == Bird.class) {
+
+                    if(r.nextInt(0,20) > 17)    {
+
+                        ENTITY_MAP[org.position.x][org.position.y] = " ";
+                        ((Bird)org).FlyFast(WIDTH, HEIGHT, org);
+                        ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                    }   else {
+
+                        ENTITY_MAP[org.position.x][org.position.y] = " ";
+                        org.Move(WIDTH,HEIGHT);
+                        ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                    }
+
+                } else  {
+
+                    ENTITY_MAP[org.position.x][org.position.y] = " ";
+                    org.Move(WIDTH,HEIGHT);
+                    ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                }
             }
         }
     }

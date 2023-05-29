@@ -54,7 +54,7 @@ public class Organism extends Entity{
 
 
             if (r == 1) {
-                Cat cat = new Cat(cell.position.x, cell.position.y, Diet.Carnivore, 1);
+                Cat cat = new Cat(cell.position.x, cell.position.y, Diet.Carnivore, 1, false, 0);
                 entity_list.add(cat);
                 cat.experience = 6;
                 entity_list.remove(cell);
@@ -337,7 +337,7 @@ public class Organism extends Entity{
      */
     void Breed(ArrayList<Entity> entity_list, Cat cat){
 
-        Cat cat1 = new Cat(this.position.x, this.position.y, Diet.Carnivore, 1);
+        Cat cat1 = new Cat(this.position.x, this.position.y, Diet.Carnivore, 1, false, 0);
         entity_list.add(cat1);
 
     }

@@ -4,6 +4,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main{
+
+    int[] output_data = new int[10];
     public static void main(String[] args) {
         Projector GAME = new Projector(50,50);
         for (int i = 0; i < GAME.HEIGHT; i++) {
@@ -11,6 +13,8 @@ public class Main{
                 GAME.ENTITY_MAP[i][j] = " ";
             }
         }
+
+
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter starting number of cells: ");
@@ -40,5 +44,11 @@ public class Main{
         }
 
         GAME.start();
+
+    }
+
+    void Write2File(int[] tab)  {
+
+
     }
 }
