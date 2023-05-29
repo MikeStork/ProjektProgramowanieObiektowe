@@ -6,7 +6,7 @@ public class Amfiprion extends Fish {
     private static int a_count;
     Amfiprion(int x, int y, Diet diet, int speed) {
         super(x, y, diet, speed);
-        this.SPRITE = CONSTANTS.RED_BOLD_BRIGHT+"A"+CONSTANTS.RESET;
+        this.SPRITE = CONSTANTS.YELLOW+"A"+CONSTANTS.RESET;
         a_count++;
     }
     /**
@@ -16,13 +16,4 @@ public class Amfiprion extends Fish {
         return a_count;
     }
     void DeepDive(){}
-
-    /**
-     * Breeds organism of given type and appends it to list of games entities
-     * @param entity_list List of games entities
-     */
-    @Override
-    public void Breed(ArrayList<Entity> entity_list) {
-        entity_list.add(new Amfiprion(this.position.x, this.position.y, this.diet, this.speed));
-    }
 }
