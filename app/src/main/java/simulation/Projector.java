@@ -80,8 +80,10 @@ public class Projector {
                 var org = (Organism)ent;
                 //Sprawdzenie otoczenia / podjęcie akcji
                 var toActWith = org.CheckSurroundings(this.ENTITY_LIST);
-                org.EatIfPossible(toActWith,ENTITY_LIST);
-                //poruszanie
+
+                if(toActWith != null){
+                    org.EatIfPossible(toActWith,ENTITY_LIST);
+                }
 
                 if(org.getClass() == Cat.class) {
 
@@ -143,14 +145,14 @@ public class Projector {
             }
         }
 
-        tab[13] = this.cycle;
-
-        if(this.cycle == this.DATA_DUMP_CYCLES.get(0)){
-            //
-            //data drop / data dump
-            //
-            this.DATA_DUMP_CYCLES.remove(0);
-        }
+//        tab[13] = this.cycle;
+//
+//        if(this.cycle == this.DATA_DUMP_CYCLES.get(0)){
+//            //
+//            //data drop / data dump
+//            //
+//            this.DATA_DUMP_CYCLES.remove(0);
+//        }
     }
     /**
      * Renders singular frame of game state
