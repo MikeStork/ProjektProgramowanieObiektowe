@@ -21,7 +21,6 @@ public class Main{
             }
         }
 
-
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter starting number of cells: ");
         num_of_cells = scanner.nextInt();

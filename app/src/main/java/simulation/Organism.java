@@ -175,7 +175,7 @@ public abstract class Organism extends Entity{
             }
             case Carnivore:{
                 if (!this.getClass().equals(e.getClass()) && (!e.getClass().equals(Weed.class)) && (this.size > e.size) ){
-                        this.Eat(e, entity_list);
+                    this.Eat(e, entity_list);
                 }
                 break;
             }

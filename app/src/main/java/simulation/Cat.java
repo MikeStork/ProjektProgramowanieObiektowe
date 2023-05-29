@@ -15,6 +15,7 @@ public class Cat extends Cell {
         super(x, y, diet, speed);
         this.SPRITE = CONSTANTS.WHITE+"C"+CONSTANTS.RESET;
         ca_count++;
+        this.size = 2;
     }
 
     void sleep() {
