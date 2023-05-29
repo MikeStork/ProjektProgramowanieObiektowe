@@ -307,17 +307,13 @@ public class Organism extends Entity{
 
     void StrongerBehaviour(){}
     void WeakerBehaviour(){}
-
-    void Breed(){
-
-    }
-
     /**
      * Breeds organism of given type and appends it to list of games entities
      * @param entity_list List of games entities
      * @param amfiprion  extended class of organism
      */
     void Breed(ArrayList<Entity> entity_list, Amfiprion amfiprion){
+
         Amfiprion amfiprion1 = new Amfiprion(this.position.x, this.position.y, Diet.Herbivore, 1);
         entity_list.add(amfiprion1);
 
