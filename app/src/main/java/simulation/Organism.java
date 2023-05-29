@@ -3,7 +3,8 @@ package simulation;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Organism extends Entity{
+public abstract class Organism extends Entity{
+    abstract void Breed(ArrayList<Entity> entity_list);
     Diet diet;
     int speed;
     int experience=0;
@@ -313,9 +314,7 @@ public class Organism extends Entity{
      * @param entity_list List of games entities
      * @param ampifrion  extended class of organism
      */
-    void Breed(ArrayList<Entity> entity_list){
-        entity_list.add(new Organism(this.position.x,this.position.y,this.diet,this.speed));
-    }
+
 //    void Breed(ArrayList<Entity> entity_list, Amfiprion amfiprion){
 //
 //        Amfiprion amfiprion1 = new Amfiprion(this.position.x, this.position.y, Diet.Herbivore, 1);
