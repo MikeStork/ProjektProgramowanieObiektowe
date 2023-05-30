@@ -1,5 +1,7 @@
 package simulation;
 
+import simulation.data.CONSTANTS;
+
 public class Weed extends Entity{
     Weed(int x, int y) {
         super(x, y, 1);

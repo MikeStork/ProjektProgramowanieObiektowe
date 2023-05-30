@@ -1,9 +1,11 @@
-package simulation;
+package simulation.workers;
+
+import simulation.interfaces.I_CSVWriter;
 
 import java.io.FileWriter;
 import java.io.IOException;
 
-class CSVFileWriter implements CSVWriter {
+class CSVFileWriter implements I_CSVWriter {
     private FileWriter fileWriter;
 
     public CSVFileWriter(String fileName) throws IOException {

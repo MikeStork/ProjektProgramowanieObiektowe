@@ -1,5 +1,8 @@
 package simulation;
 
+import simulation.data.CONSTANTS;
+import simulation.data.Diet;
+
 import java.util.ArrayList;
 
 public class Cougar extends Cat {

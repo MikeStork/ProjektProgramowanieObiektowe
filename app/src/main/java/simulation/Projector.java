@@ -1,5 +1,8 @@
 package simulation;
 
+import simulation.data.CONSTANTS;
+import simulation.workers.CSVFileWorker;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -18,7 +21,7 @@ public class Projector {
     public int cycle = 0;
     ArrayList<Entity> ENTITY_LIST = new ArrayList<Entity>();
     String[][] ENTITY_MAP;
-
+    CSVFileWorker tabularData;
     Projector(int width, int height){
         this.WIDTH = width;
         this.HEIGHT = height;
@@ -28,6 +31,11 @@ public class Projector {
      * Game starting method, controlls game
      */
     public void start() {
+        try {
+            this.tabularData = new CSVFileWorker("tabularData-"+this.cycle+".csv");
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
         running = true;
         long lastUpdateTime = System.nanoTime();
         while (running) {
@@ -148,7 +156,7 @@ public class Projector {
                     org.EvolveIfPossible(ENTITY_LIST);
                 }
 
-            }else if(ent instanceof Weed){
+            } else if(ent instanceof Weed){
                 ENTITY_MAP[ent.position.x][ent.position.y] = ent.SPRITE;
             }
 
@@ -156,10 +164,19 @@ public class Projector {
 
         if(this.DATA_DUMP_CYCLES.size() > 0){
             if(this.cycle == this.DATA_DUMP_CYCLES.get(0)){
-                //
+                try {
+                    this.tabularData.appendData(new int[]{this.cycle, WIDTH,HEIGHT, num_of_cells,num_of_weed,Cat.getNumberOfObjects(),Bird.getNumberOfObjects(),Fish.getNumberOfObjects(),Tiger.getNumberOfObjects(),Cougar.getNumberOfObjects(),Eagle.getNumberOfObjects(),Pike.getNumberOfObjects(),Amfiprion.getNumberOfObjects(),Stork.getNumberOfObjects()});
+                } catch (IOException e) {
+                    System.out.println(e.getMessage());
+                }
                 Write2File();
-                //
                 this.DATA_DUMP_CYCLES.remove(0);
+            }
+        }else{
+            try {
+                this.tabularData.close();
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
             }
         }
 
@@ -200,9 +217,5 @@ public class Projector {
             System.out.println(e.getMessage());
 
         }
-        //potentially add .csv service
-
-
-
     }
 }

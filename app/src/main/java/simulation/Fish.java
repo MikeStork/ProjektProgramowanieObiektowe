@@ -1,6 +1,6 @@
 package simulation;
-
-import simulation.bodyparts.Fins;
+import simulation.data.CONSTANTS;
+import simulation.data.Diet;
 
 import java.util.ArrayList;
 import java.util.Random;
