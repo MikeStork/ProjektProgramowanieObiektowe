@@ -14,6 +14,9 @@ public class Tiger extends Cat {
     }
     void LookForPray(){}
 
+    public static int getNumberOfObjects() {
+        return t_count;
+    }
     /**
      * Breeds organism of given type and appends it to list of games entities
      * @param entity_list List of games entities
