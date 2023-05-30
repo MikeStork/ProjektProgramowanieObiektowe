@@ -257,7 +257,11 @@ public class Projector {
             }
 
         }
-
+        try {
+            CSVFileWorker tabularData = new CSVFileWorker("tabularData.csv");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         if(this.DATA_DUMP_CYCLES.size() > 0){
             if(this.cycle == this.DATA_DUMP_CYCLES.get(0)){
                 //

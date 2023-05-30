@@ -2,7 +2,7 @@ package simulation;
 
 import java.io.IOException;
 
-interface CSVWriter {
+interface I_CSVWriter {
     void appendRow(String[] rowData) throws IOException;
 
     void close() throws IOException;
