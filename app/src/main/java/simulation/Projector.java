@@ -87,6 +87,7 @@ public class Projector {
         this.cycle++;
         Random r = new Random();
 
+        boolean any_organisms_left = false;
         for (int i = ENTITY_LIST.size()-1; i >= 0 ; i--) {
             var ent = ENTITY_LIST.get(i);
             if(ent instanceof Organism){
@@ -95,12 +96,13 @@ public class Projector {
                 if(org.DieIfPossible(ENTITY_LIST, ENTITY_MAP)){
                     continue;
                 }
+                any_organisms_left = true;
                 //Sprawdzenie otoczenia / podjęcie akcji
                 var toActWith = org.CheckSurroundings(this.ENTITY_LIST);
 
                 if(toActWith != null){
                     if(org.getClass().equals(toActWith.getClass())){
-                        if(r.nextInt(1, 30) == 1){
+                        if(r.nextInt(1, 50) == 1){
                             org.Breed(ENTITY_LIST);
                         }
                     }
@@ -178,6 +180,10 @@ public class Projector {
             } catch (IOException e) {
                 System.out.println(e.getMessage());
             }
+        }
+
+        if(any_organisms_left == false || this.cycle > 1000){
+            stop();
         }
 
     }

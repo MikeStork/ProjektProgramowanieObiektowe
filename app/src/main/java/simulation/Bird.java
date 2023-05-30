@@ -26,7 +26,7 @@ public class Bird extends Cell implements I_Bird {
      * @param height height of the map
      * @param org Organism object able to make a move
      */
-    void FlyFast(int width, int height) {
+    public void FlyFast(int width, int height) {
         int count = 0;
 
         while(count < 3)    {

@@ -13,7 +13,7 @@ public interface I_Bird {
      * @param height height of the map
      * @param org Organism object able to make a move
      */
-    void FlyFast(int width, int height, Organism org);
+    void FlyFast(int width, int height);
 
     /**
      * Return number of objects created during the simulation

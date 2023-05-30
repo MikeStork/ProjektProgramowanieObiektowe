@@ -20,21 +20,18 @@ public class Fish extends Cell implements I_Fish {
         this.level = 2;
     }
 
-    void CaughtByFisherman(ArrayList entity_list)    {
-        entity_list.remove(this);
-        fisherman_count++;
-    }
     /**
      * Removes Fish object from the map
      * @param entity_list list of objects
-     * @param fish Fish object to be removed
      */
+    public void CaughtByFisherman(ArrayList entity_list)    {
+        entity_list.remove(this);
+        fisherman_count++;
+    }
 
     public static int getNumberOfObjects() {
         return f_count;
     }
-
-
 
     /**
      * Breeds organism of given type and appends it to list of games entities
