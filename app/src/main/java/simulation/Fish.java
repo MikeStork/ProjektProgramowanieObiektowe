@@ -22,11 +22,12 @@ public class Fish extends Cell implements I_Fish {
 
     /**
      * Removes Fish object from the map
+     *
      * @param entity_list list of objects
-     * @param fish Fish object to be removed
+     * @param fish        Fish object to be removed
      */
 
-    public void CaughtByFisherman(ArrayList entity_list, Fish fish)    {
+    public void CaughtByFisherman(ArrayList<? extends Entity> entity_list, Fish fish) {
 
         entity_list.remove(fish);
 

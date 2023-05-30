@@ -9,11 +9,12 @@ public interface I_Fish {
 
     /**
      * Removes Fish object from the map
+     *
      * @param entity_list list of objects
-     * @param fish Fish object to be removed
+     * @param fish        Fish object to be removed
      */
 
-    void CaughtByFisherman(ArrayList entity_list, Fish fish);
+    void CaughtByFisherman(ArrayList<? extends Entity> entity_list, Fish fish);
 
     /**
      * Return number of objects created during the simulation

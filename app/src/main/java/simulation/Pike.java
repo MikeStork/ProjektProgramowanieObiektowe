@@ -2,24 +2,27 @@ package simulation;
 
 import simulation.data.CONSTANTS;
 import simulation.data.Diet;
-import simulation.interfaces.I_Pike;
 
 import java.util.ArrayList;
 
-public class Pike extends Fish implements I_Pike {
+public class Pike extends Fish {
     private static int p_count;
+
     Pike(int x, int y, Diet diet, int speed) {
         super(x, y, diet, speed);
-        this.SPRITE = CONSTANTS.GREEN_BOLD+"S"+CONSTANTS.RESET;
+        this.SPRITE = CONSTANTS.GREEN_BOLD + "S" + CONSTANTS.RESET;
         p_count++;
         this.size = 2;
         this.level = 3;
-    } public static int getNumberOfObjects() {
+    }
+
+    public static int getNumberOfObjects() {
         return p_count;
     }
 
     /**
      * Breeds organism of given type and appends it to list of games entities
+     *
      * @param entity_list List of games entities
      */
     @Override
