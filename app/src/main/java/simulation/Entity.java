@@ -2,7 +2,7 @@ package simulation;
 
 import java.lang.reflect.Field;
 
-public class Entity {
+public class Entity implements I_Entity {
     String color = "";
     Position position;
     String SPRITE = "E";

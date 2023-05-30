@@ -252,7 +252,7 @@ public class Projector {
 
                 org.EvolveIfPossible(ENTITY_LIST);
 
-            }else if(ent instanceof Weed){
+            } else if(ent instanceof Weed){
                 ENTITY_MAP[ent.position.x][ent.position.y] = ent.SPRITE;
             }
 

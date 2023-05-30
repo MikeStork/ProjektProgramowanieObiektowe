@@ -3,7 +3,7 @@ package simulation;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Cell extends Organism{
+public class Cell extends Organism implements I_Cell{
 
 
     Cell(int x, int y, Diet diet, int speed) {

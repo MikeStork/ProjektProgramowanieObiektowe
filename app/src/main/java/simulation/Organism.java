@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Random;
 
-public abstract class Organism extends Entity{
+public abstract class Organism extends Entity implements I_Organism {
     Diet diet;
     int speed;
     int experience=0;
@@ -16,11 +16,6 @@ public abstract class Organism extends Entity{
         this.diet = diet;
         this.speed = speed;
         this.age = 0;
-    }
-    Organism(int x, int y, Diet diet) {
-        super(x, y, 1);
-        this.diet = diet;
-        this.speed = CONSTANTS.DEFAULT_SPEED;
     }
 
     /**
@@ -45,7 +40,7 @@ public abstract class Organism extends Entity{
     /**
     * Randomly changes coordinates of Organism
     */
-    void Move(int WIDTH, int HEIGHT){
+    public void Move(int WIDTH, int HEIGHT){
         Random r = new Random();
         int add_to_x = r.nextInt(-1, 2);
         int add_to_y = r.nextInt(-1, 2);
@@ -195,8 +190,6 @@ public abstract class Organism extends Entity{
         }
     }
 
-    void StrongerBehaviour(){}
-    void WeakerBehaviour(){}
     public boolean DieIfPossible(ArrayList<Entity> entity_list, String[][] entity_map){
         if(this.age > this.lifespan){
             entity_list.remove(this);

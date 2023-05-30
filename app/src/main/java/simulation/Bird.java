@@ -55,7 +55,7 @@ public class Bird extends Cell {
      */
     @Override
     public void EvolveIfPossible(ArrayList<Entity> entity_list) {
-        if(this.experience > 20)    {
+        if(this.experience > 10)    {
             Random random = new Random();
 
             int r = random.nextInt(2);

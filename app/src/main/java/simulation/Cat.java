@@ -53,7 +53,7 @@ public class Cat extends Cell {
      */
     @Override
     public void EvolveIfPossible(ArrayList<Entity> entity_list) {
-        if(this.experience > 6)    {
+        if(this.experience > 10)    {
 
             Random random = new Random();
 
