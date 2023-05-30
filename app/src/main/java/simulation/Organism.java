@@ -7,8 +7,7 @@ import java.util.Random;
 public abstract class Organism extends Entity implements I_Organism {
     Diet diet;
     int speed;
-    int experience=0;
-    int level=1;
+    int level;
     public int age;
     public int lifespan;
     Organism(int x, int y, Diet diet, int speed) {
@@ -16,6 +15,7 @@ public abstract class Organism extends Entity implements I_Organism {
         this.diet = diet;
         this.speed = speed;
         this.age = 0;
+        this.experience = 0;
     }
 
     /**

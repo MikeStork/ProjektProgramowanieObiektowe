@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Arrays;
 
 public class CSVFileWorker {
-    private CSVWriter csvWriter;
+    private I_CSVWriter csvWriter;
 
     public CSVFileWorker(String fileName) throws IOException {
         csvWriter = new CSVFileWriter(fileName);

@@ -3,7 +3,7 @@ package simulation;
 import java.io.FileWriter;
 import java.io.IOException;
 
-class CSVFileWriter implements CSVWriter {
+class CSVFileWriter implements I_CSVWriter {
     private FileWriter fileWriter;
 
     public CSVFileWriter(String fileName) throws IOException {

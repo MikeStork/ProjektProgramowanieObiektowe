@@ -16,7 +16,8 @@ public class Cat extends Cell {
         this.SPRITE = CONSTANTS.WHITE+"C"+CONSTANTS.RESET;
         ca_count++;
         this.size = 3;
-        this.lifespan = 200;
+        this.lifespan = 500;
+        this.level = 2;
     }
 
     void sleep() {
@@ -62,15 +63,15 @@ public class Cat extends Cell {
             if(r == 1)  {
 
                 Cougar cougar = new Cougar(this.position.x, this.position.y, Diet.Carnivore, 1, false, 0);
-                entity_list.add(cougar);
                 cougar.experience = 11;
+                entity_list.add(cougar);
                 entity_list.remove(this);
 
             }   else {
 
                 Tiger tiger = new Tiger(this.position.x, this.position.y, Diet.Carnivore, 1, false, 0);
-                entity_list.add(tiger);
                 tiger.experience = 11;
+                entity_list.add(tiger);
                 entity_list.remove(this);
 
             }

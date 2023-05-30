@@ -16,7 +16,8 @@ public class Bird extends Cell {
         b_count++;
         this.SPRITE = CONSTANTS.BLUE_UNDERLINED+"B"+CONSTANTS.RESET;
         this.size = 2;
-        this.lifespan = 100;
+        this.lifespan = 400;
+        this.level = 2;
     }
     /**
      * @exception Unimplemented
@@ -63,14 +64,14 @@ public class Bird extends Cell {
             if(r == 1)  {
 
                 Stork stork = new Stork(this.position.x, this.position.y, Diet.Carnivore, 1);
-                entity_list.add(stork);
                 stork.experience = 11;
+                entity_list.add(stork);
 
             }   else {
 
                 Eagle eagle = new Eagle(this.position.x, this.position.y, Diet.Carnivore, 1);
-                entity_list.add(eagle);
                 eagle.experience = 11;
+                entity_list.add(eagle);
 
             }
             entity_list.remove(this);
