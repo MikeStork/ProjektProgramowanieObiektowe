@@ -141,6 +141,98 @@ public class Projector {
 
                     }
 
+                }  else if(org.getClass() == Tiger.class) {
+
+                    if(((Tiger) org).if_asleep)   {
+                        ((Tiger) org).sleep();
+                    }   else {
+
+                        if(r.nextInt(0,20) > 17)    {
+                            ((Tiger) org).if_asleep = true;
+                        }   else {
+
+                            ENTITY_MAP[org.position.x][org.position.y] = " ";
+                            org.Move(WIDTH,HEIGHT);
+                            ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                        }
+
+                    }
+
+                } else if(org.getClass() == Cougar.class) {
+
+                    if (((Cougar) org).if_asleep) {
+                        ((Cougar) org).sleep();
+                    } else {
+
+                        if (r.nextInt(0, 20) > 17) {
+                            ((Cougar) org).if_asleep = true;
+                        } else {
+
+                            ENTITY_MAP[org.position.x][org.position.y] = " ";
+                            org.Move(WIDTH, HEIGHT);
+                            ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                        }
+
+                    }
+                } else if(org.getClass() == Stork.class) {
+
+                    if(r.nextInt(0,20) > 17)    {
+
+                        ENTITY_MAP[org.position.x][org.position.y] = " ";
+                        ((Stork)org).FlyFast(WIDTH, HEIGHT, org);
+                        ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                    }   else {
+
+                        ENTITY_MAP[org.position.x][org.position.y] = " ";
+                        org.Move(WIDTH,HEIGHT);
+                        ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                    }
+                } else if(org.getClass() == Eagle.class) {
+
+                    if(r.nextInt(0,20) > 17)    {
+
+                        ENTITY_MAP[org.position.x][org.position.y] = " ";
+                        ((Eagle)org).FlyFast(WIDTH, HEIGHT, org);
+                        ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                    }   else {
+
+                        ENTITY_MAP[org.position.x][org.position.y] = " ";
+                        org.Move(WIDTH,HEIGHT);
+                        ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                    }
+                }  else if(org.getClass() == Amfiprion.class)   {
+
+                    if(r.nextInt(0,20) > 18)    {
+                        ENTITY_MAP[org.position.x][org.position.y] = " ";
+                        ((Amfiprion)org).CaughtByFisherman(ENTITY_LIST, (Amfiprion) org);
+
+                    }   else {
+
+                        ENTITY_MAP[org.position.x][org.position.y] = " ";
+                        org.Move(WIDTH,HEIGHT);
+                        ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                    }
+                } else if(org.getClass() == Pike.class)   {
+
+                    if(r.nextInt(0,20) > 18)    {
+                        ENTITY_MAP[org.position.x][org.position.y] = " ";
+                        ((Pike)org).CaughtByFisherman(ENTITY_LIST, (Pike) org);
+
+                    }   else {
+
+                        ENTITY_MAP[org.position.x][org.position.y] = " ";
+                        org.Move(WIDTH,HEIGHT);
+                        ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                    }
+
                 } else  {
 
                     ENTITY_MAP[org.position.x][org.position.y] = " ";
@@ -148,7 +240,9 @@ public class Projector {
                     ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
 
                 }
+
                 org.EvolveIfPossible(ENTITY_LIST);
+
             }else if(ent instanceof Weed){
                 ENTITY_MAP[ent.position.x][ent.position.y] = ent.SPRITE;
             }
