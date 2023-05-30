@@ -3,12 +3,6 @@ package simulation;
 import java.io.FileWriter;
 import java.io.IOException;
 
-interface CSVWriter {
-    void appendRow(String[] rowData) throws IOException;
-
-    void close() throws IOException;
-}
-
 class CSVFileWriter implements CSVWriter {
     private FileWriter fileWriter;
 
@@ -32,23 +26,5 @@ class CSVFileWriter implements CSVWriter {
 
     public void close() throws IOException {
         fileWriter.close();
-    }
-}
-
-class CSVFileWorker {
-    private CSVWriter csvWriter;
-
-    public CSVFileWorker(String fileName) throws IOException {
-        csvWriter = new CSVFileWriter(fileName);
-        String[] headerRow = {"Cycle", "Width", "Height", "Cells", ""};
-        csvWriter.appendRow(headerRow);
-    }
-
-    public void appendData(String[] rowData) throws IOException {
-        csvWriter.appendRow(rowData);
-    }
-
-    public void close() throws IOException {
-        csvWriter.close();
     }
 }
