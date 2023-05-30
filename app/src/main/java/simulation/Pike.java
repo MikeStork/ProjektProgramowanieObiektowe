@@ -9,6 +9,7 @@ public class Pike extends Fish {
         this.SPRITE = CONSTANTS.GREEN_BOLD+"S"+CONSTANTS.RESET;
         p_count++;
         this.size = 2;
+        this.level = 3;
     } public static int getNumberOfObjects() {
         return p_count;
     }

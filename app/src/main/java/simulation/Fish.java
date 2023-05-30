@@ -14,7 +14,8 @@ public class Fish extends Cell {
         this.SPRITE = CONSTANTS.BLUE+"F"+CONSTANTS.RESET;
         f_count++;
         this.size = 1;
-        this.lifespan = 100;
+        this.lifespan = 300;
+        this.level = 2;
     }
 
     void CaughtByFisherman(ArrayList entity_list, Fish fish)    {

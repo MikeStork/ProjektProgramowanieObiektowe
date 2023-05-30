@@ -5,13 +5,14 @@ import java.util.Random;
 
 public class Cell extends Organism{
 
-
     Cell(int x, int y, Diet diet, int speed) {
         super(x, y, diet, speed);
         this.SPRITE = CONSTANTS.PURPLE+"K"+CONSTANTS.RESET;
         this.size = 1;
         this.age = 0;
         this.lifespan = 99999;
+        this.experience = 0;
+        this.level = 1;
     }
 
     @Override
@@ -34,16 +35,16 @@ public class Cell extends Organism{
 
             if (r == 1) {
                 Cat cat = new Cat(this.position.x, this.position.y, Diet.Carnivore, 1, false, 0);
-                entity_list.add(cat);
                 cat.experience = 6;
+                entity_list.add(cat);
             } else if (r == 2) {
                 Bird bird = new Bird(this.position.x, this.position.y, Diet.Carnivore, 1);
-                entity_list.add(bird);
                 bird.experience = 6;
+                entity_list.add(bird);
             } else {
                 Fish fish = new Fish(this.position.x, this.position.y, Diet.Carnivore, 1);
-                entity_list.add(fish);
                 fish.experience = 6;
+                entity_list.add(fish);
             }
             entity_list.remove(this);
         }

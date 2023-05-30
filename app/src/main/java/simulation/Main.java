@@ -18,6 +18,24 @@ public class Main{
             }
         }
 
+//        Cat c = new Cat(0, 0, Diet.Carnivore, 1, false, 0);
+//        c.experience = 6;
+//        GAME.ENTITY_LIST.add(c);
+//        Bird b = new Bird(1, 1, Diet.Omnivore, 1);
+//        b.experience = 6;
+//        GAME.ENTITY_LIST.add(b);
+//        Bird b1 = new Bird(1, 1, Diet.Omnivore, 1);
+//        b1.experience = 6;
+//        GAME.ENTITY_LIST.add(b1);
+//
+//        Organism org = (Organism)GAME.ENTITY_LIST.get(0);
+//        Entity e = org.CheckSurroundings(GAME.ENTITY_LIST);
+//        org.EatIfPossible(e, GAME.ENTITY_LIST, GAME.ENTITY_MAP);
+//        e = org.CheckSurroundings(GAME.ENTITY_LIST);
+//        org.EatIfPossible(e, GAME.ENTITY_LIST, GAME.ENTITY_MAP);
+//
+//        org.EvolveIfPossible(GAME.ENTITY_LIST);
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter starting number of cells: ");
         num_of_cells = scanner.nextInt();
@@ -49,8 +67,6 @@ public class Main{
         }
 
         GAME.start();
-
-
     }
 
 

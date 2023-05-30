@@ -3,7 +3,6 @@ package simulation;
 import java.util.ArrayList;
 
 public class Tiger extends Cat {
-
     static int camouflage_ratio = 2;
     private static int t_count;
     Tiger(int x, int y, Diet diet, int speed, boolean if_asleep, int sleep_count) {
@@ -11,6 +10,7 @@ public class Tiger extends Cat {
         this.SPRITE = CONSTANTS.CYAN+"T"+CONSTANTS.RESET;
         t_count++;
         this.size = 4;
+        this.level = 3;
     }
     void LookForPray(){}
 
