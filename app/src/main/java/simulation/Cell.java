@@ -1,5 +1,7 @@
 package simulation;
 
+import simulation.data.CONSTANTS;
+import simulation.data.Diet;
 import simulation.interfaces.I_Cell;
 
 import java.util.ArrayList;

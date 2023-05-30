@@ -1,8 +1,7 @@
 package simulation;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import simulation.data.Diet;
+
 import java.util.*;
 
 public class Main{

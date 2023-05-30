@@ -1,5 +1,6 @@
 package simulation;
 
+import simulation.data.Diet;
 import simulation.interfaces.I_Organism;
 
 import java.util.ArrayList;

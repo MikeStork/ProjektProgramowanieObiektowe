@@ -1,14 +1,11 @@
 package simulation;
-
-import simulation.bodyparts.Beak;
-import simulation.bodyparts.Wings;
+import simulation.data.CONSTANTS;
+import simulation.data.Diet;
 
 import java.util.ArrayList;
 import java.util.Random;
 
 public class Bird extends Cell {
-    Wings wings = new Wings();
-    Beak beak = new Beak();
     private static int b_count;
     Bird(int x, int y, Diet diet, int speed) {
         super(x, y, diet, speed);
@@ -19,8 +16,12 @@ public class Bird extends Cell {
         this.lifespan = 400;
         this.level = 2;
     }
+
     /**
-     * @exception Unimplemented
+     * Enables Bird object to make 4 fast moves
+     * @param width width of the map
+     * @param height height of the map
+     * @param org Organism object able to make a move
      */
     void FlyFast(int width, int height, Organism org) {
         int count = 0;
@@ -30,12 +31,6 @@ public class Bird extends Cell {
             ++count;
         }
     }
-    /**
-     * Enables Bird object to make 4 fast moves
-     * @param width width of the map
-     * @param height height of the map
-     * @param org Organism object able to make a move
-     */
     public static int getNumberOfObjects() {
         return b_count;
     }
