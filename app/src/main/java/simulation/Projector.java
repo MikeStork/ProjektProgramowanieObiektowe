@@ -164,12 +164,15 @@ public class Projector {
 
         }
 
-        if(this.cycle == this.DATA_DUMP_CYCLES.get(0)){
-            //
-            Write2File();
-            //
-            this.DATA_DUMP_CYCLES.remove(0);
+        if(this.DATA_DUMP_CYCLES.size() > 0){
+            if(this.cycle == this.DATA_DUMP_CYCLES.get(0)){
+                //
+                Write2File();
+                //
+                this.DATA_DUMP_CYCLES.remove(0);
+            }
         }
+
     }
     /**
      * Renders singular frame of game state
@@ -185,13 +188,13 @@ public class Projector {
     }
     void Write2File()  {
 
-        String fileName = "output_data.txt";
+        String fileName = "output_" + this.cycle + "data.txt";
 
         try (PrintWriter writer = new PrintWriter(new FileWriter(fileName))) {
 
             writer.println("Size of the map in cycle " + this.cycle + " was: " + HEIGHT + " " + WIDTH + ".");
-            writer.println("Simulation started with " + num_of_cells + "cells.");
-            writer.println("Simulation started with " + num_of_weed + "weed.");
+            writer.println("Simulation started with " + num_of_cells + " cells.");
+            writer.println("Simulation started with " + num_of_weed + " weed.");
             writer.println("There were " + Cat.getNumberOfObjects() + " cats during simulation.");
             writer.println("There were " + Bird.getNumberOfObjects() + " birds during simulation.");
             writer.println("There were " + Fish.getNumberOfObjects() + " fishes during simulation.");
@@ -207,6 +210,7 @@ public class Projector {
             System.out.println(e.getMessage());
 
         }
+        //potentially add .csv service
 
 
 
