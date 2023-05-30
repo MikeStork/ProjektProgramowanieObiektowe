@@ -10,8 +10,8 @@ import static simulation.Main.num_of_cells;
 import static simulation.Main.num_of_weed;
 
 public class Projector {
-    static int WIDTH;
-    static int HEIGHT;
+    int WIDTH;
+    int HEIGHT;
     public ArrayList<Integer>   DATA_DUMP_CYCLES;
     private boolean running;
     private final long OPTIMAL_TIME = 1000000000 / CONSTANTS.FPS_TARGET;
@@ -22,7 +22,7 @@ public class Projector {
     Projector(int width, int height){
         this.WIDTH = width;
         this.HEIGHT = height;
-        ENTITY_MAP = new String[WIDTH][HEIGHT];
+        ENTITY_MAP = new String[this.WIDTH][this.HEIGHT];
     }
     /**
      * Game starting method, controlls game
@@ -92,7 +92,7 @@ public class Projector {
 
                 if(toActWith != null){
                     if(org.getClass().equals(toActWith.getClass())){
-                        if(r.nextInt(1, 50) == 1){
+                        if(r.nextInt(1, 30) == 1){
                             org.Breed(ENTITY_LIST);
                         }
                     }
@@ -176,9 +176,9 @@ public class Projector {
      * @param MAP Mapped positions of entities using 2dim array of strings
      * @return Rendered frame to be displayed
      */
-    public static String render(String[][] MAP){
-        String [] processed_rows = new String[HEIGHT];
-        for (int i = 0; i < HEIGHT; i++) {
+    public String render(String[][] MAP){
+        String [] processed_rows = new String[this.HEIGHT];
+        for (int i = 0; i < this.HEIGHT; i++) {
             processed_rows[i] = String.join(" ",MAP[i]);
         }
         return String.join("\n",processed_rows);
