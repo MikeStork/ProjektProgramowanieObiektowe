@@ -1,12 +1,14 @@
 package simulation;
+
+
 import simulation.data.CONSTANTS;
 import simulation.data.Diet;
+import simulation.interfaces.I_Fish;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Fish extends Cell {
-    Fins fins = new Fins();
+public class Fish extends Cell implements I_Fish {
     private static int f_count;
     private static int fisherman_count;
     Fish(int x, int y, Diet diet, int speed) {
@@ -32,9 +34,7 @@ public class Fish extends Cell {
         return f_count;
     }
 
-    public static int getFisherman_count() {
-        return fisherman_count;
-    }
+
 
     /**
      * Breeds organism of given type and appends it to list of games entities

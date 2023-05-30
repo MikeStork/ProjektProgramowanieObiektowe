@@ -2,10 +2,11 @@ package simulation;
 
 import simulation.data.CONSTANTS;
 import simulation.data.Diet;
+import simulation.interfaces.I_Pike;
 
 import java.util.ArrayList;
 
-public class Pike extends Fish {
+public class Pike extends Fish implements I_Pike {
     private static int p_count;
     Pike(int x, int y, Diet diet, int speed) {
         super(x, y, diet, speed);

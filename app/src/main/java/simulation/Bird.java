@@ -1,11 +1,14 @@
 package simulation;
+
 import simulation.data.CONSTANTS;
+import simulation.interfaces.I_Bird;
 import simulation.data.Diet;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Bird extends Cell {
+public class Bird extends Cell implements I_Bird {
+
     private static int b_count;
     Bird(int x, int y, Diet diet, int speed) {
         super(x, y, diet, speed);

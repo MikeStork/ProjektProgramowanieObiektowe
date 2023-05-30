@@ -1,11 +1,12 @@
 package simulation;
 import simulation.data.CONSTANTS;
 import simulation.data.Diet;
+import simulation.interfaces.I_Cat;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Cat extends Cell {
+public class Cat extends Cell implements I_Cat {
 
     boolean if_asleep;
     int sleep_count;
@@ -19,7 +20,11 @@ public class Cat extends Cell {
         this.level = 2;
     }
 
-    void sleep() {
+    /**
+     * Prevents Cat object from moving due to the "sleep" state
+     */
+
+    public void sleep() {
 
         if(this.sleep_count > 2)    {
             this.if_asleep = false;
@@ -28,13 +33,13 @@ public class Cat extends Cell {
         }
 
     }
+
+    /**
+     * Return number of objects created during the simulation
+     */
     public static int getNumberOfObjects() {
         return ca_count;
     }
-
-    /**
-     * Prevents Cat object from moving due to the "sleep" state
-     */
 
 
     /**
