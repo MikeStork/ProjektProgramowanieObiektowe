@@ -22,11 +22,11 @@ public class Bird extends Cell {
     /**
      * @exception Unimplemented
      */
-    void FlyFast(int width, int height, Organism org) {
+    void FlyFast(int width, int height) {
         int count = 0;
 
         while(count < 3)    {
-            org.Move(width, height);
+            this.Move(width, height);
             ++count;
         }
     }

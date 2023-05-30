@@ -18,11 +18,9 @@ public class Fish extends Cell {
         this.level = 2;
     }
 
-    void CaughtByFisherman(ArrayList entity_list, Fish fish)    {
-
-        entity_list.remove(fish);
+    void CaughtByFisherman(ArrayList entity_list)    {
+        entity_list.remove(this);
         fisherman_count++;
-
     }
     /**
      * Removes Fish object from the map
@@ -62,7 +60,7 @@ public class Fish extends Cell {
 
             if(r == 1)  {
 
-                Amfiprion amfiprion = new Amfiprion(this.position.x, this.position.y, Diet.Carnivore, 1);
+                Amfiprion amfiprion = new Amfiprion(this.position.x, this.position.y, Diet.Herbivore, 1);
                 entity_list.add(amfiprion);
                 amfiprion.experience = 11;
                 entity_list.remove(this);

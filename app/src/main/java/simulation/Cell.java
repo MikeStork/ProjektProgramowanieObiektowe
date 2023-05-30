@@ -38,11 +38,11 @@ public class Cell extends Organism{
                 cat.experience = 6;
                 entity_list.add(cat);
             } else if (r == 2) {
-                Bird bird = new Bird(this.position.x, this.position.y, Diet.Carnivore, 1);
+                Bird bird = new Bird(this.position.x, this.position.y, Diet.Omnivore, 1);
                 bird.experience = 6;
                 entity_list.add(bird);
             } else {
-                Fish fish = new Fish(this.position.x, this.position.y, Diet.Carnivore, 1);
+                Fish fish = new Fish(this.position.x, this.position.y, Diet.Herbivore, 1);
                 fish.experience = 6;
                 entity_list.add(fish);
             }
