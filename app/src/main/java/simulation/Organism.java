@@ -9,10 +9,13 @@ public abstract class Organism extends Entity{
     int speed;
     int experience=0;
     int level=1;
+    public int age;
+    public int lifespan;
     Organism(int x, int y, Diet diet, int speed) {
         super(x, y, 1);
         this.diet = diet;
         this.speed = speed;
+        this.age = 0;
     }
     Organism(int x, int y, Diet diet) {
         super(x, y, 1);
@@ -40,208 +43,89 @@ public abstract class Organism extends Entity{
 
 
     /**
-     * Checks whether organism can or cannot evolve
-     * If it can, it will create new organism that matches corresponding evolution state in replacement of one that has been there
-     * @param  entity_list List of games entities
-     * @param  cell Entity of extended type to Cell
-     */
-    void EvolveIfPossible(ArrayList<Entity> entity_list, Cell cell) {
-
-        if (this.experience > 5) {
-
-            Random random = new Random();
-
-            int r = random.nextInt(3);
-
-
-            if (r == 1) {
-                Cat cat = new Cat(cell.position.x, cell.position.y, Diet.Carnivore, 1, false, 0);
-                entity_list.add(cat);
-                cat.experience = 6;
-                entity_list.remove(cell);
-            } else if (r == 2) {
-                Bird bird = new Bird(cell.position.x, cell.position.y, Diet.Carnivore, 1);
-                entity_list.add(bird);
-                bird.experience = 6;
-                entity_list.remove(cell);
-
-            } else {
-                Fish fish = new Fish(cell.position.x, cell.position.y, Diet.Carnivore, 1);
-                entity_list.add(fish);
-                fish.experience = 6;
-                entity_list.remove(cell);
-            }
-
-        }
-    }
-    /**
-     * Checks whether organism can or cannot evolve
-     * If it can, it will create new organism that matches corresponding evolution state in replacement of one that has been there
-     * @param  entity_list List of games entities
-     * @param  fish Entity of extended type to Fish
-     */
-      void EvolveIfPossible(ArrayList<Entity> entity_list, Fish fish)  {
-
-            if(this.experience > 10)    {
-
-                Random random = new Random();
-
-                int r = random.nextInt(2);
-
-                if(r == 1)  {
-
-                    Amfiprion amfiprion = new Amfiprion(this.position.x, this.position.y, Diet.Carnivore, 1);
-                    entity_list.add(amfiprion);
-                    amfiprion.experience = 11;
-                    entity_list.remove(fish);
-
-                }   else {
-
-                    Pike pike = new Pike(this.position.x, this.position.y, Diet.Carnivore, 1);
-                    entity_list.add(pike);
-                    pike.experience = 11;
-                    entity_list.remove(fish);
-
-                }
-            }
-        }
-    /**
-     * Checks whether organism can or cannot evolve
-     * If it can, it will create new organism that matches corresponding evolution state in replacement of one that has been there
-     * @param  entity_list List of games entities
-     * @param  cat Entity of extended type to Cat
-     */
-        void EvolveIfPossible(ArrayList<Entity> entity_list, Cat cat)  {
-
-            if(this.experience > 10)    {
-
-                Random random = new Random();
-
-                int r = random.nextInt(2);
-
-                if(r == 1)  {
-
-                    Cougar cougar = new Cougar(this.position.x, this.position.y, Diet.Carnivore, 1, false, 0);
-                    entity_list.add(cougar);
-                    cougar.experience = 11;
-                    entity_list.remove(cat);
-
-                }   else {
-
-                    Tiger tiger = new Tiger(this.position.x, this.position.y, Diet.Carnivore, 1, false, 0);
-                    entity_list.add(tiger);
-                    tiger.experience = 11;
-                    entity_list.remove(cat);
-
-                }
-            }
-        }
-    /**
-     * Checks whether organism can or cannot evolve
-     * If it can, it will create new organism that matches corresponding evolution state in replacement of one that has been there
-     * @param  entity_list List of games entities
-     * @param  bird Entity of extended type to Bird
-     */
-        void EvolveIfPossible(ArrayList<Entity> entity_list, Bird bird)  {
-
-            if(this.experience > 10)    {
-
-                Random random = new Random();
-
-                int r = random.nextInt(2);
-
-                if(r == 1)  {
-
-                    Stork stork = new Stork(this.position.x, this.position.y, Diet.Carnivore, 1);
-                    entity_list.add(stork);
-                    stork.experience = 11;
-                    entity_list.remove(bird);
-
-                }   else {
-
-                    Eagle eagle = new Eagle(this.position.x, this.position.y, Diet.Carnivore, 1);
-                    entity_list.add(eagle);
-                    eagle.experience = 11;
-                    entity_list.remove(bird);
-
-                }
-            }
-    }
-
-    /**
     * Randomly changes coordinates of Organism
     */
     void Move(int WIDTH, int HEIGHT){
         Random r = new Random();
-        switch (r.nextInt(1,8)){
-            case 1:
-                if(this.position.x ==0){
-                    this.position.x+=1;
-                }else {
-                    this.position.x+=-1;
-                }
-                if(this.position.y == 0){
-                    this.position.y+=1;
-                }else{
-                    this.position.y+=-1;
-                }
-                break;
-            case 2:
-//                this.position.x+=0;
-                if(this.position.y == 0){
-                    this.position.y+=1;
-                }else{
-                    this.position.y+=-1;
-                }
-                break;
-            case 3:
-                if(this.position.x == WIDTH-1){
-                    this.position.x+=-1;
-                }else {
-                    this.position.x+=1;
-                }
-                if(this.position.y == 0){
-                    this.position.y+=1;
-                }else{
-                    this.position.y+=-1;
-                }
-                break;
-            case 4:
-                if(this.position.x == 0){
-                    this.position.x+=1;
-                }else {
-                    this.position.x+=-1;
-                }
-//                this.position.y+=0;
-                break;
-            case 5:
-                if(this.position.x == WIDTH-1){
-                    this.position.x+=-1;
-                }else {
-                    this.position.x+=1;
-                }
-//                this.position.y+=0;
-                break;
-            case 6:
-                if(this.position.x == WIDTH-1){
-                    this.position.x+=-1;
-                }else {
-                    this.position.x+=1;
-                }
-                if(this.position.y == HEIGHT-1){
-                    this.position.y+=-1;
-                }else{
-                    this.position.y+=1;
-                }
-                break;
-            case 7:
-//                this.position.x+=0;
-                if(this.position.y == HEIGHT-1){
-                    this.position.y+=-1;
-                }else{
-                    this.position.y+=1;
-                }
-                break;
+        int add_to_x = r.nextInt(-1, 2);
+        int add_to_y = r.nextInt(-1, 2);
+        if(this.position.x + add_to_x > 0 && this.position.x + add_to_x < WIDTH){
+            this.position.x += add_to_x;
+        }
+        if(this.position.y + add_to_y > 0 && this.position.y + add_to_y < HEIGHT){
+            this.position.y += add_to_y;
+        }
+
+//
+//        switch (r.nextInt(1,8)){
+//            case 1:
+//                if(this.position.x ==0){
+//                    this.position.x+=1;
+//                }else {
+//                    this.position.x+=-1;
+//                }
+//                if(this.position.y == 0){
+//                    this.position.y+=1;
+//                }else{
+//                    this.position.y+=-1;
+//                }
+//                break;
+//            case 2:
+////                this.position.x+=0;
+//                if(this.position.y == 0){
+//                    this.position.y+=1;
+//                }else{
+//                    this.position.y+=-1;
+//                }
+//                break;
+//            case 3:
+//                if(this.position.x == WIDTH-1){
+//                    this.position.x+=-1;
+//                }else {
+//                    this.position.x+=1;
+//                }
+//                if(this.position.y == 0){
+//                    this.position.y+=1;
+//                }else{
+//                    this.position.y+=-1;
+//                }
+//                break;
+//            case 4:
+//                if(this.position.x == 0){
+//                    this.position.x+=1;
+//                }else {
+//                    this.position.x+=-1;
+//                }
+////                this.position.y+=0;
+//                break;
+//            case 5:
+//                if(this.position.x == WIDTH-1){
+//                    this.position.x+=-1;
+//                }else {
+//                    this.position.x+=1;
+//                }
+////                this.position.y+=0;
+//                break;
+//            case 6:
+//                if(this.position.x == WIDTH-1){
+//                    this.position.x+=-1;
+//                }else {
+//                    this.position.x+=1;
+//                }
+//                if(this.position.y == HEIGHT-1){
+//                    this.position.y+=-1;
+//                }else{
+//                    this.position.y+=1;
+//                }
+//                break;
+//            case 7:
+////                this.position.x+=0;
+//                if(this.position.y == HEIGHT-1){
+//                    this.position.y+=-1;
+//                }else{
+//                    this.position.y+=1;
+//                }
+//                break;
 //            case 8:
 //                if(this.position.x == WIDTH){
 //                    this.position.x+=-1;
@@ -255,7 +139,7 @@ public abstract class Organism extends Entity{
 //                }
 //                break;
         }
-    }
+
     /**
      * Given list of entities, search for the first entity which is in the distance of Organism.
      * @param entity_list List of games entities
@@ -273,10 +157,11 @@ public abstract class Organism extends Entity{
      * @param e Entity to be eaten
      * @param entity_list List of games entities
      */
-    private void Eat(Entity e, ArrayList<Entity> entity_list){
+    private void Eat(Entity e, ArrayList<Entity> entity_list, String[][] entity_map){
         if(e != null){
             this.experience += e.experience;
             entity_list.remove(e);
+            entity_map[e.position.x][e.position.y] = " ";
         }
     }
     /**
@@ -284,23 +169,26 @@ public abstract class Organism extends Entity{
      * @param e Entity to be eaten
      * @param entity_list List of games entities
      */
-    public void EatIfPossible(Entity e, ArrayList<Entity> entity_list){
+    public void EatIfPossible(Entity e, ArrayList<Entity> entity_list, String[][] entity_map){
         switch(this.diet){
             case Herbivore:{
                 if (e.getClass().equals(Weed.class)) {
-                    this.Eat(e, entity_list);
+                    this.Eat(e, entity_list, entity_map);
                 }
                 break;
             }
             case Carnivore:{
-                if (!e.getClass().equals(e.getClass()) && (!e.getClass().equals(Weed.class)) && (this.size > e.size) ){
-                        this.Eat(e, entity_list);
+                if (!this.getClass().equals(e.getClass()) && (!e.getClass().equals(Weed.class)) && (this.size > e.size) ){
+                    this.Eat(e, entity_list, entity_map);
                 }
                 break;
             }
             case Omnivore:{
-                if((this.size > e.size) && (!e.getClass().equals(e.getClass()))){
-                    this.Eat(e, entity_list);
+                if(this.getClass().equals(Cell.class)){
+                    this.Eat(e, entity_list, entity_map);
+                }
+                else if((this.size > e.size) && (!this.getClass().equals(e.getClass()))){
+                    this.Eat(e, entity_list, entity_map);
                 }
                 break;
             }
@@ -309,8 +197,16 @@ public abstract class Organism extends Entity{
 
     void StrongerBehaviour(){}
     void WeakerBehaviour(){}
-
+    public boolean DieIfPossible(ArrayList<Entity> entity_list, String[][] entity_map){
+        if(this.age > this.lifespan){
+            entity_list.remove(this);
+            entity_map[this.position.x][this.position.y] = " ";
+            return true;
+        }
+        return false;
+    }
     abstract public void Breed(ArrayList<Entity> entity_list);
+    abstract public void EvolveIfPossible(ArrayList<Entity> entity_list);
 
 
 }

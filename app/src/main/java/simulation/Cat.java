@@ -3,6 +3,7 @@ package simulation;
 import simulation.bodyparts.Claws;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Cat extends Cell {
 
@@ -14,6 +15,8 @@ public class Cat extends Cell {
         super(x, y, diet, speed);
         this.SPRITE = CONSTANTS.WHITE+"C"+CONSTANTS.RESET;
         ca_count++;
+        this.size = 3;
+        this.lifespan = 200;
     }
 
     void sleep() {
@@ -37,10 +40,40 @@ public class Cat extends Cell {
     /**
      * Breeds organism of given type and appends it to list of games entities
      * @param entity_list of games entities
-     * @param cat  extended class of organism
      */
     @Override
     public void Breed(ArrayList<Entity> entity_list) {
         entity_list.add(new Cat(this.position.x, this.position.y, this.diet, this.speed, false, 0));
+    }
+
+    /**
+     * Checks whether organism can or cannot evolve
+     * If it can, it will create new organism that matches corresponding evolution state in replacement of one that has been there
+     * @param  entity_list List of games entities
+     */
+    @Override
+    public void EvolveIfPossible(ArrayList<Entity> entity_list) {
+        if(this.experience > 6)    {
+
+            Random random = new Random();
+
+            int r = random.nextInt(2);
+
+            if(r == 1)  {
+
+                Cougar cougar = new Cougar(this.position.x, this.position.y, Diet.Carnivore, 1, false, 0);
+                entity_list.add(cougar);
+                cougar.experience = 11;
+                entity_list.remove(this);
+
+            }   else {
+
+                Tiger tiger = new Tiger(this.position.x, this.position.y, Diet.Carnivore, 1, false, 0);
+                entity_list.add(tiger);
+                tiger.experience = 11;
+                entity_list.remove(this);
+
+            }
+        }
     }
 }

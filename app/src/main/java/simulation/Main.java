@@ -3,13 +3,12 @@ package simulation;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main{
 
+    public static int num_of_cells;
+    public static int num_of_weed;
 
     public static void main(String[] args) {
         Projector GAME = new Projector(50,50);
@@ -19,44 +18,37 @@ public class Main{
             }
         }
 
-        int[] output_data = new int[13];
-        output_data[0] = GAME.HEIGHT;
-        output_data[1] = GAME.WIDTH;
-
-
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter starting number of cells: ");
-        int num_of_cells = scanner.nextInt();
-        output_data[2] = num_of_cells;
+        num_of_cells = scanner.nextInt();
 
         Cell[] cells = new Cell[num_of_cells];
 
         System.out.println("Enter starting number of weed: ");
-        int num_of_weed = scanner.nextInt();
-        output_data[3] = num_of_weed;
+        num_of_weed = scanner.nextInt();
 
         Weed[] weed = new Weed[num_of_weed];
-        System.out.println("Download data after which cycles (enter each cycle natural number differentiating them with spaces. Pattern \"12 34 56\" or just \"12\"):");
+        System.out.println("Cycles to dump data of (Pattern \"12 34 56\" or just \"12\"): ");
+        scanner.nextLine();
         String input = scanner.nextLine();
-
         GAME.DATA_DUMP_CYCLES = parseNumbers(input);
+        Collections.sort(GAME.DATA_DUMP_CYCLES);
+
         Random random = new Random();
 
         for(int i = 0; i < num_of_cells; i++)   {
             cells[i] = new Cell(random.nextInt(GAME.HEIGHT), random.nextInt(GAME.WIDTH), Diet.Omnivore, 1);
-//            var cell = new Cell(random.nextInt(GAME.HEIGHT), random.nextInt(GAME.WIDTH),"cell", Diet.Omnivore, 1);
             GAME.ENTITY_LIST.add(cells[i]);
             GAME.ENTITY_MAP[cells[i].position.x][cells[i].position.y] = cells[i].SPRITE;
         }
 
         for(int i = 0; i < num_of_weed; i++)   {
             weed[i] = new Weed(random.nextInt(GAME.HEIGHT), random.nextInt(GAME.WIDTH));
-//            var weed = new Weed(random.nextInt(GAME.HEIGHT), random.nextInt(GAME.WIDTH), "weed");
             GAME.ENTITY_LIST.add(weed[i]);
             GAME.ENTITY_MAP[weed[i].position.x][weed[i].position.y] = weed[i].SPRITE;
         }
 
-        GAME.start(output_data);
+        GAME.start();
 
 
     }

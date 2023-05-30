@@ -6,9 +6,12 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Random;
 
+import static simulation.Main.num_of_cells;
+import static simulation.Main.num_of_weed;
+
 public class Projector {
-    static int WIDTH;
-    static int HEIGHT;
+    int WIDTH;
+    int HEIGHT;
     public ArrayList<Integer>   DATA_DUMP_CYCLES;
     private boolean running;
     private final long OPTIMAL_TIME = 1000000000 / CONSTANTS.FPS_TARGET;
@@ -19,12 +22,12 @@ public class Projector {
     Projector(int width, int height){
         this.WIDTH = width;
         this.HEIGHT = height;
-        ENTITY_MAP = new String[WIDTH][HEIGHT];
+        ENTITY_MAP = new String[this.WIDTH][this.HEIGHT];
     }
     /**
      * Game starting method, controlls game
      */
-    public void start(int[] tab) {
+    public void start() {
         running = true;
         long lastUpdateTime = System.nanoTime();
         while (running) {
@@ -43,7 +46,7 @@ public class Projector {
                     System.out.print("\033[H\033[2J");
                     System.out.flush();
                 }
-                update(tab);
+                update();
                 System.out.println(render(ENTITY_MAP));
                 for (int i = 0; i < WIDTH; i++) {
 
@@ -72,17 +75,29 @@ public class Projector {
     /**
      * Updates game state
      */
-    private void update(int[] tab) {
+    private void update() {
         this.cycle++;
         Random r = new Random();
 
-        for (int i = 0; i<ENTITY_LIST.size(); i++) {
+        for (int i = ENTITY_LIST.size()-1; i >= 0 ; i--) {
             var ent = ENTITY_LIST.get(i);
             if(ent instanceof  Organism){
                 var org = (Organism)ent;
+                org.age++;
+                if(org.DieIfPossible(ENTITY_LIST, ENTITY_MAP)){
+                    continue;
+                }
                 //Sprawdzenie otoczenia / podjęcie akcji
                 var toActWith = org.CheckSurroundings(this.ENTITY_LIST);
-                org.EatIfPossible(toActWith,ENTITY_LIST);
+
+                if(toActWith != null){
+                    if(org.getClass().equals(toActWith.getClass())){
+                        if(r.nextInt(1, 30) == 1){
+                            org.Breed(ENTITY_LIST);
+                        }
+                    }
+                    org.EatIfPossible(toActWith, ENTITY_LIST, ENTITY_MAP);
+                }
                 //poruszanie
 
                 if(org.getClass() == Cat.class) {
@@ -106,7 +121,7 @@ public class Projector {
                 }   else if(org.getClass() == Fish.class)   {
 
                     if(r.nextInt(0,20) > 18)    {
-
+                        ENTITY_MAP[org.position.x][org.position.y] = " ";
                         ((Fish)org).CaughtByFisherman(ENTITY_LIST, (Fish) org);
 
                     }   else {
@@ -135,6 +150,98 @@ public class Projector {
 
                     }
 
+                }  else if(org.getClass() == Tiger.class) {
+
+                    if(((Tiger) org).if_asleep)   {
+                        ((Tiger) org).sleep();
+                    }   else {
+
+                        if(r.nextInt(0,20) > 17)    {
+                            ((Tiger) org).if_asleep = true;
+                        }   else {
+
+                            ENTITY_MAP[org.position.x][org.position.y] = " ";
+                            org.Move(WIDTH,HEIGHT);
+                            ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                        }
+
+                    }
+
+                } else if(org.getClass() == Cougar.class) {
+
+                    if (((Cougar) org).if_asleep) {
+                        ((Cougar) org).sleep();
+                    } else {
+
+                        if (r.nextInt(0, 20) > 17) {
+                            ((Cougar) org).if_asleep = true;
+                        } else {
+
+                            ENTITY_MAP[org.position.x][org.position.y] = " ";
+                            org.Move(WIDTH, HEIGHT);
+                            ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                        }
+
+                    }
+                } else if(org.getClass() == Stork.class) {
+
+                    if(r.nextInt(0,20) > 17)    {
+
+                        ENTITY_MAP[org.position.x][org.position.y] = " ";
+                        ((Stork)org).FlyFast(WIDTH, HEIGHT, org);
+                        ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                    }   else {
+
+                        ENTITY_MAP[org.position.x][org.position.y] = " ";
+                        org.Move(WIDTH,HEIGHT);
+                        ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                    }
+                } else if(org.getClass() == Eagle.class) {
+
+                    if(r.nextInt(0,20) > 17)    {
+
+                        ENTITY_MAP[org.position.x][org.position.y] = " ";
+                        ((Eagle)org).FlyFast(WIDTH, HEIGHT, org);
+                        ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                    }   else {
+
+                        ENTITY_MAP[org.position.x][org.position.y] = " ";
+                        org.Move(WIDTH,HEIGHT);
+                        ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                    }
+                }  else if(org.getClass() == Amfiprion.class)   {
+
+                    if(r.nextInt(0,20) > 18)    {
+                        ENTITY_MAP[org.position.x][org.position.y] = " ";
+                        ((Amfiprion)org).CaughtByFisherman(ENTITY_LIST, (Amfiprion) org);
+
+                    }   else {
+
+                        ENTITY_MAP[org.position.x][org.position.y] = " ";
+                        org.Move(WIDTH,HEIGHT);
+                        ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                    }
+                } else if(org.getClass() == Pike.class)   {
+
+                    if(r.nextInt(0,20) > 18)    {
+                        ENTITY_MAP[org.position.x][org.position.y] = " ";
+                        ((Pike)org).CaughtByFisherman(ENTITY_LIST, (Pike) org);
+
+                    }   else {
+
+                        ENTITY_MAP[org.position.x][org.position.y] = " ";
+                        org.Move(WIDTH,HEIGHT);
+                        ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
+                    }
+
                 } else  {
 
                     ENTITY_MAP[org.position.x][org.position.y] = " ";
@@ -142,49 +249,51 @@ public class Projector {
                     ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
 
                 }
+
+                org.EvolveIfPossible(ENTITY_LIST);
+
+            }else if(ent instanceof Weed){
+                ENTITY_MAP[ent.position.x][ent.position.y] = ent.SPRITE;
+            }
+
+        }
+
+        if(this.DATA_DUMP_CYCLES.size() > 0){
+            if(this.cycle == this.DATA_DUMP_CYCLES.get(0)){
+                //
+                Write2File();
+                //
+                this.DATA_DUMP_CYCLES.remove(0);
             }
         }
 
-        if(this.cycle == this.DATA_DUMP_CYCLES.get(0)){
-            //
-            //data drop / data dump
-            //
-            this.DATA_DUMP_CYCLES.remove(0);
-        }
     }
     /**
      * Renders singular frame of game state
      * @param MAP Mapped positions of entities using 2dim array of strings
      * @return Rendered frame to be displayed
      */
-    public static String render(String[][] MAP){
-        String [] processed_rows = new String[HEIGHT];
-        for (int i = 0; i < HEIGHT; i++) {
+    public String render(String[][] MAP){
+        String [] processed_rows = new String[this.HEIGHT];
+        for (int i = 0; i < this.HEIGHT; i++) {
             processed_rows[i] = String.join(" ",MAP[i]);
         }
         return String.join("\n",processed_rows);
     }
-    void Write2File(int[] tab)  {
+    void Write2File()  {
 
-        String fileName = "output_data.txt";
-
-        tab[4] = Cat.getNumberOfObjects();
-        tab[5] = Bird.getNumberOfObjects();
-        tab[6] = Fish.getNumberOfObjects();
-        tab[7] = Tiger.getNumberOfObjects();
-        tab[8] = Cougar.getNumberOfObjects();
-        Stork.getNumberOfObjects();
+        String fileName = "output_" + this.cycle + "data.txt";
 
         try (PrintWriter writer = new PrintWriter(new FileWriter(fileName))) {
 
-            writer.println("Size of the map in cycle "+this.cycle+" was: " + tab[0] + " " + tab[1] + ".");
-            writer.println("Simulation started with " + tab[2] + "cells.");
-            writer.println("Simulation started with " + tab[3] + "weed.");
-            writer.println("There were " + tab[4] + " cats during simulation.");
-            writer.println("There were " + tab[5] + " birds during simulation.");
-            writer.println("There were " + tab[6] + " fishes during simulation.");
-            writer.println("There were " + tab[7] + " tigers during simulation.");
-            writer.println("There were " + tab[8] + " cougars during simulation.");
+            writer.println("Size of the map in cycle " + this.cycle + " was: " + HEIGHT + " " + WIDTH + ".");
+            writer.println("Simulation started with " + num_of_cells + " cells.");
+            writer.println("Simulation started with " + num_of_weed + " weed.");
+            writer.println("There were " + Cat.getNumberOfObjects() + " cats during simulation.");
+            writer.println("There were " + Bird.getNumberOfObjects() + " birds during simulation.");
+            writer.println("There were " + Fish.getNumberOfObjects() + " fishes during simulation.");
+            writer.println("There were " + Tiger.getNumberOfObjects() + " tigers during simulation.");
+            writer.println("There were " + Cougar.getNumberOfObjects() + " cougars during simulation.");
             writer.println("There were " + Eagle.getNumberOfObjects() + " eagles during simulation.");
             writer.println("There were " + Pike.getNumberOfObjects() + " pikes during simulation.");
             writer.println("There were " + Amfiprion.getNumberOfObjects() + " amfiprions during simulation.");

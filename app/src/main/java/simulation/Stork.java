@@ -8,6 +8,7 @@ public class Stork extends Bird {
         super(x, y, diet, speed);
         this.SPRITE = CONSTANTS.RED_BOLD+"M"+CONSTANTS.RESET;
         s_count++;
+        this.size = 3;
     }
     void DeliverABaby(){}
     public static int getNumberOfObjects() {
