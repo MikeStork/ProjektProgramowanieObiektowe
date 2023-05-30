@@ -2,7 +2,7 @@ package simulation;
 
 import java.util.ArrayList;
 
-public class Cougar extends Cat {
+public class Cougar extends Cat implements I_Cougar{
     int speed_incrementation = 1;
     private static int co_count;
 

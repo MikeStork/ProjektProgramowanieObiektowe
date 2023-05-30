@@ -2,7 +2,7 @@ package simulation;
 
 import java.util.ArrayList;
 
-public class Eagle extends Bird {
+public class Eagle extends Bird implements I_Eagle {
     private static int e_count;
     Eagle(int x, int y, Diet diet, int speed) {
         super(x, y, diet, speed);

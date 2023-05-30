@@ -2,7 +2,7 @@ package simulation;
 
 import java.util.ArrayList;
 
-public class Amfiprion extends Fish {
+public class Amfiprion extends Fish implements I_Amfiprion {
     private static int a_count;
     Amfiprion(int x, int y, Diet diet, int speed) {
         super(x, y, diet, speed);
@@ -17,5 +17,5 @@ public class Amfiprion extends Fish {
     public static int getNumberOfObjects() {
         return a_count;
     }
-    void DeepDive(){}
+
 }
