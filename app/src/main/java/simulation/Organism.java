@@ -9,10 +9,13 @@ public abstract class Organism extends Entity{
     int speed;
     int experience=0;
     int level=1;
+    public int age;
+    public int lifespan;
     Organism(int x, int y, Diet diet, int speed) {
         super(x, y, 1);
         this.diet = diet;
         this.speed = speed;
+        this.age = 0;
     }
     Organism(int x, int y, Diet diet) {
         super(x, y, 1);
@@ -154,10 +157,11 @@ public abstract class Organism extends Entity{
      * @param e Entity to be eaten
      * @param entity_list List of games entities
      */
-    private void Eat(Entity e, ArrayList<Entity> entity_list){
+    private void Eat(Entity e, ArrayList<Entity> entity_list, String[][] entity_map){
         if(e != null){
             this.experience += e.experience;
             entity_list.remove(e);
+            entity_map[e.position.x][e.position.y] = " ";
         }
     }
     /**
@@ -165,26 +169,26 @@ public abstract class Organism extends Entity{
      * @param e Entity to be eaten
      * @param entity_list List of games entities
      */
-    public void EatIfPossible(Entity e, ArrayList<Entity> entity_list){
+    public void EatIfPossible(Entity e, ArrayList<Entity> entity_list, String[][] entity_map){
         switch(this.diet){
             case Herbivore:{
                 if (e.getClass().equals(Weed.class)) {
-                    this.Eat(e, entity_list);
+                    this.Eat(e, entity_list, entity_map);
                 }
                 break;
             }
             case Carnivore:{
                 if (!this.getClass().equals(e.getClass()) && (!e.getClass().equals(Weed.class)) && (this.size > e.size) ){
-                        this.Eat(e, entity_list);
+                    this.Eat(e, entity_list, entity_map);
                 }
                 break;
             }
             case Omnivore:{
                 if(this.getClass().equals(Cell.class)){
-                    this.Eat(e, entity_list);
+                    this.Eat(e, entity_list, entity_map);
                 }
                 else if((this.size > e.size) && (!this.getClass().equals(e.getClass()))){
-                    this.Eat(e, entity_list);
+                    this.Eat(e, entity_list, entity_map);
                 }
                 break;
             }
@@ -193,7 +197,14 @@ public abstract class Organism extends Entity{
 
     void StrongerBehaviour(){}
     void WeakerBehaviour(){}
-
+    public boolean DieIfPossible(ArrayList<Entity> entity_list, String[][] entity_map){
+        if(this.age > this.lifespan){
+            entity_list.remove(this);
+            entity_map[this.position.x][this.position.y] = " ";
+            return true;
+        }
+        return false;
+    }
     abstract public void Breed(ArrayList<Entity> entity_list);
     abstract public void EvolveIfPossible(ArrayList<Entity> entity_list);
 

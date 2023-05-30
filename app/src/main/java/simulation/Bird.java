@@ -16,6 +16,7 @@ public class Bird extends Cell {
         b_count++;
         this.SPRITE = CONSTANTS.BLUE_UNDERLINED+"B"+CONSTANTS.RESET;
         this.size = 2;
+        this.lifespan = 100;
     }
     /**
      * @exception Unimplemented

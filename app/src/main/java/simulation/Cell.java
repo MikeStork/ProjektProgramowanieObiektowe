@@ -5,10 +5,13 @@ import java.util.Random;
 
 public class Cell extends Organism{
 
+
     Cell(int x, int y, Diet diet, int speed) {
         super(x, y, diet, speed);
         this.SPRITE = CONSTANTS.PURPLE+"K"+CONSTANTS.RESET;
         this.size = 1;
+        this.age = 0;
+        this.lifespan = 99999;
     }
 
     @Override

@@ -10,8 +10,8 @@ import static simulation.Main.num_of_cells;
 import static simulation.Main.num_of_weed;
 
 public class Projector {
-    static int WIDTH;
-    static int HEIGHT;
+    int WIDTH;
+    int HEIGHT;
     public ArrayList<Integer>   DATA_DUMP_CYCLES;
     private boolean running;
     private final long OPTIMAL_TIME = 1000000000 / CONSTANTS.FPS_TARGET;
@@ -22,7 +22,7 @@ public class Projector {
     Projector(int width, int height){
         this.WIDTH = width;
         this.HEIGHT = height;
-        ENTITY_MAP = new String[WIDTH][HEIGHT];
+        ENTITY_MAP = new String[this.WIDTH][this.HEIGHT];
     }
     /**
      * Game starting method, controlls game
@@ -79,15 +79,24 @@ public class Projector {
         this.cycle++;
         Random r = new Random();
 
-        for (int i = 0; i<ENTITY_LIST.size(); i++) {
+        for (int i = ENTITY_LIST.size()-1; i >= 0 ; i--) {
             var ent = ENTITY_LIST.get(i);
             if(ent instanceof  Organism){
                 var org = (Organism)ent;
+                org.age++;
+                if(org.DieIfPossible(ENTITY_LIST, ENTITY_MAP)){
+                    continue;
+                }
                 //Sprawdzenie otoczenia / podjęcie akcji
                 var toActWith = org.CheckSurroundings(this.ENTITY_LIST);
 
                 if(toActWith != null){
-                    org.EatIfPossible(toActWith,ENTITY_LIST);
+                    if(org.getClass().equals(toActWith.getClass())){
+                        if(r.nextInt(1, 30) == 1){
+                            org.Breed(ENTITY_LIST);
+                        }
+                    }
+                    org.EatIfPossible(toActWith, ENTITY_LIST, ENTITY_MAP);
                 }
                 //poruszanie
 
@@ -101,6 +110,7 @@ public class Projector {
                             ((Cat) org).if_asleep = true;
                         }   else {
 
+                            ENTITY_MAP[org.position.x][org.position.y] = " ";
                             org.Move(WIDTH,HEIGHT);
                             ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
 
@@ -113,10 +123,16 @@ public class Projector {
                     if(r.nextInt(0,20) > 18)    {
                         ENTITY_MAP[org.position.x][org.position.y] = " ";
                         ((Fish)org).CaughtByFisherman(ENTITY_LIST, (Fish) org);
+
                     }   else {
+
+                        ENTITY_MAP[org.position.x][org.position.y] = " ";
                         org.Move(WIDTH,HEIGHT);
                         ENTITY_MAP[org.position.x][org.position.y] = org.SPRITE;
+
                     }
+
+
 
                 } else if(org.getClass() == Bird.class) {
 
@@ -142,7 +158,7 @@ public class Projector {
 
                 }
                 org.EvolveIfPossible(ENTITY_LIST);
-            } else if(ent instanceof Weed){
+            }else if(ent instanceof Weed){
                 ENTITY_MAP[ent.position.x][ent.position.y] = ent.SPRITE;
             }
 
@@ -160,9 +176,9 @@ public class Projector {
      * @param MAP Mapped positions of entities using 2dim array of strings
      * @return Rendered frame to be displayed
      */
-    public static String render(String[][] MAP){
-        String [] processed_rows = new String[HEIGHT];
-        for (int i = 0; i < HEIGHT; i++) {
+    public String render(String[][] MAP){
+        String [] processed_rows = new String[this.HEIGHT];
+        for (int i = 0; i < this.HEIGHT; i++) {
             processed_rows[i] = String.join(" ",MAP[i]);
         }
         return String.join("\n",processed_rows);

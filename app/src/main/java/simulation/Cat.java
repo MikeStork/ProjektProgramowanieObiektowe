@@ -16,6 +16,7 @@ public class Cat extends Cell {
         this.SPRITE = CONSTANTS.WHITE+"C"+CONSTANTS.RESET;
         ca_count++;
         this.size = 3;
+        this.lifespan = 200;
     }
 
     void sleep() {
@@ -39,7 +40,6 @@ public class Cat extends Cell {
     /**
      * Breeds organism of given type and appends it to list of games entities
      * @param entity_list of games entities
-     * @param cat  extended class of organism
      */
     @Override
     public void Breed(ArrayList<Entity> entity_list) {
