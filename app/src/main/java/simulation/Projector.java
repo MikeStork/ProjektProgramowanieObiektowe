@@ -255,7 +255,9 @@ public class Projector {
 
                 }
 
-                org.EvolveIfPossible(ENTITY_LIST);
+                if(org.level < 3){
+                    org.EvolveIfPossible(ENTITY_LIST);
+                }
 
             }else if(ent instanceof Weed){
                 ENTITY_MAP[ent.position.x][ent.position.y] = ent.SPRITE;

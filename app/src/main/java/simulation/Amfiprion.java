@@ -9,6 +9,7 @@ public class Amfiprion extends Fish {
         this.SPRITE = CONSTANTS.YELLOW+"A"+CONSTANTS.RESET;
         a_count++;
         this.size = 2;
+        this.level = 3;
     }
     /**
      * @exception Unimplemented

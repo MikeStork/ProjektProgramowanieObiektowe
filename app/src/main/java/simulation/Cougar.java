@@ -11,6 +11,7 @@ public class Cougar extends Cat {
         this.SPRITE = CONSTANTS.YELLOW_BOLD+ "P"+CONSTANTS.RESET;
         co_count++;
         this.size = 4;
+        this.level = 3;
     }
     public static int getNumberOfObjects() {
         return co_count;

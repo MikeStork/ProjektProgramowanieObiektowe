@@ -7,8 +7,7 @@ import java.util.Random;
 public abstract class Organism extends Entity{
     Diet diet;
     int speed;
-    int experience=0;
-    int level=1;
+    int level;
     public int age;
     public int lifespan;
     Organism(int x, int y, Diet diet, int speed) {
@@ -16,6 +15,7 @@ public abstract class Organism extends Entity{
         this.diet = diet;
         this.speed = speed;
         this.age = 0;
+        this.experience = 0;
     }
     Organism(int x, int y, Diet diet) {
         super(x, y, 1);
