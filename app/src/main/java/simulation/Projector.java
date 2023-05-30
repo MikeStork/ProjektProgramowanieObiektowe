@@ -79,15 +79,24 @@ public class Projector {
         this.cycle++;
         Random r = new Random();
 
-        for (int i = 0; i<ENTITY_LIST.size(); i++) {
+        for (int i = ENTITY_LIST.size()-1; i >= 0 ; i--) {
             var ent = ENTITY_LIST.get(i);
             if(ent instanceof  Organism){
                 var org = (Organism)ent;
+                org.age++;
+                if(org.DieIfPossible(ENTITY_LIST, ENTITY_MAP)){
+                    continue;
+                }
                 //Sprawdzenie otoczenia / podjęcie akcji
                 var toActWith = org.CheckSurroundings(this.ENTITY_LIST);
 
                 if(toActWith != null){
-                    org.EatIfPossible(toActWith,ENTITY_LIST);
+                    if(org.getClass().equals(toActWith.getClass())){
+                        if(r.nextInt(1, 50) == 1){
+                            org.Breed(ENTITY_LIST);
+                        }
+                    }
+                    org.EatIfPossible(toActWith, ENTITY_LIST, ENTITY_MAP);
                 }
                 //poruszanie
 
