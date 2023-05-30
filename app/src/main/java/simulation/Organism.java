@@ -1,6 +1,8 @@
 package simulation;
 
-import java.lang.reflect.Array;
+import simulation.data.Diet;
+import simulation.interfaces.I_Organism;
+
 import java.util.ArrayList;
 import java.util.Random;
 

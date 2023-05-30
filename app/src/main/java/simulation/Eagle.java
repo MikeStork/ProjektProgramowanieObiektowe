@@ -1,5 +1,8 @@
 package simulation;
 
+import simulation.data.CONSTANTS;
+import simulation.data.Diet;
+
 import java.util.ArrayList;
 
 public class Eagle extends Bird implements I_Eagle {

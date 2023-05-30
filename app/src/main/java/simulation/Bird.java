@@ -19,16 +19,14 @@ public class Bird extends Cell implements I_Bird{
         this.lifespan = 400;
         this.level = 2;
     }
-    /**
-     * @exception Unimplemented
-     */
+
     /**
      * Enables Bird object to make 4 fast moves
      * @param width width of the map
      * @param height height of the map
      * @param org Organism object able to make a move
      */
-    public void FlyFast(int width, int height, Organism org) {
+    void FlyFast(int width, int height, Organism org) {
         int count = 0;
 
         while(count < 3)    {
@@ -36,7 +34,12 @@ public class Bird extends Cell implements I_Bird{
             ++count;
         }
     }
-
+    /**
+     * Enables Bird object to make 4 fast moves
+     * @param width width of the map
+     * @param height height of the map
+     * @param org Organism object able to make a move
+     */
     public static int getNumberOfObjects() {
         return b_count;
     }

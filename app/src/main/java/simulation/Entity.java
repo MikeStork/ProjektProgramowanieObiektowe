@@ -1,5 +1,7 @@
 package simulation;
 
+import simulation.interfaces.I_Entity;
+
 import java.lang.reflect.Field;
 
 public class Entity implements I_Entity {

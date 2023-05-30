@@ -1,6 +1,7 @@
 package simulation;
 
-import java.util.ArrayList;
+import simulation.data.CONSTANTS;
+import simulation.data.Diet;
 
 public class Amfiprion extends Fish implements I_Amfiprion {
     private static int a_count;
@@ -17,5 +18,5 @@ public class Amfiprion extends Fish implements I_Amfiprion {
     public static int getNumberOfObjects() {
         return a_count;
     }
-
+    void DeepDive(){}
 }

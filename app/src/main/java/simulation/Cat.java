@@ -1,6 +1,6 @@
 package simulation;
-
-import simulation.bodyparts.Claws;
+import simulation.data.CONSTANTS;
+import simulation.data.Diet;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -10,7 +10,6 @@ public class Cat extends Cell implements I_Cat{
     boolean if_asleep;
     int sleep_count;
     private static int ca_count;
-    Claws claws = new Claws();
     Cat(int x, int y, Diet diet, int speed, boolean if_asleep, int sleep_count) {
         super(x, y, diet, speed);
         this.SPRITE = CONSTANTS.WHITE+"C"+CONSTANTS.RESET;
