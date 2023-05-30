@@ -27,14 +27,14 @@ public abstract class Organism extends Entity implements I_Organism {
      * The url argument must specify an absolute <a href="#{@link}">{@link URL}</a>. The name
      * argument is a specifier that is relative to the url argument.
      * <p>
-     * This method always returns immediately, whether or not the
+     * This method always returns immediately, whether the
      * image exists. When this applet attempts to draw the image on
      * the screen, the data will be loaded. The graphics primitives
      * that draw the image will incrementally paint on the screen.
      *
      * @param  url  an absolute URL giving the base location of the image
      * @param  name the location of the image, relative to the url argument
-     * @return      the image at the specified URL
+     * @return the image at the specified URL
      * @see         Image
      */
 
@@ -53,88 +53,6 @@ public abstract class Organism extends Entity implements I_Organism {
             this.position.y += add_to_y;
         }
 
-//
-//        switch (r.nextInt(1,8)){
-//            case 1:
-//                if(this.position.x ==0){
-//                    this.position.x+=1;
-//                }else {
-//                    this.position.x+=-1;
-//                }
-//                if(this.position.y == 0){
-//                    this.position.y+=1;
-//                }else{
-//                    this.position.y+=-1;
-//                }
-//                break;
-//            case 2:
-////                this.position.x+=0;
-//                if(this.position.y == 0){
-//                    this.position.y+=1;
-//                }else{
-//                    this.position.y+=-1;
-//                }
-//                break;
-//            case 3:
-//                if(this.position.x == WIDTH-1){
-//                    this.position.x+=-1;
-//                }else {
-//                    this.position.x+=1;
-//                }
-//                if(this.position.y == 0){
-//                    this.position.y+=1;
-//                }else{
-//                    this.position.y+=-1;
-//                }
-//                break;
-//            case 4:
-//                if(this.position.x == 0){
-//                    this.position.x+=1;
-//                }else {
-//                    this.position.x+=-1;
-//                }
-////                this.position.y+=0;
-//                break;
-//            case 5:
-//                if(this.position.x == WIDTH-1){
-//                    this.position.x+=-1;
-//                }else {
-//                    this.position.x+=1;
-//                }
-////                this.position.y+=0;
-//                break;
-//            case 6:
-//                if(this.position.x == WIDTH-1){
-//                    this.position.x+=-1;
-//                }else {
-//                    this.position.x+=1;
-//                }
-//                if(this.position.y == HEIGHT-1){
-//                    this.position.y+=-1;
-//                }else{
-//                    this.position.y+=1;
-//                }
-//                break;
-//            case 7:
-////                this.position.x+=0;
-//                if(this.position.y == HEIGHT-1){
-//                    this.position.y+=-1;
-//                }else{
-//                    this.position.y+=1;
-//                }
-//                break;
-//            case 8:
-//                if(this.position.x == WIDTH){
-//                    this.position.x+=-1;
-//                }else {
-//                    this.position.x+=1;
-//                }
-//                if(this.position.y == HEIGHT){
-//                    this.position.y+=-1;
-//                }else{
-//                    this.position.y+=1;
-//                }
-//                break;
         }
 
     /**

@@ -2,7 +2,10 @@ package simulation;
 
 import simulation.data.Diet;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
+import java.util.Scanner;
 
 public class Main{
 
@@ -16,24 +19,6 @@ public class Main{
                 GAME.ENTITY_MAP[i][j] = " ";
             }
         }
-
-//        Cat c = new Cat(0, 0, Diet.Carnivore, 1, false, 0);
-//        c.experience = 6;
-//        GAME.ENTITY_LIST.add(c);
-//        Bird b = new Bird(1, 1, Diet.Omnivore, 1);
-//        b.experience = 6;
-//        GAME.ENTITY_LIST.add(b);
-//        Bird b1 = new Bird(1, 1, Diet.Omnivore, 1);
-//        b1.experience = 6;
-//        GAME.ENTITY_LIST.add(b1);
-//
-//        Organism org = (Organism)GAME.ENTITY_LIST.get(0);
-//        Entity e = org.CheckSurroundings(GAME.ENTITY_LIST);
-//        org.EatIfPossible(e, GAME.ENTITY_LIST, GAME.ENTITY_MAP);
-//        e = org.CheckSurroundings(GAME.ENTITY_LIST);
-//        org.EatIfPossible(e, GAME.ENTITY_LIST, GAME.ENTITY_MAP);
-//
-//        org.EvolveIfPossible(GAME.ENTITY_LIST);
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter starting number of cells: ");

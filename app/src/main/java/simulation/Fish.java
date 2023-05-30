@@ -22,6 +22,7 @@ public class Fish extends Cell implements I_Fish {
 
     /**
      * Removes Fish object from the map
+     *
      * @param entity_list list of objects
      */
     public void CaughtByFisherman(ArrayList entity_list)    {

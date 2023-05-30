@@ -1,8 +1,8 @@
 package simulation;
 
 import simulation.data.CONSTANTS;
-import simulation.interfaces.I_Bird;
 import simulation.data.Diet;
+import simulation.interfaces.I_Bird;
 
 import java.util.ArrayList;
 import java.util.Random;
