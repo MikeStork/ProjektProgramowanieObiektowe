@@ -1,4 +1,6 @@
-package simulation;
+package simulation.workers;
+
+import simulation.interfaces.I_CSVWriter;
 
 import java.io.IOException;
 import java.util.Arrays;

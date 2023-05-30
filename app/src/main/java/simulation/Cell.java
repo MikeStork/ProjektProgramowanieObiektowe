@@ -1,9 +1,11 @@
 package simulation;
 
+import simulation.interfaces.I_Cell;
+
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Cell extends Organism implements I_Cell{
+public class Cell extends Organism implements I_Cell {
 
     Cell(int x, int y, Diet diet, int speed) {
         super(x, y, diet, speed);
