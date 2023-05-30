@@ -1,11 +1,12 @@
 package simulation;
 import simulation.data.CONSTANTS;
 import simulation.data.Diet;
+import simulation.interfaces.I_Cat;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Cat extends Cell implements I_Cat{
+public class Cat extends Cell implements I_Cat {
 
     boolean if_asleep;
     int sleep_count;

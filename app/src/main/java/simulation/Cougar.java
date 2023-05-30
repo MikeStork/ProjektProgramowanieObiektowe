@@ -2,10 +2,11 @@ package simulation;
 
 import simulation.data.CONSTANTS;
 import simulation.data.Diet;
+import simulation.interfaces.I_Cougar;
 
 import java.util.ArrayList;
 
-public class Cougar extends Cat implements I_Cougar{
+public class Cougar extends Cat implements I_Cougar {
     int speed_incrementation = 1;
     private static int co_count;
 

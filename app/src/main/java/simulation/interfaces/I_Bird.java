@@ -1,4 +1,7 @@
-package simulation;
+package simulation.interfaces;
+
+import simulation.Entity;
+import simulation.Organism;
 
 import java.util.ArrayList;
 

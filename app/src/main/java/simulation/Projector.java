@@ -227,7 +227,7 @@ public class Projector {
 
                     if(r.nextInt(0,20) > 18)    {
                         ENTITY_MAP[org.position.x][org.position.y] = " ";
-                        ((Amfiprion)org).CaughtByFisherman(ENTITY_LIST, (Amfiprion) org);
+                        ((Amfiprion)org).CaughtByFisherman(ENTITY_LIST, (Fish) org);
 
                     }   else {
 
@@ -240,7 +240,7 @@ public class Projector {
 
                     if(r.nextInt(0,20) > 18)    {
                         ENTITY_MAP[org.position.x][org.position.y] = " ";
-                        ((Pike)org).CaughtByFisherman(ENTITY_LIST, (Pike) org);
+                        ((Pike)org).CaughtByFisherman(ENTITY_LIST, (Fish) org);
 
                     }   else {
 

@@ -1,8 +1,10 @@
-package simulation;
+package simulation.interfaces;
+
+import simulation.Entity;
 
 import java.util.ArrayList;
 
-public interface I_Eagle {
+public interface I_Cougar {
 
     /**
      * Return number of objects created during the simulation
@@ -16,4 +18,5 @@ public interface I_Eagle {
      * @param entity_list List of games entities
      */
     void Breed(ArrayList<Entity> entity_list);
+
 }

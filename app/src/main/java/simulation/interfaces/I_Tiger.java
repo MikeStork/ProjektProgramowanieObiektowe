@@ -1,8 +1,10 @@
-package simulation;
+package simulation.interfaces;
+
+import simulation.Entity;
 
 import java.util.ArrayList;
 
-public interface I_Stork {
+public interface I_Tiger {
 
     /**
      * Return number of objects created during the simulation

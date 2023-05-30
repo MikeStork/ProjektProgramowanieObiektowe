@@ -2,6 +2,7 @@ package simulation;
 
 import simulation.data.CONSTANTS;
 import simulation.data.Diet;
+import simulation.interfaces.I_Amfiprion;
 
 public class Amfiprion extends Fish implements I_Amfiprion {
     private static int a_count;

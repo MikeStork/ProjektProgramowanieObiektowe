@@ -2,6 +2,7 @@ package simulation;
 
 import simulation.data.CONSTANTS;
 import simulation.data.Diet;
+import simulation.interfaces.I_Stork;
 
 import java.util.ArrayList;
 
