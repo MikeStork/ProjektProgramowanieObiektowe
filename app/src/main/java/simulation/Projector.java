@@ -150,7 +150,7 @@ public class Projector {
 
         if(this.cycle == this.DATA_DUMP_CYCLES.get(0)){
             //
-            //data drop / data dump
+            Write2File();
             //
             this.DATA_DUMP_CYCLES.remove(0);
         }
@@ -191,7 +191,6 @@ public class Projector {
             System.out.println(e.getMessage());
 
         }
-        //potentially add .csv service
 
 
 
