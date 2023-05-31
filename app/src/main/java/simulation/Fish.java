@@ -7,7 +7,9 @@ import simulation.interfaces.I_Fish;
 
 import java.util.ArrayList;
 import java.util.Random;
-
+/**
+ * The Fish class represents a type of Cell entity in the simulation.
+ */
 public class Fish extends Cell implements I_Fish {
     private static int f_count;
     private static int fisherman_count;
@@ -29,7 +31,10 @@ public class Fish extends Cell implements I_Fish {
         entity_list.remove(this);
         fisherman_count++;
     }
-
+    /**
+     * Returns number of instances of this object
+     * @return Integer describing number of instances of this object
+     */
     public static int getNumberOfObjects() {
         return f_count;
     }

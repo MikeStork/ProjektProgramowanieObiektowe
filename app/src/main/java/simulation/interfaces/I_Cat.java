@@ -3,7 +3,9 @@ package simulation.interfaces;
 import simulation.Entity;
 
 import java.util.ArrayList;
-
+/**
+ * Interface of Cat class
+ */
 public interface I_Cat {
 
     /**
@@ -12,7 +14,8 @@ public interface I_Cat {
     void sleep();
 
     /**
-     * Return number of objects created during the simulation
+     * Returns number of instances of this object
+     * @return Integer describing number of instances of this object
      */
     static int getNumberOfObjects() {
         return 0;

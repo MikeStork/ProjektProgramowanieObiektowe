@@ -7,11 +7,25 @@ import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Class of Main
+ */
 public class Main{
-
+    /**
+     * Integer number of cells
+     */
     public static int num_of_cells;
+    /**
+     * Integer number of weed
+     */
     public static int num_of_weed;
-
+    /**
+     * Default constructor.
+     */
+    public Main(){}
+    /** Main program method
+     * @param args Program parameters
+     */
     public static void main(String[] args) {
         Projector GAME = new Projector(50,50);
         for (int i = 0; i < GAME.HEIGHT; i++) {
@@ -53,7 +67,10 @@ public class Main{
         GAME.start();
     }
 
-
+    /**
+     * Parses numbers given in String into Integer ArrayList
+     * @return ArrayList of Integers - Parsed String
+     */
     private static ArrayList<Integer> parseNumbers(String input) {
         ArrayList<Integer> numbers = new ArrayList<>();
         String[] numberStrings = input.split(" ");

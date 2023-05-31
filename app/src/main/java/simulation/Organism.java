@@ -5,12 +5,24 @@ import simulation.interfaces.I_Organism;
 
 import java.util.ArrayList;
 import java.util.Random;
-
+/**
+ * The Organism class represents a type of entity in the simulation.
+ */
 public abstract class Organism extends Entity implements I_Organism {
     Diet diet;
     int speed;
-    int level;
+    /**
+     * Field describing level of its owner
+     */
+    public int level;
+
+    /**
+     * Integer describing age of instance of this object
+     */
     public int age;
+    /**
+     * Integer describing lifespan of instance of this object
+     */
     public int lifespan;
     Organism(int x, int y, Diet diet, int speed) {
         super(x, y, 1);

@@ -18,11 +18,11 @@ Scrum master: Agnieszka Pisarek
 ## Spis treści
 * [Skład zespołu](#Skład-zespołu)
 * [Etapy projektu](#Etapy-projektu)
-* [Tematy projektu](#Tematy-projektu)
-  * [Ewolucja](#Ewolucja)
-  * [Szczupak król wód](#Szczupak-król-wód)
-
-* [Opis projektu](#Opis-projektu)
+* [Temat projektu - Ewolucja](#temat-projektu---ewolucja)
+* Archiwum
+  * [Temat projektu](#tematy-projektu-do-wyboru-)
+    * [Ewolucja](#Ewolucja)
+    * [Szczupak król wód](#Szczupak-król-wód)
 * [Technologie](#Technologie)
 ## Skład zespołu
 * Agnieszka Pisarek
@@ -33,7 +33,10 @@ Scrum master: Agnieszka Pisarek
 - [x] 1. Wybór zespołu
 - [x] 2. Propozycje tematów
 - [x] 3. Wybór tematu
-- [ ] 4. Podział pracy i ustalenie cyklu pracy
+- [x] 4. Podział pracy i ustalenie cyklu pracy
+- [x] 5. Napisanie kodu
+- [x] 6. Prezentacja
+- [ ] 7. Dokumentacja
 > [...]
 ![4x](https://user-images.githubusercontent.com/44142875/234476085-e3f5496a-60d5-45b6-aa75-79b4695271f8.gif)
 
@@ -47,9 +50,9 @@ Scrum master: Agnieszka Pisarek
 <p>
   Jednym z dodatkowych elementów byłaby zaawansowana simulation - zmiana epoki ewolucji. 
   Przykładowo:
-    <pre>Komórkowiec -> Mały organizm -> Zwierze -> Życie społeczne -> Cywilizacja</pre>
-</p>
-</hr>
+    <pre>Komórkowiec -> Mały organizm -> Zwierze</pre>
+<p>
+<hr>
 <p>
 Dziedziczenie może być zastosowane na wielu płaszczyznach. Organizm mięsożerny może dziedziczyć po klasie ogólnej organizmu podstawowe właściwości, organizm wszystkożerny może dziedziczyć właściwości po mięsożernym i roślinożernym. Dodatkowo istnieje duży potencjał na zastosowanie polimorfizmu, enkapsulacji i innych sposobów poprawnego pisania kodu
 </p>
@@ -68,9 +71,9 @@ Dziedziczenie może być zastosowane na wielu płaszczyznach. Organizm mięsoże
 <p>
   Jednym z dodatkowych elementów byłaby zaawansowana simulation - zmiana epoki ewolucji. 
   Przykładowo:
-    <pre>Komórkowiec -> Mały organizm -> Zwierze -> Życie społeczne -> Cywilizacja</pre>
-</p>
-</hr>
+    <pre>Komórkowiec -> Mały organizm -> Zwierze</pre>
+<p>
+<hr>
 <p>
 Dziedziczenie może być zastosowane na wielu płaszczyznach. Organizm mięsożerny może dziedziczyć po klasie ogólnej organizmu podstawowe właściwości, organizm wszystkożerny może dziedziczyć właściwości po mięsożernym i roślinożernym. Dodatkowo istnieje duży potencjał na zastosowanie polimorfizmu, enkapsulacji i innych sposobów poprawnego pisania kodu
 </p>

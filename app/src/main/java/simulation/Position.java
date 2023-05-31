@@ -1,20 +1,29 @@
 package simulation;
 
+/**
+ * Class of Position
+ */
 public class Position {
     int x;
     int y;
 
+    /**
+     * Constructs a Position object with the specified coordinates.
+     *
+     * @param x The x-coordinate of the position.
+     * @param y The y-coordinate of the position.
+     */
     Position(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
     /**
-     * Calculates distance between given position and self position
+     * Calculates the distance between the given position and the current position.
      *
-     * @param x position on x axis
-     * @param y position on y axis
-     * @return Floored distance
+     * @param x The x-coordinate of the position to calculate distance to.
+     * @param y The y-coordinate of the position to calculate distance to.
+     * @return The floored distance between the positions.
      */
     public int CalculateDistance(int x, int y) {
         return (int) Math.sqrt(Math.pow(this.x - x, 2) + Math.pow(this.y - y, 2));

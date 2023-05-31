@@ -11,13 +11,21 @@ import java.util.Random;
 
 import static simulation.Main.num_of_cells;
 import static simulation.Main.num_of_weed;
-
+/**
+ * Class of Projector
+ */
 public class Projector {
     int WIDTH;
     int HEIGHT;
+    /**
+     * Integer describing in which cycles dump data to files
+     */
     public ArrayList<Integer>   DATA_DUMP_CYCLES;
     private boolean running;
     private final long OPTIMAL_TIME = 1000000000 / CONSTANTS.FPS_TARGET;
+    /**
+     * Integer describing how many cycles have passed
+     */
     public int cycle = 0;
     ArrayList<Entity> ENTITY_LIST = new ArrayList<Entity>();
     String[][] ENTITY_MAP;
@@ -188,7 +196,7 @@ public class Projector {
 
     }
     /**
-     * Renders singular frame of game state
+     * Renders a singular frame of game state
      * @param MAP Mapped positions of entities using 2dim array of strings
      * @return Rendered frame to be displayed
      */

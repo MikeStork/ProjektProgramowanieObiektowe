@@ -3,7 +3,9 @@ package simulation.interfaces;
 import simulation.Entity;
 
 import java.util.ArrayList;
-
+/**
+ * Interface of Cell class
+ */
 public interface I_Cell {
 
     /**

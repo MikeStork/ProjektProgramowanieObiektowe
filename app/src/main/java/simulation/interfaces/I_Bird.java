@@ -4,19 +4,21 @@ import simulation.Entity;
 import simulation.Organism;
 
 import java.util.ArrayList;
-
+/**
+ * Interface of Bird class
+ */
 public interface I_Bird {
 
     /**
      * Enables Bird object to make 4 fast moves
      * @param width width of the map
      * @param height height of the map
-     * @param org Organism object able to make a move
      */
     void FlyFast(int width, int height);
 
     /**
-     * Return number of objects created during the simulation
+     * Returns number of instances of this object
+     * @return Integer describing number of instances of this object
      */
     static int getNumberOfObjects() {
         return 0;
