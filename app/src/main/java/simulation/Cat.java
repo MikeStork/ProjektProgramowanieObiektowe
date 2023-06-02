@@ -5,7 +5,9 @@ import simulation.interfaces.I_Cat;
 
 import java.util.ArrayList;
 import java.util.Random;
-
+/**
+ * The Cat class represents a type of Cell entity in the simulation.
+ */
 public class Cat extends Cell implements I_Cat {
 
     boolean if_asleep;
@@ -35,7 +37,8 @@ public class Cat extends Cell implements I_Cat {
     }
 
     /**
-     * Return number of objects created during the simulation
+     * Returns number of instances of this object
+     * @return Integer describing number of instances of this object
      */
     public static int getNumberOfObjects() {
         return ca_count;

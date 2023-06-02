@@ -4,7 +4,9 @@ import simulation.data.CONSTANTS;
 import simulation.data.Diet;
 
 import java.util.ArrayList;
-
+/**
+ * The Cougar class represents a type of cat entity in the simulation.
+ */
 public class Cougar extends Cat {
     int speed_incrementation = 1;
     private static int co_count;
@@ -16,6 +18,10 @@ public class Cougar extends Cat {
         this.size = 4;
         this.level = 3;
     }
+    /**
+     * Returns number of instances of this object
+     * @return Integer describing number of instances of this object
+     */
     public static int getNumberOfObjects() {
         return co_count;
     }

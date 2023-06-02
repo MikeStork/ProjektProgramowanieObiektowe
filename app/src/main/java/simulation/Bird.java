@@ -6,7 +6,9 @@ import simulation.interfaces.I_Bird;
 
 import java.util.ArrayList;
 import java.util.Random;
-
+/**
+ * The Bird class represents a type of Cell entity in the simulation.
+ */
 public class Bird extends Cell implements I_Bird {
 
     private static int b_count;
@@ -24,7 +26,6 @@ public class Bird extends Cell implements I_Bird {
      * Enables Bird object to make 4 fast moves
      * @param width width of the map
      * @param height height of the map
-     * @param org Organism object able to make a move
      */
     public void FlyFast(int width, int height) {
         int count = 0;
@@ -34,6 +35,10 @@ public class Bird extends Cell implements I_Bird {
             ++count;
         }
     }
+    /**
+     * Returns number of instances of this object
+     * @return Integer describing number of instances of this object
+     */
     public static int getNumberOfObjects() {
         return b_count;
     }

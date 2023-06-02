@@ -4,7 +4,9 @@ import simulation.Entity;
 import simulation.Fish;
 
 import java.util.ArrayList;
-
+/**
+ * Interface of Fish class
+ */
 public interface I_Fish {
 
     /**
@@ -15,7 +17,8 @@ public interface I_Fish {
     void CaughtByFisherman(ArrayList entity_list);
 
     /**
-     * Return number of objects created during the simulation
+     * Returns number of instances of this object
+     * @return Integer describing number of instances of this object
      */
     static int getNumberOfObjects() {
         return 0;
@@ -30,7 +33,7 @@ public interface I_Fish {
     /**
      * Checks whether organism can or cannot evolve
      * If it can, it will create new organism that matches corresponding evolution state in replacement of one that has been there
-     * @param  entity_list List of games entities
+     * @param entity_list List of games entities
      */
     public void EvolveIfPossible(ArrayList<Entity> entity_list);
 

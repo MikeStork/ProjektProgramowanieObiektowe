@@ -3,7 +3,9 @@ package simulation.interfaces;
 import simulation.Entity;
 
 import java.util.ArrayList;
-
+/**
+ * Interface of Organism class
+ */
 public interface I_Organism {
 
     /**
@@ -16,6 +18,7 @@ public interface I_Organism {
     /**
      * Given list of entities, search for the first entity which is in the distance of Organism.
      * @param entity_list List of games entities
+     * @return Entity that was first found in entity_list
      */
     public Entity CheckSurroundings(ArrayList<Entity> entity_list);
 
@@ -43,6 +46,7 @@ public interface I_Organism {
      * Checks whether given entity should be terminated
      * @param entity_list List of games entities
      * @param entity_map String array that serves as map
+     * @return Boolean describing whether it is possible for Entity to die
      */
 
     boolean DieIfPossible(ArrayList<Entity> entity_list, String[][] entity_map);
