@@ -54,7 +54,7 @@ public class Main{
     }
 
 
-    private static ArrayList<Integer> parseNumbers(String input) {
+    public static ArrayList<Integer> parseNumbers(String input) {
         ArrayList<Integer> numbers = new ArrayList<>();
         String[] numberStrings = input.split(" ");
 

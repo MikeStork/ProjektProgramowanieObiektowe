@@ -16,7 +16,7 @@ public class Projector {
     int WIDTH;
     int HEIGHT;
     public ArrayList<Integer>   DATA_DUMP_CYCLES;
-    private boolean running;
+    protected boolean running;
     private final long OPTIMAL_TIME = 1000000000 / CONSTANTS.FPS_TARGET;
     public int cycle = 0;
     ArrayList<Entity> ENTITY_LIST = new ArrayList<Entity>();
@@ -83,7 +83,7 @@ public class Projector {
     /**
      * Updates game state
      */
-    private void update() {
+    protected void update() {
         this.cycle++;
         Random r = new Random();
 

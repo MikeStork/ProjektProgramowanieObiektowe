@@ -20,6 +20,9 @@ repositories {
 dependencies {
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:31.1-jre'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
 }
 
 testing {
@@ -29,7 +32,10 @@ testing {
             // Use JUnit4 test framework
             useJUnit('4.13.2')
         }
+
     }
+
+
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
