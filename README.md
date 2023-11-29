@@ -13,6 +13,7 @@
 </p>
 <p>
 Scrum master: Agnieszka Pisarek
+PM: Michał Bocian
 </p>
 
 ## Spis treści
